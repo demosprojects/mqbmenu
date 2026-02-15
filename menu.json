@@ -1,0 +1,142 @@
+[
+    {
+        "nombre": "Yankee doble",
+        "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
+        "precio": 10000,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/3c3027e9-9471-4896-4ef6-a1a3b5a09400/public",
+        "destacado": true,
+        "etiqueta": "La más pedida"
+    },
+    {
+        "nombre": "American simple",
+        "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon.",
+        "precio": 8500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/1c2d9fb0-7f7f-433e-7fd1-11e0fb3fc400/public",
+        "destacado": false
+    },
+     {
+        "nombre": "Berlín doble",
+        "descripcion": "Pan, mayonesa, pepino, doble carne, doble cheddar, cebolla morada.",
+        "precio": 9500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/602792fc-071e-4c00-534f-bd19f1e02e00/public",
+        "destacado": false
+    },
+  {
+        "nombre": "Berlín simple",
+        "descripcion": "Pan, mayonesa, pepino, carne, cheddar, cebolla morada.",
+        "precio": 9500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/602792fc-071e-4c00-534f-bd19f1e02e00/public",
+        "destacado": false
+    },
+      {
+        "nombre": "Blue doble",
+        "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, roquefort",
+        "precio": 9500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/5be532ed-410b-40f7-f068-ce6780e8c600/public",
+        "destacado": false
+    },
+
+   {
+        "nombre": "Blue simple",
+        "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, roquefort",
+        "precio": 8500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/5be532ed-410b-40f7-f068-ce6780e8c600/public",
+        "destacado": false
+    },
+ {
+        "nombre": "Cheese doble",
+        "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
+        "precio": 8500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/c3deb753-c7af-4d4c-1052-d5299b31b100/public",
+        "destacado": false
+    },
+ {
+        "nombre": "Cheese simple",
+        "descripcion": "Pan, mayonesa, carne, cheddar.",
+        "precio": 7500,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/c3deb753-c7af-4d4c-1052-d5299b31b100/public",
+        "destacado": false
+    },
+{
+        "nombre": "Clasica doble",
+        "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
+        "precio": 9300,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/4add9863-9220-45e0-2aa3-a97294c22b00/public",
+        "destacado": false
+    },
+{
+        "nombre": "Clasica simple",
+        "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
+        "precio": 8300,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/4add9863-9220-45e0-2aa3-a97294c22b00/public",
+        "destacado": false
+    },
+{
+        "nombre": "Yankee triple",
+        "descripcion": "Pan, mayonesa, triple carne, doble cheddar, bacon.",
+        "precio": 10700,
+        "categoria": "Burgers",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/820a267b-a94f-4e6c-7545-e9d3d47a4f00/public",
+        "destacado": false
+    },
+
+
+    {
+        "nombre": "Balde de Minis",
+        "descripcion": "Balde de 8 mini burgers de pan, carne y chedar, papas fritas y un toping de aderezo.",
+        "precio": 32900,
+        "categoria": "Pollo, Baldes y Cajas",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/3c0946ca-0b06-482c-988b-771a6c22e000/public",
+        "destacado": true,
+        "etiqueta": "Especial para compartir"
+    },
+    {
+        "nombre": "Balde de pollo frito",
+        "descripcion": "Para 4 personas Pollo Papas 3 salsas",
+        "precio": 31900,
+        "categoria": "Pollo, Baldes y Cajas",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/7c9925fa-306b-45b7-6ddf-7d567e541b00/public",
+        "destacado": false
+       
+    },
+
+
+    {
+        "nombre": "Papas cheddar y bacon",
+        "descripcion": "Papas Chedar Bacon",
+        "precio": 8200,
+        "categoria": "Papas",
+        "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/6af678ad-ccc6-4f9d-9218-b5c91f85a600/public",
+        "destacado": true
+    },
+    
+    {
+        "nombre": "Papas cheddar y verdeo",
+        "descripcion": "Papas Chedar verdeo",
+        "precio": 7850,
+        "categoria": "Papas",
+        "imagen": "cheddarverdeo.jpg",
+        "destacado": false
+    },
+
+
+    {
+        "nombre": "Cerveza Patagonia 730ml",
+        "descripcion": "Variedades: Amber Lager, Bohemian Pilsener o Weisse. Bien helada.",
+        "precio": 4500,
+        "categoria": "Cervezas",
+        "imagen": "https://images.unsplash.com/photo-1567696911980-2eed69a46042?auto=format&fit=crop&q=80&w=400",
+        "destacado": true,
+        "etiqueta": "2x1 Happy Hour 🍺"
+    }
+]

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Mas que Burger's</title>
+    <link rel="icon" href="https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/e7b59903-06e0-48f8-1bb1-71bd6da8a800/public" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mqb-blue': '#014926',
+                        'mqb-dark': '#0a0a0b',
+                    },
+                    fontFamily: {
+                        'impact': ['Bebas Neue', 'sans-serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .bg-pattern {
+            background-image: radial-gradient(#014926 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+            opacity: 0.05;
+        }
+        .category-btn.active {
+            background-color: #014926 !important;
+            color: white !important;
+            box-shadow: 0 10px 20px -5px rgba(1, 73, 38, 0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.4s ease forwards; }
+
+        /* Buscador */
+        #search-input {
+            border: 2px solid #e5e7eb;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+        #search-input:focus {
+            border-color: #014926;
+            box-shadow: 0 0 0 4px rgba(1, 73, 38, 0.08);
+            outline: none;
+        }
+        #clear-search { transition: transform 0.15s; }
+        #clear-search:hover { transform: scale(1.15); }
+        mark {
+            background-color: rgba(1, 73, 38, 0.13);
+            color: #014926;
+            font-weight: 700;
+            border-radius: 3px;
+            padding: 0 2px;
+        }
+        #no-results { animation: fadeIn 0.3s ease forwards; }
+    </style>
+</head>
+<body class="bg-white text-mqb-dark font-sans selection:bg-mqb-blue selection:text-white">
+
+    <div class="fixed inset-0 bg-pattern -z-10"></div>
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/e7b59903-06e0-48f8-1bb1-71bd6da8a800/public" 
+                     alt="Logo Mas que Burger's" class="w-14 h-14 object-contain">
+                <div>
+                    <h1 class="font-impact text-3xl tracking-tight leading-none uppercase">Mas que <span class="text-mqb-blue">Burger's</span></h1>
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest italic">Más sabor en cada bocado</p>
+                </div>
+            </div>
+
+            <nav id="category-nav" class="flex gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-2 md:pb-0 items-center">
+                <button class="category-btn active px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-gray-100 transition-all">Burgers</button>
+                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Pollo, Baldes y Cajas</button>
+                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Papas</button>
+                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Kids</button>
+                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Agregados</button>
+                <button id="bebidas-toggle" class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 flex items-center gap-2 flex-shrink-0">
+                    Bebidas <i id="bebidas-chevron" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                </button>
+                
+            </nav>
+            <!-- Dropdown FUERA del nav (evita ser cortado por overflow-x-auto) -->
+            <div id="bebidas-dropdown" class="hidden fixed z-[9999] flex-col gap-1 bg-white border border-gray-100 rounded-2xl shadow-2xl p-2 min-w-[220px]">
+                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-2 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Gaseosas</button>
+                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-2 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Aguas Saborizadas y Jugos</button>
+                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-2 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Cervezas</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-12">
+        <section id="menu-section" class="space-y-8">
+
+            <div class="flex items-center gap-4">
+                <h2 id="section-title" class="font-impact text-4xl text-mqb-blue tracking-tight uppercase italic">Burgers</h2>
+                <div class="h-px flex-1 bg-mqb-blue opacity-10"></div>
+            </div>
+
+            <!-- Producto Destacado -->
+            <div id="featured-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gray-50/50 rounded-[3rem] p-4 sm:p-8 border border-gray-100" style="display: none;">
+                <div class="relative group rounded-[2.5rem] overflow-hidden shadow-2xl aspect-square md:aspect-video lg:aspect-square">
+                    <img id="featured-img" src="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute top-6 left-6">
+                        <span id="featured-badge" class="bg-mqb-blue text-white text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-xl"></span>
+                    </div>
+                </div>
+                <div class="space-y-6 px-4">
+                    <div class="space-y-2">
+                        <h3 id="featured-title" class="font-impact text-6xl uppercase italic leading-none text-mqb-blue"></h3>
+                        <p id="featured-desc" class="text-gray-500 text-lg font-light leading-relaxed"></p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span id="featured-price" class="font-impact text-5xl"></span>
+                        <div class="h-12 w-px bg-gray-200"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== BUSCADOR ===== -->
+            <div id="search-section">
+                <div class="relative flex items-center">
+                    <!-- Ícono lupa -->
+                    <div class="absolute left-5 pointer-events-none">
+                        <i id="search-icon" class="fa-solid fa-magnifying-glass text-gray-400 text-base transition-colors duration-200"></i>
+                    </div>
+
+                    <input
+                        id="search-input"
+                        type="text"
+                        placeholder="Buscá en el menú... (ej: clásica, moscú, etc)"
+                        class="w-full pl-14 pr-12 py-4 rounded-2xl bg-gray-50/70 text-sm font-medium text-mqb-dark"
+                        autocomplete="off"
+                    />
+
+                    <!-- Botón limpiar -->
+                    <button
+                        id="clear-search"
+                        class="absolute right-5 text-gray-300 hover:text-mqb-blue"
+                        style="display: none;"
+                        aria-label="Limpiar búsqueda"
+                    >
+                        <i class="fa-solid fa-circle-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Contador de resultados -->
+                <p id="search-results-count" class="mt-3 pl-1 text-xs font-black text-gray-400 uppercase tracking-widest" style="display: none;"></p>
+            </div>
+            <!-- ===== FIN BUSCADOR ===== -->
+
+            <!-- Sin resultados -->
+            <div id="no-results" class="hidden text-center py-16 space-y-3">
+                <div class="text-5xl">🍔</div>
+                <p class="font-impact text-3xl text-gray-300 uppercase italic tracking-wide">Sin resultados</p>
+                <p class="text-sm text-gray-400">Probá con otro término</p>
+            </div>
+
+            <!-- Grid de productos -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+        </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-100 py-16 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+            <div class="space-y-4">
+                <img src="https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/e7b59903-06e0-48f8-1bb1-71bd6da8a800/public" 
+                     alt="Logo" class="w-20 mx-auto md:mx-0 grayscale opacity-30">
+                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold italic">Más sabor en cada bocado</p>
+            </div>
+            <div class="space-y-2">
+                <h5 class="font-impact text-2xl text-mqb-blue tracking-tight uppercase">Villa Ángela, Chaco</h5>
+                <p class="text-gray-400 text-sm">Vení a visitarnos y disfrutá de la mejor <br class="hidden md:block"> experiencia en hamburguesas.</p>
+            </div>
+            <div class="flex justify-center md:justify-end gap-4">
+                <a href="#" class="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-mqb-blue hover:bg-mqb-blue hover:text-white transition-all transform hover:-translate-y-1">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center text-mqb-blue hover:bg-mqb-blue hover:text-white transition-all transform hover:-translate-y-1">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                </a>
+            </div>
+        </div>
+       <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 text-center">
+    
+    <p class="text-[10px] text-gray-300 font-black uppercase tracking-[0.5em]">
+        Diseñado y desarrollado por 
+        <a href="https://hostara.vercel.app" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="hover:text-yellow-400 transition-colors duration-300">
+           Hostara
+        </a>
+    </p>
+
+    <p class="text-[10px] text-gray-300 font-black uppercase tracking-[0.5em] mt-3">
+        Mas que Burger's 2026 - Todos los derechos reservados.
+    </p>
+
+</div>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+    <script>
+    // =============================================
+    // LÓGICA DEL BUSCADOR
+    // =============================================
+    (function () {
+        const searchInput  = document.getElementById('search-input');
+        const clearBtn     = document.getElementById('clear-search');
+        const resultsCount = document.getElementById('search-results-count');
+        const noResults    = document.getElementById('no-results');
+        const productsGrid = document.getElementById('products-grid');
+        const searchIcon   = document.getElementById('search-icon');
+
+        function normalize(str) {
+            return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function getAllCards() {
+            return Array.from(productsGrid.querySelectorAll('[data-name]'));
+        }
+
+        // Elimina highlights previos del grid
+        function clearHighlights() {
+            productsGrid.querySelectorAll('mark').forEach(mark => {
+                mark.replaceWith(document.createTextNode(mark.textContent));
+            });
+            productsGrid.normalize();
+        }
+
+        // Recorre los nodos de texto de un elemento y resalta coincidencias
+        function highlightNode(el, query) {
+            if (!el || !query) return;
+            const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+            const nodes = [];
+            let node;
+            while ((node = walker.nextNode())) nodes.push(node);
+
+            const normQuery = normalize(query);
+
+            nodes.forEach(textNode => {
+                const text   = textNode.textContent;
+                const normText = normalize(text);
+                const idx = normText.indexOf(normQuery);
+                if (idx === -1) return;
+
+                const frag = document.createDocumentFragment();
+                frag.appendChild(document.createTextNode(text.slice(0, idx)));
+                const mark = document.createElement('mark');
+                mark.textContent = text.slice(idx, idx + query.length);
+                frag.appendChild(mark);
+                frag.appendChild(document.createTextNode(text.slice(idx + query.length)));
+                textNode.parentNode.replaceChild(frag, textNode);
+            });
+        }
+
+        function filterProducts(query) {
+            const cards   = getAllCards();
+            if (!cards.length) return;
+
+            clearHighlights();
+
+            const trimmed = query.trim();
+            const norm    = normalize(trimmed);
+            let visible   = 0;
+
+            cards.forEach(card => {
+                const name    = normalize(card.getAttribute('data-name') || '');
+                const desc    = normalize(card.getAttribute('data-desc') || '');
+                const matches = !norm || name.includes(norm) || desc.includes(norm);
+
+                card.style.display = matches ? '' : 'none';
+
+                if (matches) {
+                    visible++;
+                    if (norm) {
+                        highlightNode(card.querySelector('[data-card-title]'), trimmed);
+                        highlightNode(card.querySelector('[data-card-desc]'),  trimmed);
+                    }
+                }
+            });
+
+            // Sin resultados
+            noResults.classList.toggle('hidden', visible > 0 || !norm);
+
+            // Contador
+            if (norm) {
+                resultsCount.style.display = 'block';
+                resultsCount.textContent   = visible === 0
+                    ? 'Sin resultados'
+                    : `${visible} producto${visible !== 1 ? 's' : ''} encontrado${visible !== 1 ? 's' : ''}`;
+            } else {
+                resultsCount.style.display = 'none';
+            }
+        }
+
+        // ── Eventos ──
+        searchInput.addEventListener('input', function () {
+            const val = this.value;
+            clearBtn.style.display = val.length ? 'flex' : 'none';
+            searchIcon.style.color = val.length ? '#014926' : '';
+            filterProducts(val);
+        });
+
+        clearBtn.addEventListener('click', function () {
+            searchInput.value      = '';
+            clearBtn.style.display = 'none';
+            searchIcon.style.color = '';
+            filterProducts('');
+            searchInput.focus();
+        });
+
+        // Re-aplica filtro si app.js re-renderiza el grid mientras hay texto
+        const observer = new MutationObserver(() => {
+            if (searchInput.value.trim()) filterProducts(searchInput.value);
+        });
+        observer.observe(productsGrid, { childList: true });
+    })();
+    </script>
+
+</body>
+</html>
