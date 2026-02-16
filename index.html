@@ -7,7 +7,7 @@
     <link rel="icon" href="https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/e7b59903-06e0-48f8-1bb1-71bd6da8a800/public" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -36,7 +36,6 @@
         .category-btn.active {
             background-color: #014926 !important;
             color: white !important;
-            box-shadow: 0 10px 20px -5px rgba(1, 73, 38, 0.3);
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -64,13 +63,14 @@
             padding: 0 2px;
         }
         #no-results { animation: fadeIn 0.3s ease forwards; }
+        #bebidas-dropdown { transition: opacity 0.15s ease; }
     </style>
 </head>
 <body class="bg-white text-mqb-dark font-sans selection:bg-mqb-blue selection:text-white">
 
     <div class="fixed inset-0 bg-pattern -z-10"></div>
 
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
+    <header class="sticky top-0 z-50 bg-white/95 border-b border-gray-100" style="will-change: transform;">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-4">
                 <img src="https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/e7b59903-06e0-48f8-1bb1-71bd6da8a800/public" 
@@ -83,24 +83,27 @@
 
             <nav id="category-nav" class="flex gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-2 md:pb-0 items-center">
                 <button class="category-btn active px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-gray-100 transition-all">Burgers</button>
-                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Pollo, Baldes y Cajas</button>
+                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Para compartir</button>
                 <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Papas</button>
                 <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Kids</button>
-                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Agregados</button>
-                <button id="bebidas-toggle" class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 flex items-center gap-2 flex-shrink-0">
+                 <button id="bebidas-toggle" class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 flex items-center gap-2 flex-shrink-0">
                     Bebidas <i id="bebidas-chevron" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200"></i>
                 </button>
-                
+                <button class="category-btn bg-gray-50/50 px-5 py-2 rounded-2xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100">Agregados</button>
             </nav>
-            <!-- Dropdown FUERA del nav (evita ser cortado por overflow-x-auto) -->
-            <div id="bebidas-dropdown" class="hidden fixed z-[9999] flex-col gap-1 bg-white border border-gray-100 rounded-2xl shadow-2xl p-2 min-w-[220px]">
-                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-2 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Gaseosas</button>
-                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-2 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Aguas Saborizadas y Jugos</button>
-                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-2 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Cervezas</button>
+            <div id="bebidas-dropdown" class="hidden fixed z-[9999] flex-col gap-1 bg-white border border-gray-100 rounded-2xl p-2" style="box-shadow: 0 8px 30px -4px rgba(0,0,0,0.18), 0 2px 8px -2px rgba(1,73,38,0.10); min-width: 220px;">
+                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-3 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Gaseosas</button>
+                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-3 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Aguas Saborizadas y Jugos</button>
+                <button class="category-btn sub-btn bg-gray-50/50 px-4 py-3 rounded-xl whitespace-nowrap text-xs font-black uppercase border border-transparent text-gray-400 transition-all hover:bg-gray-100 text-left w-full">Cervezas</button>
             </div>
         </div>
     </header>
 
+    <div class="bg-mqb-blue/5 border-b border-mqb-blue/10 py-3 px-4 text-center">
+        <p class="text-xs font-bold text-mqb-blue uppercase tracking-wider flex items-center justify-center gap-2">
+            <i class="fa-solid fa-bell"></i> Menú digital: Elegí y pedíselo al mozo
+        </p>
+    </div>
     <main class="max-w-7xl mx-auto px-4 sm:px-8 py-12">
         <section id="menu-section" class="space-y-8">
 
@@ -109,10 +112,9 @@
                 <div class="h-px flex-1 bg-mqb-blue opacity-10"></div>
             </div>
 
-            <!-- Producto Destacado -->
             <div id="featured-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gray-50/50 rounded-[3rem] p-4 sm:p-8 border border-gray-100" style="display: none;">
                 <div class="relative group rounded-[2.5rem] overflow-hidden shadow-2xl aspect-square md:aspect-video lg:aspect-square">
-                    <img id="featured-img" src="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <img id="featured-img" src="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 cursor-pointer" onclick="openModal(this.src)">
                     <div class="absolute top-6 left-6">
                         <span id="featured-badge" class="bg-mqb-blue text-white text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-xl"></span>
                     </div>
@@ -129,10 +131,8 @@
                 </div>
             </div>
 
-            <!-- ===== BUSCADOR ===== -->
             <div id="search-section">
                 <div class="relative flex items-center">
-                    <!-- Ícono lupa -->
                     <div class="absolute left-5 pointer-events-none">
                         <i id="search-icon" class="fa-solid fa-magnifying-glass text-gray-400 text-base transition-colors duration-200"></i>
                     </div>
@@ -140,12 +140,11 @@
                     <input
                         id="search-input"
                         type="text"
-                        placeholder="Buscá en el menú... (ej: clásica, moscú, etc)"
+                       placeholder="¿Qué estás buscando?"
                         class="w-full pl-14 pr-12 py-4 rounded-2xl bg-gray-50/70 text-sm font-medium text-mqb-dark"
                         autocomplete="off"
                     />
 
-                    <!-- Botón limpiar -->
                     <button
                         id="clear-search"
                         class="absolute right-5 text-gray-300 hover:text-mqb-blue"
@@ -155,20 +154,15 @@
                         <i class="fa-solid fa-circle-xmark text-lg"></i>
                     </button>
                 </div>
-
-                <!-- Contador de resultados -->
                 <p id="search-results-count" class="mt-3 pl-1 text-xs font-black text-gray-400 uppercase tracking-widest" style="display: none;"></p>
             </div>
-            <!-- ===== FIN BUSCADOR ===== -->
 
-            <!-- Sin resultados -->
             <div id="no-results" class="hidden text-center py-16 space-y-3">
                 <div class="text-5xl">🍔</div>
                 <p class="font-impact text-3xl text-gray-300 uppercase italic tracking-wide">Sin resultados</p>
                 <p class="text-sm text-gray-400">Probá con otro término</p>
             </div>
 
-            <!-- Grid de productos -->
             <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
         </section>
@@ -195,24 +189,29 @@
             </div>
         </div>
        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 text-center">
-    
-    <p class="text-[10px] text-gray-300 font-black uppercase tracking-[0.5em]">
-        Diseñado y desarrollado por 
-        <a href="https://hostara.vercel.app" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="hover:text-yellow-400 transition-colors duration-300">
-           Hostara
-        </a>
-    </p>
-
-    <p class="text-[10px] text-gray-300 font-black uppercase tracking-[0.5em] mt-3">
-        Mas que Burger's 2026 - Todos los derechos reservados.
-    </p>
-
-</div>
-
+            <p class="text-[10px] text-gray-300 font-black uppercase tracking-[0.5em]">
+                Diseñado y desarrollado por 
+                <a href="https://hostara.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="hover:text-yellow-400 transition-colors duration-300">
+                Hostara
+                </a>
+            </p>
+            <p class="text-[10px] text-gray-300 font-black uppercase tracking-[0.5em] mt-3">
+                Mas que Burger's 2026 - Todos los derechos reservados.
+            </p>
+        </div>
     </footer>
+
+    <div id="image-modal" class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4 transition-all duration-300 opacity-0" onclick="closeModal()">
+        <div class="relative w-full max-w-4xl transform transition-transform duration-300 scale-95" id="modal-container">
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white/80 hover:text-white transition-colors p-2">
+                <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+            <img id="modal-img" src="" class="w-full h-auto max-h-[85vh] object-contain rounded-2xl shadow-2xl bg-transparent" onclick="event.stopPropagation()">
+        </div>
+    </div>
 
     <script src="app.js"></script>
 
@@ -236,7 +235,6 @@
             return Array.from(productsGrid.querySelectorAll('[data-name]'));
         }
 
-        // Elimina highlights previos del grid
         function clearHighlights() {
             productsGrid.querySelectorAll('mark').forEach(mark => {
                 mark.replaceWith(document.createTextNode(mark.textContent));
@@ -244,7 +242,6 @@
             productsGrid.normalize();
         }
 
-        // Recorre los nodos de texto de un elemento y resalta coincidencias
         function highlightNode(el, query) {
             if (!el || !query) return;
             const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
@@ -296,10 +293,8 @@
                 }
             });
 
-            // Sin resultados
             noResults.classList.toggle('hidden', visible > 0 || !norm);
 
-            // Contador
             if (norm) {
                 resultsCount.style.display = 'block';
                 resultsCount.textContent   = visible === 0
@@ -310,7 +305,6 @@
             }
         }
 
-        // ── Eventos ──
         searchInput.addEventListener('input', function () {
             const val = this.value;
             clearBtn.style.display = val.length ? 'flex' : 'none';
@@ -326,7 +320,6 @@
             searchInput.focus();
         });
 
-        // Re-aplica filtro si app.js re-renderiza el grid mientras hay texto
         const observer = new MutationObserver(() => {
             if (searchInput.value.trim()) filterProducts(searchInput.value);
         });
