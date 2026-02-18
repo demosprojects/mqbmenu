@@ -93,7 +93,7 @@ const renderMenu = (categoria) => {
                 </div>
                 <p data-card-desc class="text-sm text-gray-700 font-medium leading-snug">${producto.descripcion}</p>
                 <div class="pt-2 border-t border-gray-50 flex justify-between items-center">
-                    <span class="text-[10px] font-black uppercase text-gray-300 tracking-widest italic">Mas que Burger's</span>
+                    <span class="text-[10px] font-black uppercase text-gray-300 tracking-widest italic">Mas que Burgers</span>
                     <i class="fa-solid fa-burger text-gray-100 text-xl"></i>
                 </div>
             </div>
