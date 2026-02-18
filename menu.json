@@ -4,15 +4,15 @@
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon.",
     "precio": 8500,
     "categoria": "Burgers",
-    "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/1c2d9fb0-7f7f-433e-7fd1-11e0fb3fc400/public",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
 },
 {
     "nombre": "American doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon.",
-    "precio": 10000,
+    "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/1c2d9fb0-7f7f-433e-7fd1-11e0fb3fc400/public",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
 },
 {
@@ -20,7 +20,7 @@
     "descripcion": "Pan, mayonesa, pepino, carne, cheddar, cebolla morada.",
     "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771214476/eigvpd54d8jijs2xpbaz.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false
 },
 {
@@ -28,31 +28,22 @@
     "descripcion": "Pan, mayonesa, pepino, doble carne, doble cheddar, cebolla morada.",
     "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771214476/eigvpd54d8jijs2xpbaz.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false
 },
-{
-    "nombre": "Blue simple",
-    "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, roquefort",
-    "precio": 8500,
-    "categoria": "Burgers",
-    "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/5be532ed-410b-40f7-f068-ce6780e8c600/public",
-    "destacado": false
-},
-{
-    "nombre": "Blue doble",
-    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, roquefort",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/5be532ed-410b-40f7-f068-ce6780e8c600/public",
-    "destacado": false
-},
+
+
+
+
+
+
+
 {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
     "precio": 7500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771213252/jk9jvez4efywhijtc12l.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
 },
 {
@@ -60,7 +51,7 @@
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
     "precio": 8500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771213252/jk9jvez4efywhijtc12l.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
 },
 {
@@ -68,7 +59,7 @@
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
     "precio": 8300,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771214211/oenpayqpnveu4lwifzhv.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
 },
 {
@@ -76,15 +67,23 @@
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
     "precio": 9300,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771214211/oenpayqpnveu4lwifzhv.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
 },
 {
-    "nombre": "Cryspi",
+    "nombre": "Cryspi simple",
     "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi",
-    "precio": 9300,
+    "precio": 30,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771213397/nr1mqwriu1vq5nqnver0.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
+    "destacado": false
+},
+{
+    "nombre": "Cryspi doble",
+    "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
+    "precio": 30,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
 },
 {
@@ -92,7 +91,7 @@
     "descripcion": "Pan, mayonesa, lechuga, tomate, papa rosty, carne, cheddar, huevo",
     "precio": 9300,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771215520/yd7q9inrpzohukbiqe0g.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false
 },
 {
@@ -100,7 +99,7 @@
     "descripcion": "Pan, mayonesa, lechuga, tomate, papa rosty, doble carne, doble cheddar, huevo",
     "precio": 9300,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771215520/yd7q9inrpzohukbiqe0g.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false
 },
 {
@@ -108,7 +107,7 @@
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
     "precio": 10000,
     "categoria": "Burgers",
-    "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/3c3027e9-9471-4896-4ef6-a1a3b5a09400/public",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false
 },
 {
@@ -116,14 +115,14 @@
     "descripcion": "Pan, mayonesa, triple carne, doble cheddar, bacon.",
     "precio": 10700,
     "categoria": "Burgers",
-    "imagen": "https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/820a267b-a94f-4e6c-7545-e9d3d47a4f00/public",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false
 },
 
 
 
     {
-        "nombre": "Picada Mas que Burger´s",
+        "nombre": "Picada Mas que Burgers",
         "descripcion": "Pollo frito, papas, dos pinchos de salchicha, bombas de papas rellenas, dos mini burgers, dos toping (cheddar, mayonesa)",
         "precio": 30,
         "categoria": "Para compartir",
@@ -192,18 +191,633 @@
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212986/d2gmrqr4cqazexuptw51.webp",
         "destacado": false
     },
+
+
     
-    
+       {
+        "nombre": "Cajita infantil",
+        "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo). ",
+        "precio": 30,
+        "categoria": "Kids",
+        "imagen": " ",
+        "destacado": false
+    },
+      {
+        "nombre": "Pinchos de salchica",
+        "descripcion": "Dos pinchos de salchica más papas",
+        "precio": 30,
+        "categoria": "Kids",
+        "imagen": " ",
+        "destacado": false
+    },
+      {
+        "nombre": "Burger con papas y lata de Coca Cola",
+        "descripcion": "Burger, sobre de papas y lata de Coca Cola",
+        "precio": 30,
+        "categoria": "Kids",
+        "imagen": " ",
+        "destacado": false
+    },
    
 
 
+
+  {
+        "nombre": "Fernet de 50ml con hielo",
+        "descripcion": "Se compra por separado la Coca Cola o Pepsi",
+        "precio": 30,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771269748/agddqiirlk7rnhgxpya6.webp",
+        "destacado": false
+        
+    },
     {
-        "nombre": "Cerveza Patagonia 730ml",
-        "descripcion": "Variedades: Amber Lager, Bohemian Pilsener o Weisse. Bien helada.",
+        "nombre": "Amstel 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2500,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771267519/b3mzfczwn3ajlwh6tnoa.webp",
+        "destacado": false
+        
+    },
+      {
+        "nombre": "Andes rubia 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2500,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771267740/c8xwcamfscxpf7slkkn2.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Brahma 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2000,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268354/dle0ar8j7lvlcchirvfj.webp",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Budweiser 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 1500,
+        "categoria": "Con alcohol",
+        "imagen": "https://samsclub.vtexassets.com/arquivos/ids/175910-800-450?v=638011136892400000&width=800&height=450&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Heineken 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 4000,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270104/x3vxu6zmq04spth5avfy.webp",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Hop house lager 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 3000,
+        "categoria": "Con alcohol",
+        "imagen": "https://carrefourar.vtexassets.com/arquivos/ids/682611-800-450?v=638884402624270000&width=800&height=450&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Imperial golden long neck 330cc",
+        "descripcion": "Cerveza de vidrio de 330cc",
+        "precio": 2200,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270249/gaul9msmtmrqxunqwomd.webp",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Miller 600cc",
+        "descripcion": "Cerveza de vidrio de 600cc",
+        "precio": 4300,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270351/b7rrocke2h1elue46o5e.webp",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Stella Artois 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 3000,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270597/sadxzpiywaftlvun4i5m.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Amstel 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 3900,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+ {
+        "nombre": "Brahma dorada 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 1500,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Brahma 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 3300,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Corona 710cc",
+        "descripcion": "Cerveza de vidrio de 710cc",
+        "precio": 5400,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Imperial golden 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2500,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+ {
+        "nombre": "Imperial golden 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 4300,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Heineken 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
         "precio": 4500,
-        "categoria": "Cervezas",
-        "imagen": "https://images.unsplash.com/photo-1567696911980-2eed69a46042?auto=format&fit=crop&q=80&w=400",
-        "destacado": true,
-        "etiqueta": "2x1 Happy Hour 🍺"
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Heineken de vidrio 330cc",
+        "descripcion": "Cerveza de vidrio de 330cc",
+        "precio": 3900,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Miller 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 5000,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Miller 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2700,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Pampa dorada 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2000,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Patagonia amber 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 3000,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Patagonia amber lager 730cc",
+        "descripcion": "Cerveza de vidrio de 730cc",
+        "precio": 4500,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Quilmes 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 3200,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "1890 473cc ",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 1300,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Quilmes clásica 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2000,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+      {
+        "nombre": "Quilmes stout 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2000,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+      {
+        "nombre": "Schneider 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2300,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Schneider 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 3600,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Santa Fé pilsen 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2000,
+        "categoria": "Con alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+   {
+        "nombre": "Levite 1,5L",
+        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
+        "precio": 2800,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270745/kdfg7v1iqwypubcwnasl.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Levite 2,5L",
+        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
+        "precio": 3000,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270847/f9hdlc8djkpstjdp0scd.webp",
+        "destacado": false
+        
+    },
+
+      {
+        "nombre": "Cepita durazno 1,5cc",
+        "descripcion": "Cepita sabor durazno",
+        "precio": 3800,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270969/coylziwnodpqoqksk6jr.webp",
+        "destacado": false
+        
+    },
+   {
+        "nombre": "Cepita durazno 300cc",
+        "descripcion": "Cepita sabor durazno",
+        "precio": 1400,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271069/xofgahpotqr9dkbs3dpv.webp",
+        "destacado": false
+        
+    },
+       {
+        "nombre": "Coca Cola 375 Pet",
+        "descripcion": "Coca Cola Pet ",
+        "precio": 1400,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271175/za51bnfezvgdy55fgnlf.webp",
+        "destacado": false
+        
+    },
+
+      {
+        "nombre": "Paso de los toros",
+        "descripcion": "Pomelo ",
+        "precio": 3700,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271298/f2pr10e8seckiirqqa55.webp",
+        "destacado": false
+        
+    },
+      {
+        "nombre": "Pepsi 1,5L",
+        "descripcion": "Pepsi de 1,5L ",
+        "precio": 4000,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271424/arkmqkecqcxcj7zmuqkm.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "7UP 1,5L",
+        "descripcion": "7UP de 1,5L ",
+        "precio": 3500,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "7UP 500cc",
+        "descripcion": "7UP de 500cc",
+        "precio": 1600,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Coca Cola lata mini 250ml",
+        "descripcion": "Coca Cola de 250ml",
+        "precio": 1200,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Coca Cola 1,5L",
+        "descripcion": "Coca Cola de 1,5L ",
+        "precio": 4000,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Coca Cola de vidrio 1,5L",
+        "descripcion": "Coca Cola de vidrio",
+        "precio": 3300,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Coca Cola de vidrio 1L",
+        "descripcion": "Coca Cola de vidrio",
+        "precio": 2600,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+{
+        "nombre": "Coca Cola 2,25L",
+        "descripcion": "Coca Cola de 2,25L ",
+        "precio": 4700,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Coca Cola lata",
+        "descripcion": "Coca Cola en lata ",
+        "precio": 1700,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Fanta de vidrio 1L",
+        "descripcion": "Fanta de vidrio",
+        "precio": 2600,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Fanta 1,5L",
+        "descripcion": "Fanta de 1,5L",
+        "precio": 2800,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Fanta retornable 2L",
+        "descripcion": "Fanta retornable de 2L",
+        "precio": 3000,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Mirinda 1,5L",
+        "descripcion": "Mirinda de 1,5L",
+        "precio": 3500,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Pepsi 500cc",
+        "descripcion": "Pepsi de 500cc",
+        "precio": 1700,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Pepsi lata de 354cc",
+        "descripcion": "Pepsi de 354cc",
+        "precio": 1700,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+      {
+        "nombre": "Fanta 1,5L",
+        "descripcion": "Fanta de 1,5L",
+        "precio": 2800,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+ {
+        "nombre": "Sprite de vidrio 1L",
+        "descripcion": "Sprite de vidrio 1L",
+        "precio": 2300,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Sprite lata de 354cc",
+        "descripcion": "Sprite de 354cc",
+        "precio": 1700,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Sprite retorbable 2L",
+        "descripcion": "Sprite retornable",
+        "precio": 3000,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Coca Cola 350cc de vidrio",
+        "descripcion": "Coca Cola de 350cc",
+        "precio": 1000,
+        "categoria": "Sin alcohol",
+        "imagen": " ",
+        "destacado": false
+        
+    },
+       {
+        "nombre": "Aquarius 1,5L",
+        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
+        "precio": 2700,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268012/m12eivsdr9wrytaf1yw4.webp",
+        "destacado": false
+        
+    },
+  {
+        "nombre": "Aquarius 2,5L",
+        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
+        "precio": 3300,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268180/zsczdbr8wddfqr1i3vpp.webp",
+        "destacado": false
+        
+    },
+      {
+        "nombre": "Monster",
+        "descripcion": "Monster, sabores disponibles:  ",
+        "precio": 3000,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271523/meutgnv9rqbujqcruwqp.webp",
+        "destacado": false
+        
+    },
+{
+        "nombre": "Red Bull 250cc",
+        "descripcion": "Bebida energetica ",
+        "precio": 3300,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271621/kuuhiotfv5ieheoo7loy.webp",
+        "destacado": false
+        
+    },
+
+
+    {
+        "nombre": "Bacon",
+        "descripcion": "Agregar más bacon",
+        "precio": 1900,
+        "categoria": "Agregados",
+        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Cheddar",
+        "descripcion": "Agregar más cheddar en: burger, papas o en toping",
+        "precio": 1700,
+        "categoria": "Agregados",
+        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Extra de carne",
+        "descripcion": "Agregar más carne",
+        "precio": 2100,
+        "categoria": "Agregados",
+        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Huevo",
+        "descripcion": "Agregar más huevo",
+        "precio": 550,
+        "categoria": "Agregados",
+        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Ketchup",
+        "descripcion": "Agregar más ketchup",
+        "precio": 400,
+        "categoria": "Agregados",
+        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "destacado": false
+        
+    },
+     {
+        "nombre": "Mayonesa de la casa",
+        "descripcion": "Agregar más mayonesa",
+        "precio": 550,
+        "categoria": "Agregados",
+        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "destacado": false
+        
     }
 ]
