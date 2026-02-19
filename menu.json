@@ -215,7 +215,7 @@
       {
         "nombre": "Mix de pollo y papas",
         "descripcion": "Papas, pollo, tres aderezos, verdeo",
-        "precio": 8200,
+        "precio": 10500,
         "categoria": "Papas",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212986/d2gmrqr4cqazexuptw51.webp",
         "destacado": false
