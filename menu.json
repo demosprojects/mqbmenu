@@ -666,55 +666,55 @@
 
     {
         "nombre": "Bacon",
-        "descripcion": "Agregar más bacon",
+        "descripcion": "Agregar más bacon. Imagen ilustrativa.",
         "precio": 1900,
         "categoria": "Agregados",
-        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522340/pvg2u83lx6djromaqqvp.webp",
         "destacado": false
         
     },
      {
         "nombre": "Cheddar",
-        "descripcion": "Agregar más cheddar en: burger, papas o en toping",
+        "descripcion": "Agregar más cheddar en: burger, papas o en toping. Imagen ilustrativa.",
         "precio": 1700,
         "categoria": "Agregados",
-        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522911/pmfctbur1zyfgb3avlww.webp",
         "destacado": false
         
     },
      {
         "nombre": "Extra de carne",
-        "descripcion": "Agregar más carne",
+        "descripcion": "Agregar más carne. Imagen ilustrativa.",
         "precio": 2100,
         "categoria": "Agregados",
-        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522828/vsamxbvoolr81ojuvtk3.webp",
         "destacado": false
         
     },
      {
         "nombre": "Huevo",
-        "descripcion": "Agregar más huevo",
+        "descripcion": "Agregar más huevo. Imagen ilustrativa.",
         "precio": 550,
         "categoria": "Agregados",
-        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771523015/snm3z9togb4tuyn4iohf.webp",
         "destacado": false
         
     },
      {
         "nombre": "Ketchup",
-        "descripcion": "Agregar más ketchup",
+        "descripcion": "Agregar más ketchup. Imagen ilustrativa.",
         "precio": 400,
         "categoria": "Agregados",
-        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522598/ffpfg4q5sjbyksuvwees.webp",
         "destacado": false
         
     },
      {
         "nombre": "Mayonesa de la casa",
-        "descripcion": "Agregar más mayonesa",
+        "descripcion": "Agregar más mayonesa. Imagen ilustrativa.",
         "precio": 550,
         "categoria": "Agregados",
-        "imagen": "https://masonlineprod.vtexassets.com/arquivos/ids/298994-1200-auto?v=638660035390130000&width=300&height=auto&aspect=true",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771523113/wuve0vwhfpinnef0guud.webp",
         "destacado": false
         
     }
