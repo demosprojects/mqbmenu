@@ -236,8 +236,8 @@
         "destacado": false
     },
       {
-        "nombre": "Pinchos de salchica",
-        "descripcion": "Dos pinchos de salchica rebozados más papas",
+        "nombre": "Pinchos de salchicha",
+        "descripcion": "Dos pinchos de salchicha rebozados más papas",
         "precio": 7500,
         "categoria": "Kids",
         "imagen": " ",
@@ -723,3 +723,4 @@
         
     }
 ]
+
