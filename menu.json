@@ -18,7 +18,7 @@
 {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino, carne, cheddar, cebolla morada.",
-    "precio": 9500,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false
@@ -54,6 +54,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
 },
+
 {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
@@ -70,6 +71,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
 },
+
 {
     "nombre": "Cryspi simple",
     "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi",
@@ -86,10 +88,11 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
 },
+
 {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, papa rosty, carne, cheddar, huevo",
-    "precio": 9300,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false
@@ -97,11 +100,12 @@
 {
     "nombre": "Moscú doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, papa rosty, doble carne, doble cheddar, huevo",
-    "precio": 9300,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false
 },
+
 {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
