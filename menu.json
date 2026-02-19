@@ -236,8 +236,8 @@
         "destacado": false
     },
       {
-        "nombre": "Pinchos de salchicha",
-        "descripcion": "Dos pinchos de salchicha rebozados más papas",
+        "nombre": "Pinchos de salchica",
+        "descripcion": "Dos pinchos de salchica rebozados más papas",
         "precio": 7500,
         "categoria": "Kids",
         "imagen": " ",
@@ -253,9 +253,7 @@
     },
    
 
-
-
-  {
+   {
         "nombre": "Fernet de 50ml con hielo",
         "descripcion": "Se compra por separado la Coca Cola.",
         "precio": 30,
@@ -264,7 +262,9 @@
         "destacado": false
         
     },
-    {
+
+
+  {
         "nombre": "Amstel 473cc",
         "descripcion": "Cerveza en lata de 473cc",
         "precio": 2500,
@@ -273,54 +273,6 @@
         "destacado": false
         
     },
-   
-    {
-        "nombre": "Brahma 473cc",
-        "descripcion": "Cerveza en lata de 473cc",
-        "precio": 2000,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268354/dle0ar8j7lvlcchirvfj.webp",
-        "destacado": false
-        
-    },
-  
-     {
-        "nombre": "Heineken 473cc",
-        "descripcion": "Cerveza en lata de 473cc",
-        "precio": 4000,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270104/x3vxu6zmq04spth5avfy.webp",
-        "destacado": false
-        
-    },
-     {
-        "nombre": "Hop house lager 473cc",
-        "descripcion": "Cerveza en lata de 473cc",
-        "precio": 3000,
-        "categoria": "Con alcohol",
-        "imagen": "https://carrefourar.vtexassets.com/arquivos/ids/682611-800-450?v=638884402624270000&width=800&height=450&aspect=true",
-        "destacado": false
-        
-    },
-     {
-        "nombre": "Imperial golden long neck 330cc",
-        "descripcion": "Cerveza de vidrio de 330cc",
-        "precio": 2200,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270249/gaul9msmtmrqxunqwomd.webp",
-        "destacado": false
-        
-    },
-     {
-        "nombre": "Miller 600cc",
-        "descripcion": "Cerveza de vidrio de 600cc",
-        "precio": 4300,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270351/b7rrocke2h1elue46o5e.webp",
-        "destacado": false
-        
-    },
-    
     {
         "nombre": "Amstel 710cc",
         "descripcion": "Cerveza en lata de 710cc",
@@ -330,16 +282,16 @@
         "destacado": false
         
     },
- {
-        "nombre": "Brahma dorada 473cc",
+    {
+        "nombre": "Brahma 473cc",
         "descripcion": "Cerveza en lata de 473cc",
-        "precio": 1500,
+        "precio": 2000,
         "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480712/ix7a8hzagip2cliutzp7.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268354/dle0ar8j7lvlcchirvfj.webp",
         "destacado": false
         
     },
-     {
+    {
         "nombre": "Brahma 710cc",
         "descripcion": "Cerveza en lata de 710cc",
         "precio": 3300,
@@ -348,7 +300,25 @@
         "destacado": false
         
     },
-     {
+    {
+        "nombre": "Brahma dorada 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 1500,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480712/ix7a8hzagip2cliutzp7.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Corona 330cc",
+        "descripcion": "Cerveza de vidrio de 330cc",
+        "precio": 3200,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481010/m88ldchvzabohmdqefso.webp",
+        "destacado": false
+        
+    },
+    {
         "nombre": "Corona 710cc",
         "descripcion": "Cerveza de vidrio de 710cc",
         "precio": 5400,
@@ -357,36 +327,17 @@
         "destacado": false
         
     },
-     {
-        "nombre": "Corona 330cc",
-        "descripcion": "Cerveza de vidrio de 330cc",
-        "precio": 5400,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481010/m88ldchvzabohmdqefso.webp",
-        "destacado": false
-        
-    },
-    
-
-     {
-        "nombre": "Imperial golden 473cc",
+ 
+    {
+        "nombre": "Heineken 473cc",
         "descripcion": "Cerveza en lata de 473cc",
-        "precio": 2500,
+        "precio": 4000,
         "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481102/ded1skf8ijs4brra6exb.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270104/x3vxu6zmq04spth5avfy.webp",
         "destacado": false
         
     },
- {
-        "nombre": "Imperial golden 710cc",
-        "descripcion": "Cerveza en lata de 710cc",
-        "precio": 4300,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481174/ysrxqr0kb6ldqro5q2cj.webp",
-        "destacado": false
-        
-    },
-     {
+    {
         "nombre": "Heineken 710cc",
         "descripcion": "Cerveza en lata de 710cc",
         "precio": 4500,
@@ -395,7 +346,7 @@
         "destacado": false
         
     },
-     {
+    {
         "nombre": "Heineken de vidrio 330cc",
         "descripcion": "Cerveza de vidrio de 330cc",
         "precio": 3900,
@@ -404,16 +355,43 @@
         "destacado": false
         
     },
-     {
-        "nombre": "Miller 710cc",
-        "descripcion": "Cerveza en lata de 710cc",
-        "precio": 5000,
+    {
+        "nombre": "Hop house lager 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 3000,
         "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481578/cryr77hifcabmjpzrge3.webp",
+        "imagen": "https://carrefourar.vtexassets.com/arquivos/ids/682611-800-450?v=638884402624270000&width=800&height=450&aspect=true",
         "destacado": false
         
     },
-     {
+    {
+        "nombre": "Imperial golden 473cc",
+        "descripcion": "Cerveza en lata de 473cc",
+        "precio": 2500,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481102/ded1skf8ijs4brra6exb.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Imperial golden 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 4300,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481174/ysrxqr0kb6ldqro5q2cj.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Imperial golden 330cc",
+        "descripcion": "Cerveza de vidrio de 330cc",
+        "precio": 2200,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270249/gaul9msmtmrqxunqwomd.webp",
+        "destacado": false
+        
+    },
+    {
         "nombre": "Miller 473cc",
         "descripcion": "Cerveza en lata de 473cc",
         "precio": 2700,
@@ -422,7 +400,25 @@
         "destacado": false
         
     },
-     {
+    {
+        "nombre": "Miller 600cc",
+        "descripcion": "Cerveza de vidrio de 600cc",
+        "precio": 4300,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270351/b7rrocke2h1elue46o5e.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Miller 710cc",
+        "descripcion": "Cerveza en lata de 710cc",
+        "precio": 5000,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481578/cryr77hifcabmjpzrge3.webp",
+        "destacado": false
+        
+    },
+    {
         "nombre": "Pampa dorada 473cc",
         "descripcion": "Cerveza en lata de 473cc",
         "precio": 2000,
@@ -431,9 +427,8 @@
         "destacado": false
         
     },
-    
-
-      {
+  
+    {
         "nombre": "Schneider 473cc",
         "descripcion": "Cerveza en lata de 473cc",
         "precio": 2300,
@@ -442,7 +437,7 @@
         "destacado": false
         
     },
-     {
+    {
         "nombre": "Schneider 710cc",
         "descripcion": "Cerveza en lata de 710cc",
         "precio": 3600,
@@ -451,35 +446,26 @@
         "destacado": false
         
     },
-     {
-        "nombre": "Santa Fé pilsen 473cc",
-        "descripcion": "Cerveza en lata de 473cc",
-        "precio": 2000,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482324/rhn02nwsjcs22hsriuez.webp",
-        "destacado": false
-        
-    },
-   {
-        "nombre": "Levite 1,5L",
+
+{
+        "nombre": "Aquarius 2,5L",
         "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
-        "precio": 2800,
+        "precio": 3300,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270745/kdfg7v1iqwypubcwnasl.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268180/zsczdbr8wddfqr1i3vpp.webp",
         "destacado": false
         
     },
     {
-        "nombre": "Levite 2,5L",
+        "nombre": "Aquarius 1,5L",
         "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
-        "precio": 3000,
+        "precio": 2700,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270847/f9hdlc8djkpstjdp0scd.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268012/m12eivsdr9wrytaf1yw4.webp",
         "destacado": false
         
     },
-
-      {
+    {
         "nombre": "Cepita durazno 1,5cc",
         "descripcion": "Cepita sabor durazno",
         "precio": 3800,
@@ -488,7 +474,7 @@
         "destacado": false
         
     },
-   {
+    {
         "nombre": "Cepita durazno 300cc",
         "descripcion": "Cepita sabor durazno",
         "precio": 1400,
@@ -497,29 +483,16 @@
         "destacado": false
         
     },
-       {
-        "nombre": "Coca Cola 375 Pet",
-        "descripcion": "Coca Cola Pet ",
-        "precio": 1400,
+    {
+        "nombre": "Coca Cola 2,25L",
+        "descripcion": "Coca Cola de 2,25L ",
+        "precio": 4700,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271175/za51bnfezvgdy55fgnlf.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483087/qb6upfl4w9zbkgq5twef.webp",
         "destacado": false
         
     },
-
-     
-   
-   
-     {
-        "nombre": "Coca Cola lata mini 250ml",
-        "descripcion": "Coca Cola de 250ml",
-        "precio": 1200,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482597/ap61exopzarp0vfrbjs7.webp",
-        "destacado": false
-        
-    },
-     {
+    {
         "nombre": "Coca Cola 1,5L",
         "descripcion": "Coca Cola de 1,5L ",
         "precio": 4000,
@@ -528,7 +501,7 @@
         "destacado": false
         
     },
-     {
+    {
         "nombre": "Coca Cola de vidrio 1,5L",
         "descripcion": "Coca Cola de vidrio",
         "precio": 3300,
@@ -537,7 +510,7 @@
         "destacado": false
         
     },
-     {
+    {
         "nombre": "Coca Cola de vidrio 1L",
         "descripcion": "Coca Cola de vidrio",
         "precio": 2600,
@@ -546,12 +519,21 @@
         "destacado": false
         
     },
-{
-        "nombre": "Coca Cola 2,25L",
-        "descripcion": "Coca Cola de 2,25L ",
-        "precio": 4700,
+    {
+        "nombre": "Coca Cola 375 Pet",
+        "descripcion": "Coca Cola Pet ",
+        "precio": 1400,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483087/qb6upfl4w9zbkgq5twef.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271175/za51bnfezvgdy55fgnlf.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Coca Cola 350cc de vidrio",
+        "descripcion": "Coca Cola de 350cc",
+        "precio": 1000,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771484093/gupn1p8lpzqpwu0mvizh.webp",
         "destacado": false
         
     },
@@ -565,24 +547,15 @@
         
     },
     {
-        "nombre": "Fanta de vidrio 1L",
-        "descripcion": "Fanta de vidrio",
-        "precio": 2600,
+        "nombre": "Coca Cola lata mini 250ml",
+        "descripcion": "Coca Cola de 250ml",
+        "precio": 1200,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483420/tgwn7vv5cgirhpbq64sf.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482597/ap61exopzarp0vfrbjs7.webp",
         "destacado": false
         
     },
-     {
-        "nombre": "Fanta 1,5L",
-        "descripcion": "Fanta de 1,5L",
-        "precio": 2800,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483550/fscwuc82do5op74uzuvb.webp",
-        "destacado": false
-        
-    },
-     {
+    {
         "nombre": "Fanta retornable 2L",
         "descripcion": "Fanta retornable de 2L",
         "precio": 3000,
@@ -591,64 +564,43 @@
         "destacado": false
         
     },
-   
-    
- {
-        "nombre": "Sprite de vidrio 1L",
-        "descripcion": "Sprite de vidrio 1L",
-        "precio": 2300,
+    {
+        "nombre": "Fanta 1,5L",
+        "descripcion": "Fanta de 1,5L",
+        "precio": 2800,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483823/xknsfswibpbic9zl3ipr.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483550/fscwuc82do5op74uzuvb.webp",
         "destacado": false
         
     },
-     {
-        "nombre": "Sprite lata de 354cc",
-        "descripcion": "Sprite de 354cc",
-        "precio": 1700,
+    {
+        "nombre": "Fanta de vidrio 1L",
+        "descripcion": "Fanta de vidrio",
+        "precio": 2600,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483906/unjjna3wmjjd28exwcdi.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483420/tgwn7vv5cgirhpbq64sf.webp",
         "destacado": false
         
     },
-     {
-        "nombre": "Sprite retorbable 2L",
-        "descripcion": "Sprite retornable",
+    {
+        "nombre": "Levite 2,5L",
+        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
         "precio": 3000,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483994/f2x9yn0kbxgv0vgqlm8p.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270847/f9hdlc8djkpstjdp0scd.webp",
         "destacado": false
         
     },
-     {
-        "nombre": "Coca Cola 350cc de vidrio",
-        "descripcion": "Coca Cola de 350cc",
-        "precio": 1000,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771484093/gupn1p8lpzqpwu0mvizh.webp",
-        "destacado": false
-        
-    },
-
-       {
-        "nombre": "Aquarius 1,5L",
+    {
+        "nombre": "Levite 1,5L",
         "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
-        "precio": 2700,
+        "precio": 2800,
         "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268012/m12eivsdr9wrytaf1yw4.webp",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270745/kdfg7v1iqwypubcwnasl.webp",
         "destacado": false
         
     },
-  {
-        "nombre": "Aquarius 2,5L",
-        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
-        "precio": 3300,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268180/zsczdbr8wddfqr1i3vpp.webp",
-        "destacado": false
-        
-    },
-      {
+    {
         "nombre": "Monster",
         "descripcion": "Monster, sabores disponibles:  ",
         "precio": 3000,
@@ -657,7 +609,7 @@
         "destacado": false
         
     },
-{
+    {
         "nombre": "Red Bull 250cc",
         "descripcion": "Bebida energetica ",
         "precio": 3300,
@@ -666,6 +618,34 @@
         "destacado": false
         
     },
+    {
+        "nombre": "Sprite retorbable 2L",
+        "descripcion": "Sprite retornable",
+        "precio": 3000,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483994/f2x9yn0kbxgv0vgqlm8p.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Sprite de vidrio 1L",
+        "descripcion": "Sprite de vidrio 1L",
+        "precio": 2300,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483823/xknsfswibpbic9zl3ipr.webp",
+        "destacado": false
+        
+    },
+    {
+        "nombre": "Sprite lata de 354cc",
+        "descripcion": "Sprite de 354cc",
+        "precio": 1700,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483906/unjjna3wmjjd28exwcdi.webp",
+        "destacado": false
+        
+    },
+
 
 
     {
@@ -723,4 +703,3 @@
         
     }
 ]
-
