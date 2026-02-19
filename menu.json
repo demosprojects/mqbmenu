@@ -75,7 +75,7 @@
 {
     "nombre": "Cryspi simple",
     "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi",
-    "precio": 30,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
@@ -83,7 +83,7 @@
 {
     "nombre": "Cryspi doble",
     "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
-    "precio": 30,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
@@ -148,25 +148,25 @@
         "descripcion": "Tres piezas de pollo frito, un toping de mayonesa y papas.",
         "precio": 8000,
         "categoria": "Para compartir",
-        "imagen": " ",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540302/bn5djl0ksyctigdnvwvj.webp",
         "destacado": false
        
     },
   {
         "nombre": "Pollo frito 6 piezas",
-        "descripcion": "Seis piezas de pollo frito, un toping de mayonesa y papas.",
+        "descripcion": "Seis piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
         "precio": 16000,
         "categoria": "Para compartir",
-        "imagen": " ",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540493/tlqhk2gtaua7wix5ilys.webp",
         "destacado": false
        
     },
      {
         "nombre": "Pollo frito 12 piezas",
-        "descripcion": "Doce piezas de pollo frito, dos toping de mayonesa y papas.",
+        "descripcion": "Doce piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
         "precio": 32000,
         "categoria": "Para compartir",
-        "imagen": " ",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540616/b8cyz0kjawwptdg1i5he.webp",
         "destacado": false
        
     },
@@ -232,15 +232,15 @@
         "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo).",
         "precio": 12900,
         "categoria": "Kids",
-        "imagen": " ",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540791/t6ovevubfvt8agtdsxgj.webp",
         "destacado": false
     },
       {
-        "nombre": "Pinchos de salchica",
-        "descripcion": "Dos pinchos de salchica rebozados más papas",
+        "nombre": "Pinchos de salchicha",
+        "descripcion": "Dos pinchos de salchicha rebozados más papas",
         "precio": 7500,
         "categoria": "Kids",
-        "imagen": " ",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
         "destacado": false
     },
       {
@@ -248,7 +248,7 @@
         "descripcion": "Burger, sobre de papas y lata de Coca Cola",
         "precio": 8500,
         "categoria": "Kids",
-        "imagen": " ",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540084/kqycr6yoqpesuksfgtm7.webp",
         "destacado": false
     },
    
@@ -256,7 +256,7 @@
    {
         "nombre": "Fernet de 50ml con hielo",
         "descripcion": "Se compra por separado la Coca Cola.",
-        "precio": 30,
+        "precio": 7000,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771269748/agddqiirlk7rnhgxpya6.webp",
         "destacado": false
@@ -703,3 +703,4 @@
         
     }
 ]
+
