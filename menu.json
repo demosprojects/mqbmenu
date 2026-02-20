@@ -331,7 +331,7 @@
     {
         "nombre": "Heineken 473cc",
         "descripcion": "Cerveza en lata de 473cc",
-        "precio": 4000,
+        "precio": 4500,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270104/x3vxu6zmq04spth5avfy.webp",
         "destacado": false
@@ -340,7 +340,7 @@
     {
         "nombre": "Heineken 710cc",
         "descripcion": "Cerveza en lata de 710cc",
-        "precio": 4500,
+        "precio": 5500,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481265/vj4qq5ufht2zbfjeyrnm.webp",
         "destacado": false
@@ -355,6 +355,7 @@
         "destacado": false
         
     },
+  
     {
         "nombre": "Hop house lager 473cc",
         "descripcion": "Cerveza en lata de 473cc",
@@ -367,7 +368,7 @@
     {
         "nombre": "Imperial golden 473cc",
         "descripcion": "Cerveza en lata de 473cc",
-        "precio": 2500,
+        "precio": 3800,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481102/ded1skf8ijs4brra6exb.webp",
         "destacado": false
@@ -376,7 +377,7 @@
     {
         "nombre": "Imperial golden 710cc",
         "descripcion": "Cerveza en lata de 710cc",
-        "precio": 4300,
+        "precio": 4800,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481174/ysrxqr0kb6ldqro5q2cj.webp",
         "destacado": false
@@ -385,7 +386,7 @@
     {
         "nombre": "Imperial golden 330cc",
         "descripcion": "Cerveza de vidrio de 330cc",
-        "precio": 2200,
+        "precio": 3500,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270249/gaul9msmtmrqxunqwomd.webp",
         "destacado": false
@@ -394,7 +395,7 @@
     {
         "nombre": "Miller 473cc",
         "descripcion": "Cerveza en lata de 473cc",
-        "precio": 2700,
+        "precio": 3800,
         "categoria": "Con alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481657/elc2schyfrlniafhwwkf.webp",
         "destacado": false
@@ -483,15 +484,7 @@
         "destacado": false
         
     },
-    {
-        "nombre": "Coca Cola 2,25L",
-        "descripcion": "Coca Cola de 2,25L ",
-        "precio": 4700,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483087/qb6upfl4w9zbkgq5twef.webp",
-        "destacado": false
-        
-    },
+
     {
         "nombre": "Coca Cola 1,5L",
         "descripcion": "Coca Cola de 1,5L ",
@@ -504,7 +497,7 @@
     {
         "nombre": "Coca Cola de vidrio 1,5L",
         "descripcion": "Coca Cola de vidrio",
-        "precio": 3300,
+        "precio": 3800,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482886/hwrd5kuesxkyhhiaauia.webp",
         "destacado": false
@@ -513,7 +506,7 @@
     {
         "nombre": "Coca Cola de vidrio 1L",
         "descripcion": "Coca Cola de vidrio",
-        "precio": 2600,
+        "precio": 3300,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482988/qgea8b1z9fcxaitestrn.webp",
         "destacado": false
@@ -528,15 +521,7 @@
         "destacado": false
         
     },
-    {
-        "nombre": "Coca Cola 350cc de vidrio",
-        "descripcion": "Coca Cola de 350cc",
-        "precio": 1000,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771484093/gupn1p8lpzqpwu0mvizh.webp",
-        "destacado": false
-        
-    },
+ 
     {
         "nombre": "Coca Cola lata",
         "descripcion": "Coca Cola en lata ",
@@ -555,19 +540,11 @@
         "destacado": false
         
     },
-    {
-        "nombre": "Fanta retornable 2L",
-        "descripcion": "Fanta retornable de 2L",
-        "precio": 3000,
-        "categoria": "Sin alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483642/edarqnfc3eukhkztbrvx.webp",
-        "destacado": false
-        
-    },
+ 
     {
         "nombre": "Fanta 1,5L",
         "descripcion": "Fanta de 1,5L",
-        "precio": 2800,
+        "precio": 4000,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483550/fscwuc82do5op74uzuvb.webp",
         "destacado": false
@@ -576,7 +553,7 @@
     {
         "nombre": "Fanta de vidrio 1L",
         "descripcion": "Fanta de vidrio",
-        "precio": 2600,
+        "precio": 3300,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483420/tgwn7vv5cgirhpbq64sf.webp",
         "destacado": false
@@ -621,7 +598,7 @@
     {
         "nombre": "Sprite retorbable 2L",
         "descripcion": "Sprite retornable",
-        "precio": 3000,
+        "precio": 3300,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483994/f2x9yn0kbxgv0vgqlm8p.webp",
         "destacado": false
@@ -630,7 +607,7 @@
     {
         "nombre": "Sprite de vidrio 1L",
         "descripcion": "Sprite de vidrio 1L",
-        "precio": 2300,
+        "precio": 3300,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483823/xknsfswibpbic9zl3ipr.webp",
         "destacado": false
@@ -703,4 +680,5 @@
         
     }
 ]
+
 
