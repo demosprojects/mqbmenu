@@ -450,7 +450,7 @@
 {
         "nombre": "Agua mineral 600ml",
         "descripcion": "Agua mineral de 600ml",
-        "precio": 100,
+        "precio": 1300,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771630365/n5v88kclovxlcf0iyspx.webp",
         "destacado": false
@@ -688,6 +688,7 @@
         
     }
 ]
+
 
 
 
