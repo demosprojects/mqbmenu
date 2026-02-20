@@ -447,10 +447,18 @@
         "destacado": false
         
     },
-
+{
+        "nombre": "Agua mineral 600ml",
+        "descripcion": "Agua mineral de 600ml",
+        "precio": ,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771630365/n5v88kclovxlcf0iyspx.webp",
+        "destacado": false
+        
+    },
 {
         "nombre": "Aquarius 2,5L",
-        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
+        "descripcion": "Agua saborizada, consultar sabores.",
         "precio": 3300,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268180/zsczdbr8wddfqr1i3vpp.webp",
@@ -459,7 +467,7 @@
     },
     {
         "nombre": "Aquarius 1,5L",
-        "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
+        "descripcion": "Agua saborizada, consultar sabores.",
         "precio": 2700,
         "categoria": "Sin alcohol",
         "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268012/m12eivsdr9wrytaf1yw4.webp",
@@ -680,5 +688,6 @@
         
     }
 ]
+
 
 
