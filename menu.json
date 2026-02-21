@@ -282,51 +282,6 @@
         "destacado": false
         
     },
-    {
-        "nombre": "Brahma 473cc",
-        "descripcion": "Cerveza en lata de 473cc",
-        "precio": 2000,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268354/dle0ar8j7lvlcchirvfj.webp",
-        "destacado": false
-        
-    },
-    {
-        "nombre": "Brahma 710cc",
-        "descripcion": "Cerveza en lata de 710cc",
-        "precio": 3300,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480851/dvsm1kwd4ozs7ae3r2gy.webp",
-        "destacado": false
-        
-    },
-    {
-        "nombre": "Brahma dorada 473cc",
-        "descripcion": "Cerveza en lata de 473cc",
-        "precio": 1500,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480712/ix7a8hzagip2cliutzp7.webp",
-        "destacado": false
-        
-    },
-    {
-        "nombre": "Corona 330cc",
-        "descripcion": "Cerveza de vidrio de 330cc",
-        "precio": 3200,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481010/m88ldchvzabohmdqefso.webp",
-        "destacado": false
-        
-    },
-    {
-        "nombre": "Corona 710cc",
-        "descripcion": "Cerveza de vidrio de 710cc",
-        "precio": 5400,
-        "categoria": "Con alcohol",
-        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480936/xgp97ja430abya1gbk8v.webp",
-        "destacado": false
-        
-    },
  
     {
         "nombre": "Heineken 473cc",
@@ -688,6 +643,7 @@
         
     }
 ]
+
 
 
 
