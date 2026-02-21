@@ -310,6 +310,15 @@
         "destacado": false
         
     },
+    {
+        "nombre": "Heineken 1L",
+        "descripcion": "Cerveza de vidrio de 1L",
+        "precio": 7900,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771716045/lkacqawcrzkt3hlpnlw9.webp",
+        "destacado": false
+        
+    },
   
     {
         "nombre": "Hop house lager 473cc",
@@ -347,6 +356,15 @@
         "destacado": false
         
     },
+     {
+        "nombre": "Imperial golden 1L",
+        "descripcion": "Cerveza de vidrio de 1L",
+        "precio": 5800,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771716290/oh6gpt68b3mcm6kflwas.webp",
+        "destacado": false
+        
+    },
     {
         "nombre": "Miller 473cc",
         "descripcion": "Cerveza en lata de 473cc",
@@ -374,6 +392,16 @@
         "destacado": false
         
     },
+      {
+        "nombre": "Miller 1L",
+        "descripcion": "Cerveza de vidrio de 1L",
+        "precio": 5800,
+        "categoria": "Con alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771716164/efga2bvm6v5uctegndaq.webp",
+        "destacado": false
+        
+    },
+
     {
         "nombre": "Pampa dorada 473cc",
         "descripcion": "Cerveza en lata de 473cc",
@@ -585,8 +613,15 @@
         "destacado": false
         
     },
-
-
+     {
+        "nombre": "Sprite 370",
+        "descripcion": "Sprite de 370cc",
+        "precio": 1400,
+        "categoria": "Sin alcohol",
+        "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771716433/ynubpzmzgydhuo5gsaee.webp",
+        "destacado": false
+        
+    },
 
     {
         "nombre": "Bacon",
@@ -643,7 +678,6 @@
         
     }
 ]
-
 
 
 
