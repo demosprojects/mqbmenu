@@ -328,10 +328,14 @@
  const norm = normalize(trimmed);
  let visible = 0;
 
+ const catActiva = (typeof categoriaActiva !== 'undefined' ? categoriaActiva : '').toLowerCase();
+
  cards.forEach(card => {
  const name = normalize(card.getAttribute('data-name') || '');
  const desc = normalize(card.getAttribute('data-desc') || '');
- const matches = !norm || name.includes(norm) || desc.includes(norm);
+ const cardCat = (card.getAttribute('data-category') || '').toLowerCase();
+ const enCategoriaActiva = !catActiva || cardCat === catActiva;
+ const matches = enCategoriaActiva && (!norm || name.includes(norm) || desc.includes(norm));
 
  card.style.display = matches ? '' : 'none';
 
@@ -380,4 +384,3 @@
 
 </body>
 </html>
-
