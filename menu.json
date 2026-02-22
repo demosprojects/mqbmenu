@@ -80,14 +80,6 @@
     "destacado": false
   },
   {
-    "nombre": "Moscú doble",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
-    "destacado": false
-  },
-  {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
     "precio": 8500,
@@ -95,6 +87,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
     "destacado": false
   },
+  {
+    "nombre": "Moscú doble",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
+    "destacado": false
+  },
+  
   {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
@@ -584,3 +585,4 @@
     "destacado": false
   }
 ]
+
