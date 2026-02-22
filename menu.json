@@ -79,18 +79,19 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
   },
+  
   {
-    "nombre": "Moscú doble",
+    "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
-    "precio": 9500,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
     "destacado": false
   },
   {
-    "nombre": "Moscú simple",
+    "nombre": "Moscú doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
     "destacado": false
@@ -592,3 +593,4 @@
     "destacado": false
   }
 ]
+
