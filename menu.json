@@ -79,19 +79,18 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
   },
-  
   {
-    "nombre": "Moscú simple",
+    "nombre": "Moscú doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
     "destacado": false
   },
   {
-    "nombre": "Moscú doble",
+    "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
-    "precio": 9500,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771800685/okvoxnkm3hfayxb7ufrn.webp",
     "destacado": false
@@ -118,14 +117,6 @@
     "precio": 29900,
     "categoria": "Para compartir",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212698/q2gcsdytm9uu3akerwuf.webp",
-    "destacado": false
-  },
-  {
-    "nombre": "Picada Mas que Burgers",
-    "descripcion": "Pollo frito, papas, dos pinchos de salchicha, bombas de papas rellenas, dos mini burgers, dos toping (cheddar, mayonesa)",
-    "precio": 29900,
-    "categoria": "Para compartir",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212547/z85jnk9tdq2fhgkigehk.webp",
     "destacado": false
   },
   {
@@ -593,4 +584,3 @@
     "destacado": false
   }
 ]
-
