@@ -209,14 +209,6 @@
     "destacado": false
   },
   {
-    "nombre": "Pinchos de salchicha",
-    "descripcion": "Dos pinchos de salchicha rebozados más papas",
-    "precio": 7500,
-    "categoria": "Kids",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
-    "destacado": false
-  },
-  {
     "nombre": "Agua mineral 600ml",
     "descripcion": "Agua mineral de 600ml",
     "precio": 1300,
@@ -585,4 +577,5 @@
     "destacado": false
   }
 ]
+
 
