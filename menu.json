@@ -330,7 +330,7 @@
   },
   {
     "nombre": "Monster",
-    "descripcion": "Monster, sabores disponibles:  ",
+    "descripcion": Bebida energética, consultar sabores disponibles. ",
     "precio": 3000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271523/meutgnv9rqbujqcruwqp.webp",
@@ -338,7 +338,7 @@
   },
   {
     "nombre": "Red Bull 250cc",
-    "descripcion": "Bebida energetica ",
+    "descripcion": "Bebida energética.",
     "precio": 3300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271621/kuuhiotfv5ieheoo7loy.webp",
@@ -369,7 +369,7 @@
     "destacado": false
   },
   {
-    "nombre": "Sprite retorbable 2L",
+    "nombre": "Sprite retornable 2L",
     "descripcion": "Sprite retornable",
     "precio": 3300,
     "categoria": "Sin alcohol",
