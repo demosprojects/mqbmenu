@@ -330,7 +330,7 @@
   },
   {
     "nombre": "Monster",
-    "descripcion": Bebida energética, consultar sabores disponibles. ",
+    "descripcion": "Bebida energética, consultar sabores disponibles. ",
     "precio": 3000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271523/meutgnv9rqbujqcruwqp.webp",
