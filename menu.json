@@ -79,7 +79,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
   },
-  {
+ {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
     "precio": 8500,
@@ -89,13 +89,13 @@
   },
   {
     "nombre": "Moscú doble",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, bacon, huevo",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
     "destacado": false
   },
-  
+ 
   {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
@@ -125,7 +125,7 @@
     "descripcion": "Doce piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
     "precio": 32000,
     "categoria": "Para compartir",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540616/b8cyz0kjawwptdg1i5he.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976003/tosl2skyxt3rpuyaa1ux.webp",
     "destacado": false
   },
   {
@@ -133,7 +133,7 @@
     "descripcion": "Tres piezas de pollo frito, un toping de mayonesa y papas.",
     "precio": 8000,
     "categoria": "Para compartir",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540302/bn5djl0ksyctigdnvwvj.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976155/zt6hczmheivsgi3zfe23.webp",
     "destacado": false
   },
   {
@@ -141,7 +141,7 @@
     "descripcion": "Seis piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
     "precio": 16000,
     "categoria": "Para compartir",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540493/tlqhk2gtaua7wix5ilys.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976291/knpcoozaipyfva8s4bko.webp",
     "destacado": false
   },
   {
@@ -197,7 +197,7 @@
     "descripcion": "Burger, sobre de papas y lata de Coca Cola",
     "precio": 8500,
     "categoria": "Kids",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540084/kqycr6yoqpesuksfgtm7.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976221/o553nwdvo9vvcwchs93a.webp",
     "destacado": false
   },
   {
@@ -205,7 +205,7 @@
     "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo).",
     "precio": 12900,
     "categoria": "Kids",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771540791/t6ovevubfvt8agtdsxgj.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976064/rkl72xtqtyi1nfl94fjr.webp",
     "destacado": false
   },
   {
@@ -577,5 +577,3 @@
     "destacado": false
   }
 ]
-
-
