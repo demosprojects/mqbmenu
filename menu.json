@@ -1,13 +1,5 @@
 [
-  {
-    "nombre": "American doble",
-    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon.",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
-    "destacado": false
-  },
-  {
+   {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon.",
     "precio": 8500,
@@ -16,11 +8,11 @@
     "destacado": false
   },
   {
-    "nombre": "Berlín doble",
-    "descripcion": "Pan, mayonesa, pepino, doble carne, doble cheddar, cebolla morada.",
+    "nombre": "American doble",
+    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon.",
     "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
   },
   {
@@ -32,11 +24,11 @@
     "destacado": false
   },
   {
-    "nombre": "Cheese doble",
-    "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 8500,
+    "nombre": "Berlín doble",
+    "descripcion": "Pan, mayonesa, pepino, doble carne, doble cheddar, cebolla morada.",
+    "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false
   },
   {
@@ -48,11 +40,11 @@
     "destacado": false
   },
   {
-    "nombre": "Clasica doble",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 9300,
+    "nombre": "Cheese doble",
+    "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
+    "precio": 8500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
   },
   {
@@ -64,11 +56,11 @@
     "destacado": false
   },
   {
-    "nombre": "Cryspi doble",
-    "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
-    "precio": 9500,
+    "nombre": "Clasica doble",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
+    "precio": 9300,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
   },
   {
@@ -79,7 +71,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
   },
- {
+  {
+    "nombre": "Cryspi doble",
+    "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
+    "destacado": false
+  },
+  {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
     "precio": 8500,
@@ -95,7 +95,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
     "destacado": false
   },
- 
   {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
@@ -192,6 +191,14 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211990/lwurul1tnm1tkx3uieoz.webp",
     "destacado": false
   },
+   {
+    "nombre": "Cajita infantil",
+    "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo).",
+    "precio": 12900,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976064/rkl72xtqtyi1nfl94fjr.webp",
+    "destacado": false
+  },
   {
     "nombre": "Burger con papas y lata de Coca Cola",
     "descripcion": "Burger, sobre de papas y lata de Coca Cola",
@@ -200,14 +207,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976221/o553nwdvo9vvcwchs93a.webp",
     "destacado": false
   },
-  {
-    "nombre": "Cajita infantil",
-    "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo).",
-    "precio": 12900,
-    "categoria": "Kids",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976064/rkl72xtqtyi1nfl94fjr.webp",
-    "destacado": false
-  },
+ 
   {
     "nombre": "Agua mineral 600ml",
     "descripcion": "Agua mineral de 600ml",
@@ -577,3 +577,4 @@
     "destacado": false
   }
 ]
+
