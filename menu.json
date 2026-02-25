@@ -1,5 +1,5 @@
 [
-   {
+  {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon.",
     "precio": 8500,
@@ -65,7 +65,7 @@
   },
   {
     "nombre": "Cryspi simple",
-    "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi",
+    "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi.",
     "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
@@ -73,7 +73,7 @@
   },
   {
     "nombre": "Cryspi doble",
-    "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
+    "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi.",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
@@ -81,7 +81,7 @@
   },
   {
     "nombre": "Moscú simple",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo.",
     "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
@@ -89,7 +89,7 @@
   },
   {
     "nombre": "Moscú doble",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, bacon, huevo",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, bacon, huevo.",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
@@ -113,7 +113,7 @@
   },
   {
     "nombre": "Miniburgers",
-    "descripcion": "Miniburgers, papa y aderezos (mayonesa y ketchup)",
+    "descripcion": "Miniburgers, papa y aderezos (mayonesa y ketchup).",
     "precio": 29900,
     "categoria": "Para compartir",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212698/q2gcsdytm9uu3akerwuf.webp",
@@ -145,7 +145,7 @@
   },
   {
     "nombre": "Mix de pollo y papas",
-    "descripcion": "Papas, pollo, tres aderezos, verdeo",
+    "descripcion": "Papas, pollo, tres aderezos, verdeo.",
     "precio": 10500,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212986/d2gmrqr4cqazexuptw51.webp",
@@ -153,7 +153,7 @@
   },
   {
     "nombre": "Papas cheddar",
-    "descripcion": "Papas con cheddar",
+    "descripcion": "Papas con cheddar.",
     "precio": 8800,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211838/rkrwn61dyyjhmsddximf.webp",
@@ -161,7 +161,7 @@
   },
   {
     "nombre": "Papas cheddar y bacon",
-    "descripcion": "Papas con cheddar y bacon",
+    "descripcion": "Papas con cheddar y bacon.",
     "precio": 9500,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212093/bpudztedatx58xwzsjm3.webp",
@@ -169,7 +169,7 @@
   },
   {
     "nombre": "Papas cheddar y verdeo",
-    "descripcion": "Papas con cheddar y verdeo",
+    "descripcion": "Papas con cheddar y verdeo.",
     "precio": 9000,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771208945/b3pcue9nk9h7qsbphlxx.webp",
@@ -177,7 +177,7 @@
   },
   {
     "nombre": "Papas clásicas",
-    "descripcion": "Solo papas",
+    "descripcion": "Solo papas.",
     "precio": 7500,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211692/wuudsjftpob8bdm1jjth.webp",
@@ -185,13 +185,21 @@
   },
   {
     "nombre": "Papas completas",
-    "descripcion": "Papas con cheddar, huevo revuelto y verdeo",
+    "descripcion": "Papas con cheddar, huevo revuelto y verdeo.",
     "precio": 9500,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211990/lwurul1tnm1tkx3uieoz.webp",
     "destacado": false
   },
-   {
+  {
+    "nombre": "Burger con papas y lata de Coca Cola",
+    "descripcion": "Burger, sobre de papas y lata de Coca Cola.",
+    "precio": 8500,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976221/o553nwdvo9vvcwchs93a.webp",
+    "destacado": false
+  },
+  {
     "nombre": "Cajita infantil",
     "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo).",
     "precio": 12900,
@@ -199,15 +207,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976064/rkl72xtqtyi1nfl94fjr.webp",
     "destacado": false
   },
-  {
-    "nombre": "Burger con papas y lata de Coca Cola",
-    "descripcion": "Burger, sobre de papas y lata de Coca Cola",
-    "precio": 8500,
-    "categoria": "Kids",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976221/o553nwdvo9vvcwchs93a.webp",
-    "destacado": false
-  },
- 
   {
     "nombre": "Agua mineral 600ml",
     "descripcion": "Agua mineral de 600ml",
@@ -577,4 +576,3 @@
     "destacado": false
   }
 ]
-
