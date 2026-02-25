@@ -201,7 +201,7 @@
   },
   {
     "nombre": "Cajita infantil",
-    "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar las burgers por tiritas de pollo).",
+    "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar la burger por tiritas de pollo).",
     "precio": 12900,
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976064/rkl72xtqtyi1nfl94fjr.webp",
@@ -313,7 +313,7 @@
   },
   {
     "nombre": "Levite 1,5L",
-    "descripcion": "Agua saborizada, consultar sabores disponibles.",
+    "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
     "precio": 2800,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270745/kdfg7v1iqwypubcwnasl.webp",
@@ -321,7 +321,7 @@
   },
   {
     "nombre": "Levite 2,5L",
-    "descripcion": "Agua saborizada, consultar sabores disponibles.",
+    "descripcion": "Agua saborizada, sabores disponibles: Naranja, pera, etc",
     "precio": 3000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270847/f9hdlc8djkpstjdp0scd.webp",
