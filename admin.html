@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | Más que Burgers</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0e0d;
+    --surface: #1a1917;
+    --surface2: #242220;
+    --border: #2e2c29;
+    --accent: #e85d2f;
+    --accent2: #f0a500;
+    --text: #f0ede8;
+    --muted: #7a7570;
+    --danger: #c0392b;
+    --success: #27ae60;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.05em; color: var(--accent); }
+  .logo span { color: var(--text); }
+  .header-actions { display: flex; gap: 0.75rem; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:active { opacity: 0.7; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); padding: 0.35rem 0.75rem; font-size: 0.8rem; }
+  .btn-danger:hover { background: var(--danger); color: #fff; opacity: 1; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.04em; margin-bottom: 0.25rem; }
+  .page-subtitle { color: var(--muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
+
+  /* --- Estilos del buscador --- */
+  .search-bar {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 0.6rem 1rem; border-radius: 8px;
+    margin-bottom: 1.5rem; transition: border-color 0.2s ease;
+  }
+  .search-bar:focus-within { border-color: var(--accent); }
+  .search-bar svg { color: var(--muted); flex-shrink: 0; transition: color 0.2s ease; }
+  .search-bar:focus-within svg { color: var(--accent); }
+  .search-bar input {
+    flex: 1; background: transparent; border: none; outline: none;
+    color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+  }
+  .search-bar input::placeholder { color: var(--muted); }
+
+  .stats { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+  .stat-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.8rem; color: var(--muted); }
+  .stat-pill strong { color: var(--text); font-size: 1rem; display: block; line-height: 1.2; }
+
+  #productos-container { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .prod-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+
+  .prod-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .prod-thumb {
+    width: 40px; height: 40px;
+    border-radius: 7px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+  }
+  .prod-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .thumb-placeholder { font-size: 1.1rem; line-height: 1; }
+  .thumb-overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; border-radius: 6px;
+  }
+  .prod-thumb:hover .thumb-overlay { opacity: 1; }
+  .thumb-overlay svg { color: #fff; }
+
+  .prod-name-preview { flex: 1; font-weight: 600; font-size: 0.95rem; }
+  .prod-name-preview.empty { color: var(--muted); font-style: italic; }
+  .prod-cat-badge { font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 20px; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
+  .prod-price-badge { font-size: 0.8rem; font-weight: 700; color: var(--accent2); white-space: nowrap; min-width: 60px; text-align: right; }
+  .prod-dest-badge { font-size: 0.7rem; background: #e85d2f22; color: var(--accent); border: 1px solid #e85d2f44; padding: 0.15rem 0.5rem; border-radius: 20px; white-space: nowrap; }
+  .prod-chevron { color: var(--muted); font-size: 0.75rem; }
+  .prod-card.open .prod-chevron { transform: rotate(180deg); }
+
+  .prod-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.2s ease; }
+  .prod-body-inner { overflow: hidden; }
+  .prod-card.open .prod-body { grid-template-rows: 1fr; }
+  .prod-body-content { padding: 1rem; border-top: 1px solid var(--border); }
+
+  .fields-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.75rem; }
+  @media(max-width:640px){ .fields-grid { grid-template-columns: 1fr 1fr; } }
+  .field-group { display: flex; flex-direction: column; gap: 0.3rem; }
+  .field-group.span2 { grid-column: span 2; }
+  .field-group.span4 { grid-column: span 4; }
+  label.field-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+  input[type="text"], input[type="number"], select, textarea {
+    background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 0.5rem 0.7rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.875rem; outline: none; width: 100%;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+  select option { background: #1a1917; }
+  textarea { resize: vertical; min-height: 70px; }
+
+  .toggle-row { display: flex; align-items: center; gap: 0.6rem; padding-top: 0.75rem; }
+  .toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-track { position: absolute; inset: 0; background: var(--border); border-radius: 20px; cursor: pointer; }
+  .toggle input:checked + .toggle-track { background: var(--accent); }
+  .toggle-track::after { content: ''; position: absolute; width: 14px; height: 14px; background: #fff; border-radius: 50%; top: 3px; left: 3px; transition: transform 0.15s; }
+  .toggle input:checked + .toggle-track::after { transform: translateX(16px); }
+
+  .card-footer { display: flex; justify-content: flex-end; padding-top: 0.75rem; margin-top: 0.75rem; border-top: 1px solid var(--border); }
+
+  #toast {
+    position: fixed; bottom: 2rem; right: 2rem;
+    background: var(--success); color: #fff;
+    padding: 0.75rem 1.25rem; border-radius: 8px;
+    font-size: 0.875rem; font-weight: 600;
+    opacity: 0; pointer-events: none; z-index: 9999;
+    transition: opacity 0.2s;
+  }
+  #toast.show { opacity: 1; }
+
+  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--muted); }
+  .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; }
+
+  /* Modales */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    z-index: 500; background: rgba(0,0,0,0.8);
+    align-items: center; justify-content: center; padding: 1rem;
+  }
+  .modal-overlay.open { display: flex; }
+  @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+  #img-modal { z-index: 1000; }
+  .modal-img-inner { position: relative; max-width: min(90vw, 540px); width: 100%; animation: scaleIn 0.15s ease; }
+  .modal-img-inner img { width: 100%; border-radius: 12px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+  .modal-img-name { text-align: center; margin-top: 0.75rem; font-weight: 600; color: var(--text); }
+
+  .modal-box {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    width: 100%; max-width: 620px; max-height: 90vh; overflow-y: auto;
+    animation: scaleIn 0.15s ease;
+  }
+  .modal-box-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 1.25rem; border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; background: var(--surface); z-index: 1;
+  }
+  .modal-box-header h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.05em; }
+  .modal-close { width: 28px; height: 28px; background: var(--surface2); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; color: var(--muted); flex-shrink: 0; }
+  .modal-close:hover { color: var(--text); }
+  .modal-box-body { padding: 1.25rem; }
+  .modal-box-footer { display: flex; justify-content: flex-end; gap: 0.75rem; padding: 1rem 1.25rem; border-top: 1px solid var(--border); }
+
+  .json-pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-family: 'Courier New', monospace; font-size: 0.78rem; line-height: 1.6; color: #a8d8a8; white-space: pre; overflow-x: auto; max-height: 55vh; overflow-y: auto; }
+
+  /* Estilos específicos para el modal del iframe para que se vea bien en pantalla */
+  .modal-iframe-container { display: flex; flex-direction: column; height: 80vh; max-width: 800px; }
+  .modal-iframe-body { flex: 1; padding: 0; overflow: hidden; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; }
+  .modal-iframe-body iframe { width: 100%; height: 100%; border: none; display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Más que <span>Burgers</span></div>
+  <div class="header-actions">
+    <button class="btn btn-secondary" onclick="abrirIframeModal()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Cargar imagen
+    </button>
+    
+    <button class="btn btn-secondary" onclick="abrirAgregarModal()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      Agregar
+    </button>
+    
+    <button class="btn btn-primary" onclick="mostrarJSON()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Ver JSON
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="page-title">Panel de Menú</div>
+  <div class="page-subtitle">Administrá los productos del menú digital</div>
+  
+  <div class="search-bar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="buscador" placeholder="Buscar por nombre o categoría..." oninput="filtrarLista()">
+  </div>
+
+  <div class="stats" id="stats-bar"></div>
+  <div id="productos-container"></div>
+</main>
+
+<div id="toast"></div>
+
+<div class="modal-overlay" id="iframe-modal" onclick="cerrarIframeModal(event)">
+  <div class="modal-box modal-iframe-container">
+    <div class="modal-box-header">
+      <h2>Servidor de Imágenes</h2>
+      <span class="modal-close" onclick="cerrarIframeModalDirecto()">✕</span>
+    </div>
+    <div class="modal-box-body modal-iframe-body">
+      <iframe src="https://demosprojects.github.io/url-fotos/imagenes-crear.html"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="img-modal" onclick="cerrarImgModal(event)">
+  <div class="modal-img-inner">
+    <img id="modal-img" src="" alt="">
+    <div class="modal-img-name" id="modal-img-name"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="agregar-modal" onclick="cerrarAgregarModal(event)">
+  <div class="modal-box">
+    <div class="modal-box-header">
+      <h2>Nuevo Producto</h2>
+      <span class="modal-close" onclick="cerrarAgregarModalDirecto()">✕</span>
+    </div>
+    <div class="modal-box-body">
+      <div class="fields-grid">
+        <div class="field-group span2">
+          <label class="field-label">Nombre</label>
+          <input type="text" id="new-nombre" placeholder="Nombre del producto">
+        </div>
+        <div class="field-group">
+          <label class="field-label">Precio ($)</label>
+          <input type="number" id="new-precio" placeholder="0" min="0">
+        </div>
+        <div class="field-group">
+          <label class="field-label">Categoría</label>
+          <select id="new-categoria">
+            <option>Burgers</option><option>Para compartir</option><option>Papas</option>
+            <option>Kids</option><option>Sin alcohol</option><option>Con alcohol</option>
+            <option>Agregados</option>
+          </select>
+        </div>
+        <div class="field-group span4">
+          <label class="field-label">Descripción</label>
+          <textarea id="new-descripcion" placeholder="Descripción del producto"></textarea>
+        </div>
+        <div class="field-group span4">
+          <label class="field-label">URL Imagen</label>
+          <input type="text" id="new-imagen" placeholder="https://...">
+        </div>
+      </div>
+      <div class="toggle-row">
+        <label class="toggle">
+          <input type="checkbox" id="new-destacado">
+          <div class="toggle-track"></div>
+        </label>
+        <span style="font-size:0.875rem">Producto destacado</span>
+      </div>
+    </div>
+    <div class="modal-box-footer">
+      <button class="btn btn-secondary" onclick="cerrarAgregarModalDirecto()">Cancelar</button>
+      <button class="btn btn-primary" onclick="confirmarAgregarProducto()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Agregar producto
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="json-modal" onclick="cerrarJsonModal(event)">
+  <div class="modal-box" style="max-width:760px">
+    <div class="modal-box-header">
+      <h2>JSON del menú</h2>
+      <span class="modal-close" onclick="cerrarJsonModalDirecto()">✕</span>
+    </div>
+    <div class="modal-box-body">
+      <pre class="json-pre" id="json-output"></pre>
+    </div>
+    <div class="modal-box-footer">
+      <button class="btn btn-secondary" onclick="cerrarJsonModalDirecto()">Cerrar</button>
+      <button class="btn btn-primary" onclick="copiarJson()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+let productos = [];
+const cardCache = new Map();
+const ordenCategorias = ["Burgers","Para compartir","Papas","Kids","Sin alcohol","Con alcohol","Agregados"];
+
+// ── Optimización de Imágenes al vuelo ──
+function getOptimizedImageUrl(url, width = 100, quality = 60) {
+  if (!url) return '';
+  if (url.startsWith('data:image') || !url.startsWith('http')) {
+    return url;
+  }
+  return `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=${width}&q=${quality}&output=webp`;
+}
+
+// ── Stats ──
+const statBar = document.getElementById('stats-bar');
+const sTotal = document.createElement('div'); sTotal.className = 'stat-pill';
+const sDest  = document.createElement('div'); sDest.className  = 'stat-pill';
+const sCats  = document.createElement('div'); sCats.className  = 'stat-pill';
+const nTotal = document.createElement('strong');
+const nDest  = document.createElement('strong');
+const nCats  = document.createElement('strong');
+sTotal.append(nTotal, 'Productos');
+sDest.append(nDest, 'Destacados');
+sCats.append(nCats, 'Categorías');
+statBar.append(sTotal, sDest, sCats);
+
+function renderStats() {
+  nTotal.textContent = productos.length;
+  nDest.textContent  = productos.filter(p => p.destacado).length;
+  nCats.textContent  = new Set(productos.map(p => p.categoria)).size;
+}
+
+// ── Carga ──
+async function cargarProductos() {
+  try {
+    const res = await fetch("menu.json");
+    if (!res.ok) throw new Error();
+    productos = await res.json();
+  } catch { productos = []; }
+  renderProductos();
+}
+
+// ── Render lista completa ──
+function renderProductos() {
+  cardCache.clear();
+  const container = document.getElementById("productos-container");
+  container.innerHTML = "";
+  if (productos.length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">🍔</div><p>No hay productos aún. ¡Agregá el primero!</p></div>`;
+    renderStats();
+    return;
+  }
+  const frag = document.createDocumentFragment();
+  productos.forEach((prod, i) => {
+    const card = crearCard(prod, i);
+    cardCache.set(i, card);
+    frag.appendChild(card);
+  });
+  container.appendChild(frag);
+  renderStats();
+  filtrarLista();
+}
+
+// ── Filtro de ultra-bajo consumo ──
+function filtrarLista() {
+  const query = document.getElementById('buscador').value.toLowerCase();
+  let visibles = 0;
+
+  cardCache.forEach((card, index) => {
+    const prod = productos[index];
+    if (!prod) return;
+
+    const match = (prod.nombre || '').toLowerCase().includes(query) ||
+                  (prod.categoria || '').toLowerCase().includes(query);
+
+    const currentDisplay = card.style.display;
+    const newDisplay = match ? '' : 'none';
+    
+    if (currentDisplay !== newDisplay) card.style.display = newDisplay;
+    if (match) visibles++;
+  });
+
+  let emptySearch = document.getElementById('empty-search');
+  if (visibles === 0 && productos.length > 0) {
+    if (!emptySearch) {
+      emptySearch = document.createElement('div');
+      emptySearch.id = 'empty-search';
+      emptySearch.className = 'empty-state';
+      document.getElementById('productos-container').appendChild(emptySearch);
+    }
+    emptySearch.innerHTML = `<div class="icon">🔍</div><p>No se encontraron resultados para "${document.getElementById('buscador').value}"</p>`;
+    emptySearch.style.display = '';
+  } else if (emptySearch) {
+    emptySearch.style.display = 'none';
+  }
+}
+
+// ── Crear card con DOM nativo ──
+function crearCard(prod, i) {
+  const card = document.createElement("div");
+  card.className = "prod-card";
+  card.dataset.index = i;
+
+  const header = document.createElement("div");
+  header.className = "prod-card-header";
+  header.addEventListener('click', () => card.classList.toggle('open'));
+
+  const thumb = buildThumb(prod, i);
+
+  const nameEl = document.createElement("div");
+  nameEl.className = "prod-name-preview" + (prod.nombre ? "" : " empty");
+  nameEl.textContent = prod.nombre || "Producto sin nombre";
+
+  const destBadge  = document.createElement("span"); destBadge.className  = "prod-dest-badge";  destBadge.textContent = "⭐ Destacado"; destBadge.style.display = prod.destacado ? "" : "none";
+  const catBadge   = document.createElement("span"); catBadge.className   = "prod-cat-badge";   catBadge.textContent = prod.categoria;
+  const priceBadge = document.createElement("span"); priceBadge.className = "prod-price-badge"; priceBadge.textContent = prod.precio ? '$' + prod.precio.toLocaleString() : '—';
+  const chevron    = document.createElement("span"); chevron.className    = "prod-chevron";     chevron.textContent = "▼";
+
+  header.append(thumb, nameEl, destBadge, catBadge, priceBadge, chevron);
+
+  const body = document.createElement("div"); body.className = "prod-body";
+  const bodyInner = document.createElement("div"); bodyInner.className = "prod-body-inner";
+  const bodyContent = document.createElement("div"); bodyContent.className = "prod-body-content";
+
+  const grid = document.createElement("div"); grid.className = "fields-grid";
+
+  grid.appendChild(mkText("Nombre", "span2", prod.nombre, v => {
+    productos[i].nombre = v;
+    nameEl.textContent = v || "Producto sin nombre";
+    nameEl.classList.toggle("empty", !v);
+  }));
+  grid.appendChild(mkNumber("Precio ($)", "", prod.precio, v => {
+    productos[i].precio = parseInt(v) || 0;
+    priceBadge.textContent = productos[i].precio ? '$' + productos[i].precio.toLocaleString() : '—';
+  }));
+  grid.appendChild(mkSelect("Categoría", "", prod.categoria, v => {
+    productos[i].categoria = v;
+    catBadge.textContent = v;
+  }));
+  grid.appendChild(mkTextarea("Descripción", "span4", prod.descripcion, v => { productos[i].descripcion = v; }));
+  
+  grid.appendChild(mkTextChange("URL Imagen", "span4", prod.imagen, v => {
+    productos[i].imagen = v;
+    rebuildThumb(thumb, v, i);
+  }));
+
+  const tRow = document.createElement("div"); tRow.className = "toggle-row";
+  const tLabel = document.createElement("label"); tLabel.className = "toggle";
+  const tInput = document.createElement("input"); tInput.type = "checkbox"; tInput.checked = prod.destacado;
+  tInput.addEventListener('change', () => {
+    productos[i].destacado = tInput.checked;
+    destBadge.style.display = tInput.checked ? "" : "none";
+    renderStats();
+  });
+  const tTrack = document.createElement("div"); tTrack.className = "toggle-track";
+  tLabel.append(tInput, tTrack);
+  const tText = document.createElement("span"); tText.style.fontSize = "0.875rem"; tText.textContent = "Producto destacado";
+  tRow.append(tLabel, tText);
+
+  const footer = document.createElement("div"); footer.className = "card-footer";
+  const btnDel = document.createElement("button"); btnDel.className = "btn btn-danger"; btnDel.textContent = "🗑 Eliminar producto";
+  btnDel.addEventListener('click', () => eliminarProducto(i));
+  footer.appendChild(btnDel);
+
+  bodyContent.append(grid, tRow, footer);
+  bodyInner.appendChild(bodyContent);
+  body.appendChild(bodyInner);
+  card.append(header, body);
+  return card;
+}
+
+function buildThumb(prod, i) {
+  const thumb = document.createElement("div");
+  thumb.className = "prod-thumb";
+  if (prod.imagen) {
+    const img = document.createElement("img"); 
+    img.src = getOptimizedImageUrl(prod.imagen, 80, 60); 
+    img.loading = "lazy"; 
+    img.alt = ""; 
+    img.onerror = () => { img.style.display='none'; };
+    
+    const ov = document.createElement("div"); ov.className = "thumb-overlay";
+    ov.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`;
+    thumb.append(img, ov);
+    thumb.addEventListener('click', e => { e.stopPropagation(); abrirImgModal(i); });
+  } else {
+    thumb.innerHTML = `<span class="thumb-placeholder">🍔</span>`;
+  }
+  return thumb;
+}
+
+function rebuildThumb(thumb, url, i) {
+  thumb.innerHTML = "";
+  const newThumb = thumb.cloneNode(false);
+  thumb.parentNode.replaceChild(newThumb, thumb);
+  if (url) {
+    const img = document.createElement("img"); 
+    img.src = getOptimizedImageUrl(url, 80, 60); 
+    img.loading = "lazy";
+    img.alt = ""; 
+    img.onerror = () => { img.style.display='none'; };
+    
+    const ov = document.createElement("div"); ov.className = "thumb-overlay";
+    ov.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`;
+    newThumb.append(img, ov);
+    newThumb.addEventListener('click', e => { e.stopPropagation(); abrirImgModal(i); });
+  } else {
+    newThumb.innerHTML = `<span class="thumb-placeholder">🍔</span>`;
+  }
+}
+
+// ── Helpers campos ──
+function mkField(label, span) {
+  const g = document.createElement("div"); g.className = "field-group" + (span ? " "+span : "");
+  const l = document.createElement("label"); l.className = "field-label"; l.textContent = label;
+  g.appendChild(l); return g;
+}
+function mkText(label, span, val, cb) {
+  const g = mkField(label, span);
+  const inp = document.createElement("input"); inp.type = "text"; inp.value = val || "";
+  inp.addEventListener('input', () => cb(inp.value));
+  g.appendChild(inp); return g;
+}
+function mkTextChange(label, span, val, cb) {
+  const g = mkField(label, span);
+  const inp = document.createElement("input"); inp.type = "text"; inp.value = val || "";
+  inp.addEventListener('change', () => cb(inp.value)); 
+  g.appendChild(inp); return g;
+}
+function mkNumber(label, span, val, cb) {
+  const g = mkField(label, span);
+  const inp = document.createElement("input"); inp.type = "number"; inp.value = val || 0;
+  inp.addEventListener('input', () => cb(inp.value));
+  g.appendChild(inp); return g;
+}
+function mkSelect(label, span, val, cb) {
+  const g = mkField(label, span);
+  const sel = document.createElement("select");
+  ordenCategorias.forEach(cat => {
+    const opt = document.createElement("option"); opt.value = cat; opt.textContent = cat;
+    if (cat === val) opt.selected = true;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener('change', () => cb(sel.value));
+  g.appendChild(sel); return g;
+}
+function mkTextarea(label, span, val, cb) {
+  const g = mkField(label, span);
+  const ta = document.createElement("textarea"); ta.value = val || "";
+  ta.addEventListener('input', () => cb(ta.value));
+  g.appendChild(ta); return g;
+}
+
+// ── Eliminar ──
+function eliminarProducto(i) {
+  if (!confirm(`¿Eliminar "${productos[i].nombre || 'este producto'}"?`)) return;
+  productos.splice(i, 1);
+  renderProductos();
+}
+
+// ── Modales ──
+
+// Modal Iframe (Generador de URLs)
+function abrirIframeModal() {
+  document.getElementById('iframe-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function cerrarIframeModal(e) { if (e.target === document.getElementById('iframe-modal')) cerrarIframeModalDirecto(); }
+function cerrarIframeModalDirecto() { document.getElementById('iframe-modal').classList.remove('open'); document.body.style.overflow = ''; }
+
+function abrirImgModal(i) {
+  const prod = productos[i];
+  if (!prod.imagen) return;
+  document.getElementById('modal-img').src = getOptimizedImageUrl(prod.imagen, 600, 80);
+  document.getElementById('modal-img-name').textContent = prod.nombre || '';
+  document.getElementById('img-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function cerrarImgModal(e) { if (e.target === document.getElementById('img-modal')) cerrarImgModalDirecto(); }
+function cerrarImgModalDirecto() { document.getElementById('img-modal').classList.remove('open'); document.body.style.overflow = ''; }
+
+function abrirAgregarModal() {
+  ['new-nombre','new-precio','new-descripcion','new-imagen'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('new-categoria').value = 'Burgers';
+  document.getElementById('new-destacado').checked = false;
+  document.getElementById('agregar-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('new-nombre').focus();
+}
+function cerrarAgregarModal(e) { if (e.target === document.getElementById('agregar-modal')) cerrarAgregarModalDirecto(); }
+function cerrarAgregarModalDirecto() { document.getElementById('agregar-modal').classList.remove('open'); document.body.style.overflow = ''; }
+
+function confirmarAgregarProducto() {
+  const nuevo = {
+    nombre:      document.getElementById('new-nombre').value.trim(),
+    descripcion: document.getElementById('new-descripcion').value.trim(),
+    precio:      parseInt(document.getElementById('new-precio').value) || 0,
+    categoria:   document.getElementById('new-categoria').value,
+    imagen:      document.getElementById('new-imagen').value.trim(),
+    destacado:   document.getElementById('new-destacado').checked
+  };
+  productos.push(nuevo);
+  const i = productos.length - 1;
+  const container = document.getElementById("productos-container");
+  if (container.querySelector('.empty-state')) container.innerHTML = "";
+  const card = crearCard(nuevo, i);
+  cardCache.set(i, card);
+  container.appendChild(card);
+  renderStats();
+  filtrarLista();
+  cerrarAgregarModalDirecto();
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function ordenarProductos(lista) {
+  return [...lista].sort((a, b) => {
+    // 1. Respetar el orden de las categorías primero
+    const ca = ordenCategorias.indexOf(a.categoria), cb = ordenCategorias.indexOf(b.categoria);
+    if (ca !== cb) return ca - cb;
+
+    // 2. Lógica para agrupar bebidas de la misma marca
+    if (a.categoria === "Sin alcohol" || a.categoria === "Con alcohol") {
+      const ma = a.nombre.split(" ")[0], mb = b.nombre.split(" ")[0];
+      if (ma !== mb) return ma.localeCompare(mb);
+    }
+
+    // 3. Lógica inteligente para tamaños (Simple, Doble, Triple)
+    const regex = /(.+?)\s+(simple|doble|triple|cuadruple)$/i;
+    const matchA = a.nombre.match(regex);
+    const matchB = b.nombre.match(regex);
+
+    if (matchA && matchB) {
+      // Extraemos el nombre base (ej: "American") para compararlos
+      const baseA = matchA[1].toLowerCase();
+      const baseB = matchB[1].toLowerCase();
+      
+      // Si estamos comparando la misma hamburguesa, ordenamos por tamaño
+      if (baseA === baseB) {
+        const pesos = { "simple": 1, "doble": 2, "triple": 3, "cuadruple": 4 };
+        const pesoA = pesos[matchA[2].toLowerCase()];
+        const pesoB = pesos[matchB[2].toLowerCase()];
+        return pesoA - pesoB;
+      }
+    }
+
+    // 4. Si no son tamaños de la misma burger, orden alfabético normal
+    return a.nombre.localeCompare(b.nombre);
+  });
+}
+function mostrarJSON() {
+  document.getElementById('json-output').textContent = JSON.stringify(ordenarProductos(productos), null, 2);
+  document.getElementById('json-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function cerrarJsonModal(e) { if (e.target === document.getElementById('json-modal')) cerrarJsonModalDirecto(); }
+function cerrarJsonModalDirecto() { document.getElementById('json-modal').classList.remove('open'); document.body.style.overflow = ''; }
+function copiarJson() {
+  navigator.clipboard.writeText(document.getElementById('json-output').textContent).then(() => toast('✓ JSON copiado'));
+}
+
+// ── Toast ──
+let toastTimer;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ── Escape ──
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  cerrarImgModalDirecto(); cerrarIframeModalDirecto(); cerrarAgregarModalDirecto(); cerrarJsonModalDirecto();
+});
+
+cargarProductos();
+</script>
+</body>
+</html>
