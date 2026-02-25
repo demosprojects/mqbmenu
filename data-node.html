@@ -92,7 +92,8 @@
 
   #productos-container { display: flex; flex-direction: column; gap: 0.75rem; }
 
-  .prod-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .prod-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: opacity 0.3s ease; }
+  .prod-card.agotado { opacity: 0.6; } /* Efecto visual cuando está apagado */
 
   .prod-card-header {
     display: flex;
@@ -131,7 +132,10 @@
   .prod-name-preview.empty { color: var(--muted); font-style: italic; }
   .prod-cat-badge { font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 20px; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
   .prod-price-badge { font-size: 0.8rem; font-weight: 700; color: var(--accent2); white-space: nowrap; min-width: 60px; text-align: right; }
+  
   .prod-dest-badge { font-size: 0.7rem; background: #e85d2f22; color: var(--accent); border: 1px solid #e85d2f44; padding: 0.15rem 0.5rem; border-radius: 20px; white-space: nowrap; }
+  .prod-disp-badge { font-size: 0.7rem; background: #c0392b22; color: var(--danger); border: 1px solid #c0392b44; padding: 0.15rem 0.5rem; border-radius: 20px; white-space: nowrap; }
+
   .prod-chevron { color: var(--muted); font-size: 0.75rem; }
   .prod-card.open .prod-chevron { transform: rotate(180deg); }
 
@@ -158,13 +162,16 @@
   select option { background: #1a1917; }
   textarea { resize: vertical; min-height: 70px; }
 
-  .toggle-row { display: flex; align-items: center; gap: 0.6rem; padding-top: 0.75rem; }
+  .toggles-container { display: flex; gap: 1.5rem; padding-top: 0.75rem; }
+  .toggle-wrapper { display: flex; align-items: center; gap: 0.6rem; }
   .toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
   .toggle input { opacity: 0; width: 0; height: 0; }
   .toggle-track { position: absolute; inset: 0; background: var(--border); border-radius: 20px; cursor: pointer; }
   .toggle input:checked + .toggle-track { background: var(--accent); }
   .toggle-track::after { content: ''; position: absolute; width: 14px; height: 14px; background: #fff; border-radius: 50%; top: 3px; left: 3px; transition: transform 0.15s; }
   .toggle input:checked + .toggle-track::after { transform: translateX(16px); }
+  /* Toggle para Agotado/Disponible en verde */
+  .toggle-disp input:checked + .toggle-track { background: var(--success); }
 
   .card-footer { display: flex; justify-content: flex-end; padding-top: 0.75rem; margin-top: 0.75rem; border-top: 1px solid var(--border); }
 
@@ -286,7 +293,7 @@
       <button class="btn btn-primary" id="btn-confirmar-gh" onclick="procesarGuardadoGitHub()">
         <svg id="gh-btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
         <svg id="gh-btn-spinner" class="spinner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-        <span id="gh-btn-text">Guardar cambios</span>
+        <span id="gh-btn-text">Publicar Cambios</span>
       </button>
     </div>
   </div>
@@ -344,12 +351,21 @@
           <input type="text" id="new-imagen" placeholder="https://...">
         </div>
       </div>
-      <div class="toggle-row">
-        <label class="toggle">
-          <input type="checkbox" id="new-destacado">
-          <div class="toggle-track"></div>
-        </label>
-        <span style="font-size:0.875rem">Producto destacado</span>
+      <div class="toggles-container">
+        <div class="toggle-wrapper">
+          <label class="toggle toggle-disp">
+            <input type="checkbox" id="new-disponible" checked>
+            <div class="toggle-track"></div>
+          </label>
+          <span style="font-size:0.875rem">Disponible</span>
+        </div>
+        <div class="toggle-wrapper">
+          <label class="toggle">
+            <input type="checkbox" id="new-destacado">
+            <div class="toggle-track"></div>
+          </label>
+          <span style="font-size:0.875rem">Destacado</span>
+        </div>
       </div>
     </div>
     <div class="modal-box-footer">
@@ -475,6 +491,10 @@ function crearCard(prod, i) {
   const card = document.createElement("div");
   card.className = "prod-card";
   card.dataset.index = i;
+  
+  // Si disponible es explícitamente false, le ponemos clase agotado. Si no existe, asume true.
+  const isDisponible = prod.disponible !== false;
+  if (!isDisponible) card.classList.add('agotado');
 
   const header = document.createElement("div");
   header.className = "prod-card-header";
@@ -487,11 +507,15 @@ function crearCard(prod, i) {
   nameEl.textContent = prod.nombre || "Producto sin nombre";
 
   const destBadge  = document.createElement("span"); destBadge.className  = "prod-dest-badge";  destBadge.textContent = "⭐ Destacado"; destBadge.style.display = prod.destacado ? "" : "none";
+  
+  // Badge de agotado
+  const dispBadge  = document.createElement("span"); dispBadge.className  = "prod-disp-badge";  dispBadge.textContent = "🚫 Agotado"; dispBadge.style.display = isDisponible ? "none" : "";
+
   const catBadge   = document.createElement("span"); catBadge.className   = "prod-cat-badge";   catBadge.textContent = prod.categoria;
   const priceBadge = document.createElement("span"); priceBadge.className = "prod-price-badge"; priceBadge.textContent = prod.precio ? '$' + prod.precio.toLocaleString() : '—';
   const chevron    = document.createElement("span"); chevron.className    = "prod-chevron";     chevron.textContent = "▼";
 
-  header.append(thumb, nameEl, destBadge, catBadge, priceBadge, chevron);
+  header.append(thumb, nameEl, dispBadge, destBadge, catBadge, priceBadge, chevron);
 
   const body = document.createElement("div"); body.className = "prod-body";
   const bodyInner = document.createElement("div"); bodyInner.className = "prod-body-inner";
@@ -519,25 +543,47 @@ function crearCard(prod, i) {
     rebuildThumb(thumb, v, i);
   }));
 
-  const tRow = document.createElement("div"); tRow.className = "toggle-row";
-  const tLabel = document.createElement("label"); tLabel.className = "toggle";
-  const tInput = document.createElement("input"); tInput.type = "checkbox"; tInput.checked = prod.destacado;
-  tInput.addEventListener('change', () => {
-    productos[i].destacado = tInput.checked;
-    destBadge.style.display = tInput.checked ? "" : "none";
+  // Contenedor de toggles
+  const togglesContainer = document.createElement("div");
+  togglesContainer.className = "toggles-container";
+
+  // Toggle Disponible
+  const tDispWrapper = document.createElement("div"); tDispWrapper.className = "toggle-wrapper";
+  const tDispLabel = document.createElement("label"); tDispLabel.className = "toggle toggle-disp";
+  const tDispInput = document.createElement("input"); tDispInput.type = "checkbox"; tDispInput.checked = isDisponible;
+  tDispInput.addEventListener('change', () => {
+    productos[i].disponible = tDispInput.checked;
+    dispBadge.style.display = tDispInput.checked ? "none" : "";
+    if(tDispInput.checked) card.classList.remove('agotado');
+    else card.classList.add('agotado');
+  });
+  const tDispTrack = document.createElement("div"); tDispTrack.className = "toggle-track";
+  tDispLabel.append(tDispInput, tDispTrack);
+  const tDispText = document.createElement("span"); tDispText.style.fontSize = "0.875rem"; tDispText.textContent = "Disponible";
+  tDispWrapper.append(tDispLabel, tDispText);
+
+  // Toggle Destacado
+  const tDestWrapper = document.createElement("div"); tDestWrapper.className = "toggle-wrapper";
+  const tDestLabel = document.createElement("label"); tDestLabel.className = "toggle";
+  const tDestInput = document.createElement("input"); tDestInput.type = "checkbox"; tDestInput.checked = prod.destacado;
+  tDestInput.addEventListener('change', () => {
+    productos[i].destacado = tDestInput.checked;
+    destBadge.style.display = tDestInput.checked ? "" : "none";
     renderStats();
   });
-  const tTrack = document.createElement("div"); tTrack.className = "toggle-track";
-  tLabel.append(tInput, tTrack);
-  const tText = document.createElement("span"); tText.style.fontSize = "0.875rem"; tText.textContent = "Producto destacado";
-  tRow.append(tLabel, tText);
+  const tDestTrack = document.createElement("div"); tDestTrack.className = "toggle-track";
+  tDestLabel.append(tDestInput, tDestTrack);
+  const tDestText = document.createElement("span"); tDestText.style.fontSize = "0.875rem"; tDestText.textContent = "Destacado";
+  tDestWrapper.append(tDestLabel, tDestText);
+
+  togglesContainer.append(tDispWrapper, tDestWrapper);
 
   const footer = document.createElement("div"); footer.className = "card-footer";
   const btnDel = document.createElement("button"); btnDel.className = "btn btn-danger"; btnDel.textContent = "🗑 Eliminar producto";
   btnDel.addEventListener('click', () => eliminarProducto(i));
   footer.appendChild(btnDel);
 
-  bodyContent.append(grid, tRow, footer);
+  bodyContent.append(grid, togglesContainer, footer);
   bodyInner.appendChild(bodyContent);
   body.appendChild(bodyInner);
   card.append(header, body);
@@ -660,6 +706,7 @@ function abrirAgregarModal() {
   ['new-nombre','new-precio','new-descripcion','new-imagen'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('new-categoria').value = 'Burgers';
   document.getElementById('new-destacado').checked = false;
+  document.getElementById('new-disponible').checked = true; // Por defecto disponible
   document.getElementById('agregar-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
   setTimeout(() => document.getElementById('new-nombre').focus(), 100);
@@ -674,7 +721,8 @@ function confirmarAgregarProducto() {
     precio:      parseInt(document.getElementById('new-precio').value) || 0,
     categoria:   document.getElementById('new-categoria').value,
     imagen:      document.getElementById('new-imagen').value.trim(),
-    destacado:   document.getElementById('new-destacado').checked
+    destacado:   document.getElementById('new-destacado').checked,
+    disponible:  document.getElementById('new-disponible').checked
   };
   productos.push(nuevo);
   const i = productos.length - 1;
@@ -692,7 +740,7 @@ function confirmarAgregarProducto() {
 // ── Modal de GitHub ──
 function abrirGithubModal() {
   const tokenInput = document.getElementById('github-token-input');
-  tokenInput.value = ''; // Limpiamos el campo por seguridad
+  tokenInput.value = ''; 
   document.getElementById('github-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
   setTimeout(() => tokenInput.focus(), 100);
@@ -703,7 +751,6 @@ function cerrarGithubModalDirecto() {
   document.body.style.overflow = ''; 
 }
 
-// Al presionar Enter dentro del input del token, dispara el guardado
 document.getElementById('github-token-input').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
     e.preventDefault();
@@ -750,14 +797,12 @@ async function procesarGuardadoGitHub() {
     return;
   }
 
-  // Referencias a los elementos UI
   const btnConfirmar = document.getElementById('btn-confirmar-gh');
   const btnCancelar = document.getElementById('btn-cancelar-gh');
   const icon = document.getElementById('gh-btn-icon');
   const spinner = document.getElementById('gh-btn-spinner');
   const text = document.getElementById('gh-btn-text');
 
-  // Estado de carga visual
   btnConfirmar.disabled = true;
   btnCancelar.disabled = true;
   tokenInput.disabled = true;
@@ -768,12 +813,9 @@ async function procesarGuardadoGitHub() {
   try {
     const datosOrdenados = ordenarProductos(productos);
     const jsonString = JSON.stringify(datosOrdenados, null, 2);
-    
-    // Convertimos a Base64 respetando los acentos y las ñ
     const base64Content = btoa(unescape(encodeURIComponent(jsonString)));
     const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${ARCHIVO_JSON}`;
 
-    // Paso 1: Obtener el código SHA
     const resGet = await fetch(url, {
       headers: { 'Authorization': `token ${token}` }
     });
@@ -784,7 +826,6 @@ async function procesarGuardadoGitHub() {
 
     text.textContent = 'Guardando...';
 
-    // Paso 2: Subir el archivo
     const resPut = await fetch(url, {
       method: 'PUT',
       headers: {
@@ -792,7 +833,7 @@ async function procesarGuardadoGitHub() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        message: '🍔 Actualización de menú desde el Admin',
+        message: '🍔 Menú actualizado desde admin.',
         content: base64Content,
         sha: shaActual
       })
@@ -807,10 +848,8 @@ async function procesarGuardadoGitHub() {
 
   } catch (error) {
     toast('❌ Error: ' + error.message, 'error');
-    // Le volvemos a dar foco al input para que corrija la clave
     setTimeout(() => tokenInput.focus(), 100);
   } finally {
-    // Restaurar botones a la normalidad
     btnConfirmar.disabled = false;
     btnCancelar.disabled = false;
     tokenInput.disabled = false;
@@ -820,7 +859,7 @@ async function procesarGuardadoGitHub() {
   }
 }
 
-// ── Toast (Ahora soporta estados) ──
+// ── Toast ──
 let toastTimer;
 function toast(msg, type = 'success') {
   const t = document.getElementById('toast');
@@ -829,7 +868,6 @@ function toast(msg, type = 'success') {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => {
     t.classList.remove('show');
-    // Limpiar clases extra después de que se oculta
     setTimeout(() => t.className = '', 200);
   }, 3500);
 }
