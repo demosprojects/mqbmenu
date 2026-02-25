@@ -11,7 +11,11 @@ const featuredSection = document.getElementById('featured-section');
 async function cargarDatos() {
     try {
         const response = await fetch('menu.json');
-        menuData = await response.json();
+        const dataRaw = await response.json();
+        
+        // Filtramos para ignorar los que tienen disponible: false
+        menuData = dataRaw.filter(producto => producto.disponible !== false);
+        
         renderTodo();
         mostrarCategoria("Burgers");
     } catch (error) {
