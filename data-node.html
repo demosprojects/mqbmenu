@@ -55,9 +55,12 @@
     font-weight: 600;
     cursor: pointer;
     border: none;
+    transition: opacity 0.2s;
   }
-  .btn:hover { opacity: 0.85; }
-  .btn:active { opacity: 0.7; }
+  .btn:hover:not(:disabled) { opacity: 0.85; }
+  .btn:active:not(:disabled) { opacity: 0.7; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
   .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); padding: 0.35rem 0.75rem; font-size: 0.8rem; }
@@ -144,12 +147,14 @@
   .field-group.span4 { grid-column: span 4; }
   label.field-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 
-  input[type="text"], input[type="number"], select, textarea {
+  input[type="text"], input[type="password"], input[type="number"], select, textarea {
     background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
     color: var(--text); padding: 0.5rem 0.7rem;
     font-family: 'DM Sans', sans-serif; font-size: 0.875rem; outline: none; width: 100%;
+    transition: border-color 0.2s ease;
   }
   input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+  input:disabled, select:disabled, textarea:disabled { opacity: 0.6; cursor: not-allowed; }
   select option { background: #1a1917; }
   textarea { resize: vertical; min-height: 70px; }
 
@@ -165,22 +170,24 @@
 
   #toast {
     position: fixed; bottom: 2rem; right: 2rem;
-    background: var(--success); color: #fff;
+    background: var(--surface2); border: 1px solid var(--border); color: #fff;
     padding: 0.75rem 1.25rem; border-radius: 8px;
     font-size: 0.875rem; font-weight: 600;
     opacity: 0; pointer-events: none; z-index: 9999;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    transform: translateY(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
-  #toast.show { opacity: 1; }
-
-  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--muted); }
-  .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; }
+  #toast.show { opacity: 1; transform: translateY(0); }
+  #toast.success { border-color: var(--success); color: var(--success); }
+  #toast.error { border-color: var(--danger); color: var(--danger); }
 
   /* Modales */
   .modal-overlay {
     display: none; position: fixed; inset: 0;
     z-index: 500; background: rgba(0,0,0,0.8);
     align-items: center; justify-content: center; padding: 1rem;
+    backdrop-filter: blur(4px);
   }
   .modal-overlay.open { display: flex; }
   @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -194,6 +201,7 @@
     background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
     width: 100%; max-width: 620px; max-height: 90vh; overflow-y: auto;
     animation: scaleIn 0.15s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   }
   .modal-box-header {
     display: flex; align-items: center; justify-content: space-between;
@@ -201,17 +209,24 @@
     position: sticky; top: 0; background: var(--surface); z-index: 1;
   }
   .modal-box-header h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.05em; }
-  .modal-close { width: 28px; height: 28px; background: var(--surface2); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; color: var(--muted); flex-shrink: 0; }
-  .modal-close:hover { color: var(--text); }
+  .modal-close { width: 28px; height: 28px; background: var(--surface2); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; color: var(--muted); flex-shrink: 0; transition: all 0.2s; }
+  .modal-close:hover { color: var(--text); border-color: var(--muted); }
   .modal-box-body { padding: 1.25rem; }
-  .modal-box-footer { display: flex; justify-content: flex-end; gap: 0.75rem; padding: 1rem 1.25rem; border-top: 1px solid var(--border); }
+  .modal-box-footer { display: flex; justify-content: flex-end; gap: 0.75rem; padding: 1rem 1.25rem; border-top: 1px solid var(--border); background: var(--bg); border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; }
 
-  .json-pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-family: 'Courier New', monospace; font-size: 0.78rem; line-height: 1.6; color: #a8d8a8; white-space: pre; overflow-x: auto; max-height: 55vh; overflow-y: auto; }
-
-  /* Estilos específicos para el modal del iframe para que se vea bien en pantalla */
+  /* Iframe Modal */
   .modal-iframe-container { display: flex; flex-direction: column; height: 80vh; max-width: 800px; }
   .modal-iframe-body { flex: 1; padding: 0; overflow: hidden; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; }
   .modal-iframe-body iframe { width: 100%; height: 100%; border: none; display: block; }
+
+  /* Elementos específicos del modal de GitHub */
+  .input-icon-wrapper { position: relative; width: 100%; }
+  .input-icon-wrapper input { padding-left: 2.2rem; font-family: monospace; letter-spacing: 0.1em; }
+  .input-icon-wrapper svg { position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted); }
+  
+  /* Animación de carga */
+  @keyframes spin { 100% { transform: rotate(360deg); } }
+  .spinner { animation: spin 1s linear infinite; }
 </style>
 </head>
 <body>
@@ -220,7 +235,7 @@
   <div class="logo">Más que <span>Burgers</span></div>
   <div class="header-actions">
     <button class="btn btn-secondary" onclick="abrirIframeModal()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2-2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
       Cargar imagen
     </button>
     
@@ -229,9 +244,9 @@
       Agregar
     </button>
     
-    <button class="btn btn-primary" onclick="mostrarJSON()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      Ver JSON
+    <button class="btn btn-primary" onclick="abrirGithubModal()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Guardar y Publicar
     </button>
   </div>
 </header>
@@ -250,6 +265,32 @@
 </main>
 
 <div id="toast"></div>
+
+<div class="modal-overlay" id="github-modal" onclick="cerrarGithubModal(event)">
+  <div class="modal-box" style="max-width: 450px;">
+    <div class="modal-box-header">
+      <h2>Autorización Requerida</h2>
+      <span class="modal-close" onclick="cerrarGithubModalDirecto()">✕</span>
+    </div>
+    <div class="modal-box-body">
+      <p style="color: var(--muted); font-size: 0.875rem; margin-bottom: 1.25rem; line-height: 1.5;">
+        Por seguridad, ingresá tu <strong>Token de GitHub</strong> para sincronizar los cambios con la web pública.
+      </p>
+      <div class="input-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <input type="password" id="github-token-input" placeholder="ghp_..." autocomplete="off">
+      </div>
+    </div>
+    <div class="modal-box-footer">
+      <button class="btn btn-secondary" id="btn-cancelar-gh" onclick="cerrarGithubModalDirecto()">Cancelar</button>
+      <button class="btn btn-primary" id="btn-confirmar-gh" onclick="procesarGuardadoGitHub()">
+        <svg id="gh-btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        <svg id="gh-btn-spinner" class="spinner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+        <span id="gh-btn-text">Guardar cambios</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 <div class="modal-overlay" id="iframe-modal" onclick="cerrarIframeModal(event)">
   <div class="modal-box modal-iframe-container">
@@ -321,27 +362,16 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="json-modal" onclick="cerrarJsonModal(event)">
-  <div class="modal-box" style="max-width:760px">
-    <div class="modal-box-header">
-      <h2>JSON del menú</h2>
-      <span class="modal-close" onclick="cerrarJsonModalDirecto()">✕</span>
-    </div>
-    <div class="modal-box-body">
-      <pre class="json-pre" id="json-output"></pre>
-    </div>
-    <div class="modal-box-footer">
-      <button class="btn btn-secondary" onclick="cerrarJsonModalDirecto()">Cerrar</button>
-      <button class="btn btn-primary" onclick="copiarJson()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        Copiar
-      </button>
-    </div>
-  </div>
-</div>
-
 <script>
 'use strict';
+
+// ==========================================
+// ⚙️ CONFIGURACIÓN DE GITHUB (MODIFICÁ ESTO)
+// ==========================================
+const GITHUB_USER = "demosprojects"; // Cambiá esto
+const GITHUB_REPO = "mqbmenu";    // Cambiá esto
+const ARCHIVO_JSON = "menu.json"; 
+// ==========================================
 
 let productos = [];
 const cardCache = new Map();
@@ -605,7 +635,7 @@ function eliminarProducto(i) {
 
 // ── Modales ──
 
-// Modal Iframe (Generador de URLs)
+// Modal Iframe
 function abrirIframeModal() {
   document.getElementById('iframe-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -613,6 +643,7 @@ function abrirIframeModal() {
 function cerrarIframeModal(e) { if (e.target === document.getElementById('iframe-modal')) cerrarIframeModalDirecto(); }
 function cerrarIframeModalDirecto() { document.getElementById('iframe-modal').classList.remove('open'); document.body.style.overflow = ''; }
 
+// Modal Imagen
 function abrirImgModal(i) {
   const prod = productos[i];
   if (!prod.imagen) return;
@@ -624,13 +655,14 @@ function abrirImgModal(i) {
 function cerrarImgModal(e) { if (e.target === document.getElementById('img-modal')) cerrarImgModalDirecto(); }
 function cerrarImgModalDirecto() { document.getElementById('img-modal').classList.remove('open'); document.body.style.overflow = ''; }
 
+// Modal Agregar
 function abrirAgregarModal() {
   ['new-nombre','new-precio','new-descripcion','new-imagen'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('new-categoria').value = 'Burgers';
   document.getElementById('new-destacado').checked = false;
   document.getElementById('agregar-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
-  document.getElementById('new-nombre').focus();
+  setTimeout(() => document.getElementById('new-nombre').focus(), 100);
 }
 function cerrarAgregarModal(e) { if (e.target === document.getElementById('agregar-modal')) cerrarAgregarModalDirecto(); }
 function cerrarAgregarModalDirecto() { document.getElementById('agregar-modal').classList.remove('open'); document.body.style.overflow = ''; }
@@ -657,29 +689,45 @@ function confirmarAgregarProducto() {
   card.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
+// ── Modal de GitHub ──
+function abrirGithubModal() {
+  const tokenInput = document.getElementById('github-token-input');
+  tokenInput.value = ''; // Limpiamos el campo por seguridad
+  document.getElementById('github-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => tokenInput.focus(), 100);
+}
+function cerrarGithubModal(e) { if (e.target === document.getElementById('github-modal')) cerrarGithubModalDirecto(); }
+function cerrarGithubModalDirecto() { 
+  document.getElementById('github-modal').classList.remove('open'); 
+  document.body.style.overflow = ''; 
+}
+
+// Al presionar Enter dentro del input del token, dispara el guardado
+document.getElementById('github-token-input').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    procesarGuardadoGitHub();
+  }
+});
+
 function ordenarProductos(lista) {
   return [...lista].sort((a, b) => {
-    // 1. Respetar el orden de las categorías primero
     const ca = ordenCategorias.indexOf(a.categoria), cb = ordenCategorias.indexOf(b.categoria);
     if (ca !== cb) return ca - cb;
 
-    // 2. Lógica para agrupar bebidas de la misma marca
     if (a.categoria === "Sin alcohol" || a.categoria === "Con alcohol") {
       const ma = a.nombre.split(" ")[0], mb = b.nombre.split(" ")[0];
       if (ma !== mb) return ma.localeCompare(mb);
     }
 
-    // 3. Lógica inteligente para tamaños (Simple, Doble, Triple)
     const regex = /(.+?)\s+(simple|doble|triple|cuadruple)$/i;
     const matchA = a.nombre.match(regex);
     const matchB = b.nombre.match(regex);
 
     if (matchA && matchB) {
-      // Extraemos el nombre base (ej: "American") para compararlos
       const baseA = matchA[1].toLowerCase();
       const baseB = matchB[1].toLowerCase();
-      
-      // Si estamos comparando la misma hamburguesa, ordenamos por tamaño
       if (baseA === baseB) {
         const pesos = { "simple": 1, "doble": 2, "triple": 3, "cuadruple": 4 };
         const pesoA = pesos[matchA[2].toLowerCase()];
@@ -687,35 +735,112 @@ function ordenarProductos(lista) {
         return pesoA - pesoB;
       }
     }
-
-    // 4. Si no son tamaños de la misma burger, orden alfabético normal
     return a.nombre.localeCompare(b.nombre);
   });
 }
-function mostrarJSON() {
-  document.getElementById('json-output').textContent = JSON.stringify(ordenarProductos(productos), null, 2);
-  document.getElementById('json-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function cerrarJsonModal(e) { if (e.target === document.getElementById('json-modal')) cerrarJsonModalDirecto(); }
-function cerrarJsonModalDirecto() { document.getElementById('json-modal').classList.remove('open'); document.body.style.overflow = ''; }
-function copiarJson() {
-  navigator.clipboard.writeText(document.getElementById('json-output').textContent).then(() => toast('✓ JSON copiado'));
+
+// ── GUARDADO AUTOMÁTICO EN GITHUB ──
+async function procesarGuardadoGitHub() {
+  const tokenInput = document.getElementById('github-token-input');
+  const token = tokenInput.value.trim();
+  
+  if (!token) {
+    toast('⚠️ Ingresá tu Token para continuar', 'error');
+    tokenInput.focus();
+    return;
+  }
+
+  // Referencias a los elementos UI
+  const btnConfirmar = document.getElementById('btn-confirmar-gh');
+  const btnCancelar = document.getElementById('btn-cancelar-gh');
+  const icon = document.getElementById('gh-btn-icon');
+  const spinner = document.getElementById('gh-btn-spinner');
+  const text = document.getElementById('gh-btn-text');
+
+  // Estado de carga visual
+  btnConfirmar.disabled = true;
+  btnCancelar.disabled = true;
+  tokenInput.disabled = true;
+  icon.style.display = 'none';
+  spinner.style.display = 'inline-block';
+  text.textContent = 'Procesando...';
+
+  try {
+    const datosOrdenados = ordenarProductos(productos);
+    const jsonString = JSON.stringify(datosOrdenados, null, 2);
+    
+    // Convertimos a Base64 respetando los acentos y las ñ
+    const base64Content = btoa(unescape(encodeURIComponent(jsonString)));
+    const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${ARCHIVO_JSON}`;
+
+    // Paso 1: Obtener el código SHA
+    const resGet = await fetch(url, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    
+    if (!resGet.ok) throw new Error("Token incorrecto o repositorio no encontrado.");
+    const dataGet = await resGet.json();
+    const shaActual = dataGet.sha;
+
+    text.textContent = 'Guardando...';
+
+    // Paso 2: Subir el archivo
+    const resPut = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: '🍔 Actualización de menú desde el Admin',
+        content: base64Content,
+        sha: shaActual
+      })
+    });
+
+    if (resPut.ok) {
+      toast('¡Menú actualizado con éxito!', 'success');
+      cerrarGithubModalDirecto();
+    } else {
+      throw new Error("GitHub rechazó la modificación del archivo.");
+    }
+
+  } catch (error) {
+    toast('❌ Error: ' + error.message, 'error');
+    // Le volvemos a dar foco al input para que corrija la clave
+    setTimeout(() => tokenInput.focus(), 100);
+  } finally {
+    // Restaurar botones a la normalidad
+    btnConfirmar.disabled = false;
+    btnCancelar.disabled = false;
+    tokenInput.disabled = false;
+    icon.style.display = 'inline-block';
+    spinner.style.display = 'none';
+    text.textContent = 'Publicar Cambios';
+  }
 }
 
-// ── Toast ──
+// ── Toast (Ahora soporta estados) ──
 let toastTimer;
-function toast(msg) {
+function toast(msg, type = 'success') {
   const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
+  t.textContent = msg; 
+  t.className = 'show ' + type;
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+  toastTimer = setTimeout(() => {
+    t.classList.remove('show');
+    // Limpiar clases extra después de que se oculta
+    setTimeout(() => t.className = '', 200);
+  }, 3500);
 }
 
 // ── Escape ──
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  cerrarImgModalDirecto(); cerrarIframeModalDirecto(); cerrarAgregarModalDirecto(); cerrarJsonModalDirecto();
+  cerrarImgModalDirecto(); 
+  cerrarIframeModalDirecto(); 
+  cerrarAgregarModalDirecto();
+  cerrarGithubModalDirecto();
 });
 
 cargarProductos();
