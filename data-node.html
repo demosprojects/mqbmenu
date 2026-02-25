@@ -262,9 +262,14 @@
   <div class="page-title">Panel de Menú</div>
   <div class="page-subtitle">Administrá los productos del menú digital</div>
   
-  <div class="search-bar">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="buscador" placeholder="Buscar por nombre o categoría..." oninput="filtrarLista()">
+  <div style="display:flex; gap:0.75rem; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap;">
+    <div class="search-bar" style="margin-bottom:0; flex:1; min-width:200px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="buscador" placeholder="Buscar por nombre o categoría..." oninput="filtrarLista()">
+    </div>
+    <button id="btn-filtro-nodisp" class="btn btn-secondary" onclick="toggleFiltroNoDisponibles()" style="white-space:nowrap; font-size:0.8rem;">
+      Ver no disponibles
+    </button>
   </div>
 
   <div class="stats" id="stats-bar"></div>
@@ -390,6 +395,7 @@ const ARCHIVO_JSON = "menu.json";
 // ==========================================
 
 let productos = [];
+let soloNoDisponibles = false;
 const cardCache = new Map();
 const ordenCategorias = ["Burgers","Para compartir","Papas","Kids","Sin alcohol","Con alcohol","Agregados"];
 
@@ -453,6 +459,23 @@ function renderProductos() {
 }
 
 // ── Filtro de ultra-bajo consumo ──
+function toggleFiltroNoDisponibles() {
+  soloNoDisponibles = !soloNoDisponibles;
+  const btn = document.getElementById('btn-filtro-nodisp');
+  if (soloNoDisponibles) {
+    btn.style.background = 'var(--danger)';
+    btn.style.color = '#fff';
+    btn.style.borderColor = 'var(--danger)';
+    btn.textContent = '✕ Solo no disponibles';
+  } else {
+    btn.style.background = '';
+    btn.style.color = '';
+    btn.style.borderColor = '';
+    btn.textContent = 'Ver no disponibles';
+  }
+  filtrarLista();
+}
+
 function filtrarLista() {
   const query = document.getElementById('buscador').value.toLowerCase();
   let visibles = 0;
@@ -461,8 +484,10 @@ function filtrarLista() {
     const prod = productos[index];
     if (!prod) return;
 
-    const match = (prod.nombre || '').toLowerCase().includes(query) ||
+    const matchQuery = (prod.nombre || '').toLowerCase().includes(query) ||
                   (prod.categoria || '').toLowerCase().includes(query);
+    const matchDisp = !soloNoDisponibles || prod.disponible === false;
+    const match = matchQuery && matchDisp;
 
     const currentDisplay = card.style.display;
     const newDisplay = match ? '' : 'none';
@@ -509,7 +534,7 @@ function crearCard(prod, i) {
   const destBadge  = document.createElement("span"); destBadge.className  = "prod-dest-badge";  destBadge.textContent = "⭐ Destacado"; destBadge.style.display = prod.destacado ? "" : "none";
   
   // Badge de agotado
-  const dispBadge  = document.createElement("span"); dispBadge.className  = "prod-disp-badge";  dispBadge.textContent = "🚫 Agotado"; dispBadge.style.display = isDisponible ? "none" : "";
+  const dispBadge  = document.createElement("span"); dispBadge.className  = "prod-disp-badge";  dispBadge.textContent = "No disponible"; dispBadge.style.display = isDisponible ? "none" : "";
 
   const catBadge   = document.createElement("span"); catBadge.className   = "prod-cat-badge";   catBadge.textContent = prod.categoria;
   const priceBadge = document.createElement("span"); priceBadge.className = "prod-price-badge"; priceBadge.textContent = prod.precio ? '$' + prod.precio.toLocaleString() : '—';
