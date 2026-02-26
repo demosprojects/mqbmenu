@@ -201,19 +201,19 @@
     "destacado": false
   },
   {
-    "nombre": "Burger con papas y lata de Coca Cola",
-    "descripcion": "Burger, sobre de papas y lata de Coca Cola",
-    "precio": 8500,
-    "categoria": "Kids",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976221/o553nwdvo9vvcwchs93a.webp",
-    "destacado": false
-  },
-  {
     "nombre": "Cajita infantil",
     "descripcion": "Mini burger, papas, lata de Coca Cola, libro para colorear.(Opción de reemplazar la burger por tiritas de pollo).",
     "precio": 12900,
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976064/rkl72xtqtyi1nfl94fjr.webp",
+    "destacado": false
+  },
+  {
+    "nombre": "Mini burger con papas y lata de Coca Cola",
+    "descripcion": "Burger, sobre de papas y lata de Coca Cola",
+    "precio": 8500,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976221/o553nwdvo9vvcwchs93a.webp",
     "destacado": false
   },
   {
