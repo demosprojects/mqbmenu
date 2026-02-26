@@ -238,7 +238,8 @@
     "precio": 3300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268180/zsczdbr8wddfqr1i3vpp.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Cepita durazno 1,5cc",
@@ -334,7 +335,8 @@
     "precio": 3000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270847/f9hdlc8djkpstjdp0scd.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Monster",
