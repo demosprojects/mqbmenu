@@ -3,9 +3,9 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="color-scheme" content="light">
+<meta name="color-scheme" content="only light">
  <meta name="theme-color" content="#ffffff">
- <title>Menú | Mas que Burgers</title>
+ <title>Menú | Más que Burgers</title>
  <link rel="icon" href="https://imagedelivery.net/ut8GNCA1obOu4JnXrJ_J9Q/e7b59903-06e0-48f8-1bb1-71bd6da8a800/public" type="image/x-icon">
  <script src="https://cdn.tailwindcss.com"></script>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -37,8 +37,9 @@
  </script>
 
  <style>
-   :root {
-  color-scheme: light;
+
+:root {
+  color-scheme: only light !important;
 }
  .no-scrollbar::-webkit-scrollbar { display: none; }
  .bg-pattern {
@@ -77,6 +78,12 @@
  }
  #no-results { animation: fadeIn 0.3s ease forwards; }
  #bebidas-dropdown { transition: opacity 0.15s ease; }
+
+ @media (prefers-color-scheme: dark) {
+  html {
+    filter: invert(0%) !important;
+  }
+}
  </style>
 </head>
 <body class="bg-white text-mqb-dark font-sans selection:bg-mqb-blue selection:text-white">
@@ -196,14 +203,14 @@
  </div>
 
  <!-- Ubicación -->
- <div class="space-y-2">
- <h5 class="font-impact text-xl sm:text-2xl text-mqb-blue uppercase tracking-tight">
- Villa Ángela, Chaco
- </h5>
- <p class="text-gray-400 text-sm leading-relaxed">
- Vení a visitarnos y disfrutá de la mejor experiencia en hamburguesas.
- </p>
- </div>
+<div class="space-y-2">
+  <h5 class="font-bold text-sm uppercase tracking-widest text-mqb-blue">
+    <i class="fa-solid fa-location-dot mr-2"></i>Villa Ángela, Chaco
+  </h5>
+  <p class="text-sm text-gray-400 leading-relaxed">
+    Vení a visitarnos y disfrutá de la mejor experiencia en hamburguesas.
+  </p>
+</div>
 
  <!-- Redes -->
  <div class="flex justify-center md:justify-end gap-4">
@@ -389,4 +396,3 @@
 
 </body>
 </html>
-
