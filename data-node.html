@@ -600,26 +600,6 @@
   .modal-box-footer .btn { flex: 1; justify-content: center; }
   @media (min-width: 480px) { .modal-box-footer .btn { flex: initial; justify-content: initial; } }
 
-  /* ── IFRAME MODAL ── */
-  .modal-iframe-container {
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
-    max-width: 800px;
-  }
-  @media (min-width: 768px) { .modal-iframe-container { height: 80vh; } }
-  .modal-iframe-body {
-    flex: 1;
-    padding: 0;
-    overflow: hidden;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
-  @media (min-width: 480px) {
-    .modal-iframe-body { border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; }
-  }
-  .modal-iframe-body iframe { width: 100%; height: 100%; border: none; display: block; }
-
   /* ── GITHUB MODAL ── */
   .input-icon-wrapper { position: relative; width: 100%; }
   .input-icon-wrapper input { padding-left: 2.2rem; font-family: monospace; letter-spacing: 0.08em; }
@@ -628,6 +608,64 @@
   /* ── SPINNER ── */
   @keyframes spin { 100% { transform: rotate(360deg); } }
   .spinner { animation: spin 1s linear infinite; }
+
+  /* ── INLINE IMAGE UPLOADER ── */
+  .img-uploader {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  @media (min-width: 640px) { .img-uploader { grid-column: span 4; } }
+
+  .img-btn-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .img-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s, background 0.15s;
+    min-height: 38px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .img-action-btn:active { opacity: 0.7; }
+  .img-action-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .img-action-btn.upload  { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .img-action-btn.upload:hover  { border-color: var(--accent); color: var(--accent); }
+  .img-action-btn.change  { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+  .img-action-btn.change:hover  { border-color: var(--accent); color: var(--accent); }
+  .img-action-btn.remove  { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+  .img-action-btn.remove:hover  { background: var(--danger); color: #fff; }
+
+  @keyframes uploadspin { to { transform: rotate(360deg); } }
+  .img-spinner {
+    width: 14px; height: 14px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: uploadspin 0.7s linear infinite;
+    flex-shrink: 0;
+  }
+
+  .img-error {
+    display: none;
+    font-size: 0.75rem;
+    color: var(--danger);
+  }
+  .img-error.visible { display: block; }
 </style>
 </head>
 <body>
@@ -635,11 +673,6 @@
 <header>
   <div class="logo">Más que <span>Burgers</span></div>
   <div class="header-actions">
-    <button class="btn btn-secondary" onclick="abrirIframeModal()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2-2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-      <span class="btn-label">Cargar imagen</span>
-    </button>
-    
     <button class="btn btn-secondary" onclick="abrirAgregarModal()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
       <span class="btn-label">Agregar</span>
@@ -698,18 +731,6 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="iframe-modal" onclick="cerrarIframeModal(event)">
-  <div class="modal-box modal-iframe-container">
-    <div class="modal-box-header">
-      <h2>Servidor de Imágenes</h2>
-      <span class="modal-close" onclick="cerrarIframeModalDirecto()">✕</span>
-    </div>
-    <div class="modal-box-body modal-iframe-body">
-      <iframe src="https://demosprojects.github.io/url-fotos/imagenes-crear.html"></iframe>
-    </div>
-  </div>
-</div>
-
 <div class="modal-overlay" id="img-modal" onclick="cerrarImgModal(event)">
   <div class="modal-img-inner">
     <img id="modal-img" src="" alt="">
@@ -745,10 +766,14 @@
           <label class="field-label">Descripción</label>
           <textarea id="new-descripcion" placeholder="Descripción del producto"></textarea>
         </div>
-        <div class="field-group span4">
-          <label class="field-label">URL Imagen</label>
-          <input type="text" id="new-imagen" placeholder="https://...">
+        <div class="img-uploader" id="new-img-uploader">
+          <label class="field-label">Imagen</label>
+          <div class="img-btn-row" id="new-img-btn-row">
+            <!-- Se genera por JS -->
+          </div>
+          <div class="img-error" id="new-img-error"></div>
         </div>
+        <input type="hidden" id="new-imagen" value="">
       </div>
       <div class="toggles-container">
         <div class="toggle-wrapper">
@@ -957,9 +982,9 @@ function crearCard(prod, i) {
   }));
   grid.appendChild(mkTextarea("Descripción", "span4", prod.descripcion, v => { productos[i].descripcion = v; }));
   
-  grid.appendChild(mkTextChange("URL Imagen", "span4", prod.imagen, v => {
-    productos[i].imagen = v;
-    rebuildThumb(thumb, v, i);
+  grid.appendChild(mkImgUploader(prod.imagen, url => {
+    productos[i].imagen = url;
+    rebuildThumb(thumb, url, i);
   }));
 
   // Contenedor de toggles
@@ -998,7 +1023,7 @@ function crearCard(prod, i) {
   togglesContainer.append(tDispWrapper, tDestWrapper);
 
   const footer = document.createElement("div"); footer.className = "card-footer";
-  const btnDel = document.createElement("button"); btnDel.className = "btn btn-danger"; btnDel.textContent = "🗑 Eliminar producto";
+  const btnDel = document.createElement("button"); btnDel.className = "btn btn-danger"; btnDel.textContent = "Eliminar producto";
   btnDel.addEventListener('click', () => eliminarProducto(i));
   footer.appendChild(btnDel);
 
@@ -1067,6 +1092,132 @@ function mkTextChange(label, span, val, cb) {
   inp.addEventListener('change', () => cb(inp.value)); 
   g.appendChild(inp); return g;
 }
+
+// ── Subida de imagen a Cloudinary ──
+const CLOUDINARY_URL  = 'https://api.cloudinary.com/v1_1/dl2tftoum/image/upload';
+const CLOUDINARY_PRESET = 'uploads';
+
+async function uploadImageFile(file) {
+  const canvas = await fileToCanvas(file);
+  const blob   = await canvasToBlob(canvas);
+  const fd     = new FormData();
+  fd.append('file', blob, 'image.webp');
+  fd.append('upload_preset', CLOUDINARY_PRESET);
+  const res  = await fetch(CLOUDINARY_URL, { method: 'POST', body: fd });
+  const data = await res.json();
+  if (!data.secure_url) throw new Error('Cloudinary error');
+  return data.secure_url;
+}
+
+function fileToCanvas(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        const c = document.createElement('canvas');
+        c.width = img.width; c.height = img.height;
+        c.getContext('2d').drawImage(img, 0, 0);
+        resolve(c);
+      };
+      img.onerror = reject;
+      img.src = e.target.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function canvasToBlob(canvas) {
+  return new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 0.82));
+}
+
+// ── Widget de subida inline (solo botones, sin preview) ──
+const ICONO_SUBIR = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>`;
+const ICONO_TRASH = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg>`;
+const ICONO_SPIN  = `<span class="img-spinner"></span>`;
+
+function mkImgUploader(initialUrl, cb) {
+  const g = document.createElement('div');
+  g.className = 'img-uploader';
+
+  const lbl = document.createElement('label');
+  lbl.className = 'field-label';
+  lbl.textContent = 'Imagen';
+
+  const row = document.createElement('div');
+  row.className = 'img-btn-row';
+
+  const errEl = document.createElement('div');
+  errEl.className = 'img-error';
+
+  // Input file oculto
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file'; fileInput.accept = 'image/*';
+  fileInput.style.cssText = 'position:absolute;width:0;height:0;opacity:0;pointer-events:none;';
+  fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
+
+  let hasImage = !!initialUrl;
+  renderButtons();
+
+  function renderButtons() {
+    row.innerHTML = '';
+    row.appendChild(fileInput);
+    if (!hasImage) {
+      const btnUp = makeBtn('upload', ICONO_SUBIR + ' Subir imagen', () => fileInput.click());
+      row.appendChild(btnUp);
+    } else {
+      const btnCh = makeBtn('change', ICONO_SUBIR + ' Cambiar imagen', () => fileInput.click());
+      const btnRm = makeBtn('remove', ICONO_TRASH + ' Eliminar imagen', () => {
+        hasImage = false;
+        errEl.classList.remove('visible');
+        cb('');
+        renderButtons();
+      });
+      row.append(btnCh, btnRm);
+    }
+  }
+
+  function makeBtn(cls, html, onClick) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'img-action-btn ' + cls;
+    b.innerHTML = html;
+    b.addEventListener('click', onClick);
+    return b;
+  }
+
+  async function handleFile(file) {
+    errEl.classList.remove('visible');
+    setLoading(true);
+    try {
+      const url = await uploadImageFile(file);
+      hasImage = true;
+      cb(url);
+      renderButtons();
+      toast('✓ Imagen subida', 'success');
+    } catch {
+      errEl.textContent = 'Error al subir. Intentá de nuevo.';
+      errEl.classList.add('visible');
+    } finally {
+      setLoading(false);
+    }
+    fileInput.value = '';
+  }
+
+  function setLoading(on) {
+    row.querySelectorAll('.img-action-btn').forEach(b => {
+      b.disabled = on;
+      if (on && b.classList.contains('upload') || b.classList.contains('change')) {
+        b._origHTML = b._origHTML || b.innerHTML;
+        if (on) b.innerHTML = ICONO_SPIN + ' Subiendo...';
+        else b.innerHTML = b._origHTML;
+      }
+    });
+  }
+
+  g.append(lbl, row, errEl);
+  return g;
+}
 function mkNumber(label, span, val, cb) {
   const g = mkField(label, span);
   const inp = document.createElement("input"); inp.type = "number"; inp.value = val || 0;
@@ -1098,16 +1249,6 @@ function eliminarProducto(i) {
   renderProductos();
 }
 
-// ── Modales ──
-
-// Modal Iframe
-function abrirIframeModal() {
-  document.getElementById('iframe-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function cerrarIframeModal(e) { if (e.target === document.getElementById('iframe-modal')) cerrarIframeModalDirecto(); }
-function cerrarIframeModalDirecto() { document.getElementById('iframe-modal').classList.remove('open'); document.body.style.overflow = ''; }
-
 // Modal Imagen
 function abrirImgModal(i) {
   const prod = productos[i];
@@ -1120,12 +1261,82 @@ function abrirImgModal(i) {
 function cerrarImgModal(e) { if (e.target === document.getElementById('img-modal')) cerrarImgModalDirecto(); }
 function cerrarImgModalDirecto() { document.getElementById('img-modal').classList.remove('open'); document.body.style.overflow = ''; }
 
-// Modal Agregar
+// ── Modal Agregar — lógica de imagen ──
+let newImgUrl = '';
+
+function renderNewImgButtons() {
+  const row    = document.getElementById('new-img-btn-row');
+  const hidden = document.getElementById('new-imagen');
+  row.innerHTML = '';
+
+  // file input siempre oculto
+  const fi = document.createElement('input');
+  fi.type = 'file'; fi.accept = 'image/*'; fi.id = 'new-img-file';
+  fi.style.cssText = 'position:absolute;width:0;height:0;opacity:0;pointer-events:none;';
+  fi.addEventListener('change', () => { if (fi.files[0]) handleNewFile(fi.files[0]); });
+  row.appendChild(fi);
+
+  if (!newImgUrl) {
+    const btn = makeImgBtn('upload', ICONO_SUBIR + ' Subir imagen', () => fi.click());
+    row.appendChild(btn);
+  } else {
+    const btnCh = makeImgBtn('change', ICONO_SUBIR + ' Cambiar imagen', () => fi.click());
+    const btnRm = makeImgBtn('remove', ICONO_TRASH + ' Eliminar imagen', () => {
+      newImgUrl = ''; hidden.value = '';
+      document.getElementById('new-img-error').classList.remove('visible');
+      renderNewImgButtons();
+    });
+    row.append(btnCh, btnRm);
+  }
+}
+
+function makeImgBtn(cls, html, onClick) {
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'img-action-btn ' + cls;
+  b.innerHTML = html;
+  b.addEventListener('click', onClick);
+  return b;
+}
+
+async function handleNewFile(file) {
+  const errEl = document.getElementById('new-img-error');
+  errEl.classList.remove('visible');
+  const row = document.getElementById('new-img-btn-row');
+  row.querySelectorAll('.img-action-btn').forEach(b => { b.disabled = true; });
+  const loadBtn = row.querySelector('.img-action-btn.upload, .img-action-btn.change');
+  if (loadBtn) { loadBtn._orig = loadBtn.innerHTML; loadBtn.innerHTML = ICONO_SPIN + ' Subiendo...'; }
+  try {
+    const url = await uploadImageFile(file);
+    newImgUrl = url;
+    document.getElementById('new-imagen').value = url;
+    renderNewImgButtons();
+    toast('✓ Imagen subida', 'success');
+  } catch {
+    errEl.textContent = 'Error al subir. Intentá de nuevo.';
+    errEl.classList.add('visible');
+    row.querySelectorAll('.img-action-btn').forEach(b => { b.disabled = false; });
+    if (loadBtn && loadBtn._orig) loadBtn.innerHTML = loadBtn._orig;
+  }
+  const fi = document.getElementById('new-img-file');
+  if (fi) fi.value = '';
+}
+
+// Funciones legacy que el HTML inline llama (ya no existen pero por si acaso)
+function triggerNewImgFile(e) { e && e.stopPropagation(); const fi = document.getElementById('new-img-file'); if(fi) fi.click(); }
+function removeNewImg(e) { e && e.stopPropagation(); newImgUrl = ''; document.getElementById('new-imagen').value = ''; renderNewImgButtons(); }
+
+renderNewImgButtons();
+
+// ── Modal Agregar ──
 function abrirAgregarModal() {
-  ['new-nombre','new-precio','new-descripcion','new-imagen'].forEach(id => document.getElementById(id).value = '');
+  ['new-nombre','new-precio','new-descripcion'].forEach(id => document.getElementById(id).value = '');
+  newImgUrl = '';
+  document.getElementById('new-imagen').value = '';
+  document.getElementById('new-img-error').classList.remove('visible');
+  renderNewImgButtons();
   document.getElementById('new-categoria').value = 'Burgers';
   document.getElementById('new-destacado').checked = false;
-  document.getElementById('new-disponible').checked = true; // Por defecto disponible
+  document.getElementById('new-disponible').checked = true;
   document.getElementById('agregar-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
   setTimeout(() => document.getElementById('new-nombre').focus(), 100);
@@ -1295,31 +1506,10 @@ function toast(msg, type = 'success') {
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
   cerrarImgModalDirecto(); 
-  cerrarIframeModalDirecto(); 
   cerrarAgregarModalDirecto();
   cerrarGithubModalDirecto();
 });
 
-// ── Listener para copiar link desde el iframe de imágenes ──
-window.addEventListener('message', e => {
-  if (e.data && e.data.type === 'COPY_TO_CLIPBOARD' && e.data.text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(e.data.text)
-        .then(() => toast('¡Link copiado al portapapeles!', 'success'))
-        .catch(() => toast('No se pudo copiar el link', 'error'));
-    } else {
-      // fallback execCommand desde el padre (tiene foco)
-      const tmp = document.createElement('textarea');
-      tmp.value = e.data.text;
-      tmp.style.position = 'fixed'; tmp.style.opacity = '0';
-      document.body.appendChild(tmp);
-      tmp.focus(); tmp.select();
-      try { document.execCommand('copy'); toast('¡Link copiado al portapapeles!', 'success'); }
-      catch { toast('No se pudo copiar el link', 'error'); }
-      document.body.removeChild(tmp);
-    }
-  }
-});
 
 cargarProductos();
 </script>
