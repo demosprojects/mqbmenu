@@ -1300,6 +1300,27 @@ document.addEventListener('keydown', e => {
   cerrarGithubModalDirecto();
 });
 
+// ── Listener para copiar link desde el iframe de imágenes ──
+window.addEventListener('message', e => {
+  if (e.data && e.data.type === 'COPY_TO_CLIPBOARD' && e.data.text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(e.data.text)
+        .then(() => toast('¡Link copiado al portapapeles!', 'success'))
+        .catch(() => toast('No se pudo copiar el link', 'error'));
+    } else {
+      // fallback execCommand desde el padre (tiene foco)
+      const tmp = document.createElement('textarea');
+      tmp.value = e.data.text;
+      tmp.style.position = 'fixed'; tmp.style.opacity = '0';
+      document.body.appendChild(tmp);
+      tmp.focus(); tmp.select();
+      try { document.execCommand('copy'); toast('¡Link copiado al portapapeles!', 'success'); }
+      catch { toast('No se pudo copiar el link', 'error'); }
+      document.body.removeChild(tmp);
+    }
+  }
+});
+
 cargarProductos();
 </script>
 </body>
