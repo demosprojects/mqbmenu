@@ -290,6 +290,24 @@
     "destacado": false
   },
   {
+    "nombre": "Coca Cola de vidrio 350cc",
+    "descripcion": "Coca Cola de vidrio de 350cc",
+    "precio": 1200,
+    "categoria": "Sin alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772072528/xulmwqe2uhxvgd4jny04.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Coca Cola de vidrio Zero 350cc",
+    "descripcion": "Coca Cola de vidrio de 350cc",
+    "precio": 1200,
+    "categoria": "Sin alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772072342/oolne6mwh0ovmjb5qamo.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Coca Cola lata",
     "descripcion": "Coca Cola en lata ",
     "precio": 1700,
@@ -521,6 +539,24 @@
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481856/odd4pelricsjjay6qcop.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Pampa honey 473cc",
+    "descripcion": "Cerveza en lata de 473cc",
+    "precio": 2000,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772071934/uas7kkcvyvrv7ocet3ju.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Santa Fé 473cc",
+    "descripcion": "Cerveza en lata de 473cc",
+    "precio": 2000,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482324/rhn02nwsjcs22hsriuez.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Schneider 473cc",
