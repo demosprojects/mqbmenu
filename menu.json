@@ -370,7 +370,8 @@
     "precio": 3300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271621/kuuhiotfv5ieheoo7loy.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Sprite 370",
