@@ -271,7 +271,8 @@
     "precio": 1400,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271175/za51bnfezvgdy55fgnlf.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Coca Cola de vidrio 1,5L",
