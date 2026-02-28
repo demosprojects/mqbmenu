@@ -2,7 +2,7 @@
   {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon.",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
@@ -10,7 +10,7 @@
   {
     "nombre": "American doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon.",
-    "precio": 9500,
+    "precio": 10500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
@@ -18,7 +18,7 @@
   {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino, carne, cheddar, cebolla morada.",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false
@@ -26,7 +26,7 @@
   {
     "nombre": "Berlín doble",
     "descripcion": "Pan, mayonesa, pepino, doble carne, doble cheddar, cebolla morada.",
-    "precio": 9500,
+    "precio": 10500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false
@@ -34,7 +34,7 @@
   {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 7500,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
@@ -42,7 +42,7 @@
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
@@ -50,7 +50,7 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 8300,
+    "precio": 9300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
@@ -58,7 +58,7 @@
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 9300,
+    "precio": 10300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
@@ -66,7 +66,7 @@
   {
     "nombre": "Cryspi simple",
     "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
@@ -74,7 +74,7 @@
   {
     "nombre": "Cryspi doble",
     "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
-    "precio": 9500,
+    "precio": 10500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
@@ -82,7 +82,7 @@
   {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
-    "precio": 8500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
     "destacado": false
@@ -90,7 +90,7 @@
   {
     "nombre": "Moscú doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, bacon, huevo",
-    "precio": 9500,
+    "precio": 10500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
     "destacado": false
@@ -98,7 +98,7 @@
   {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
-    "precio": 10000,
+    "precio": 11000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false
@@ -106,7 +106,7 @@
   {
     "nombre": "Yankee triple",
     "descripcion": "Pan, mayonesa, triple carne, doble cheddar, bacon.",
-    "precio": 10700,
+    "precio": 12000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false
@@ -578,7 +578,7 @@
   {
     "nombre": "Bacon",
     "descripcion": "Agregar más bacon. Imagen ilustrativa.",
-    "precio": 1900,
+    "precio": 2500,
     "categoria": "Agregados",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522340/pvg2u83lx6djromaqqvp.webp",
     "destacado": false
@@ -586,7 +586,7 @@
   {
     "nombre": "Cheddar",
     "descripcion": "Agregar más cheddar en: burger, papas o en toping. Imagen ilustrativa.",
-    "precio": 1700,
+    "precio": 2500,
     "categoria": "Agregados",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522911/pmfctbur1zyfgb3avlww.webp",
     "destacado": false
@@ -594,7 +594,7 @@
   {
     "nombre": "Extra de carne",
     "descripcion": "Agregar más carne. Imagen ilustrativa.",
-    "precio": 2100,
+    "precio": 4000,
     "categoria": "Agregados",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522828/vsamxbvoolr81ojuvtk3.webp",
     "destacado": false
@@ -602,7 +602,7 @@
   {
     "nombre": "Huevo",
     "descripcion": "Agregar más huevo. Imagen ilustrativa.",
-    "precio": 550,
+    "precio": 700,
     "categoria": "Agregados",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771523015/snm3z9togb4tuyn4iohf.webp",
     "destacado": false
@@ -610,7 +610,7 @@
   {
     "nombre": "Ketchup",
     "descripcion": "Agregar más ketchup. Imagen ilustrativa.",
-    "precio": 400,
+    "precio": 700,
     "categoria": "Agregados",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771522598/ffpfg4q5sjbyksuvwees.webp",
     "destacado": false
@@ -618,7 +618,7 @@
   {
     "nombre": "Mayonesa de la casa",
     "descripcion": "Agregar más mayonesa. Imagen ilustrativa.",
-    "precio": 550,
+    "precio": 700,
     "categoria": "Agregados",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771523113/wuve0vwhfpinnef0guud.webp",
     "destacado": false
