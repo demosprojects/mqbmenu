@@ -293,7 +293,7 @@
   {
     "nombre": "Coca Cola de vidrio 350cc",
     "descripcion": "Coca Cola de vidrio de 350cc",
-    "precio": 1200,
+    "precio": 1300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772072528/xulmwqe2uhxvgd4jny04.webp",
     "destacado": false,
@@ -302,7 +302,7 @@
   {
     "nombre": "Coca Cola de vidrio Zero 350cc",
     "descripcion": "Coca Cola de vidrio de 350cc",
-    "precio": 1200,
+    "precio": 1300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772072342/oolne6mwh0ovmjb5qamo.webp",
     "destacado": false,
