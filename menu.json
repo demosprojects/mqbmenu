@@ -42,7 +42,7 @@
   },
   {
     "nombre": "Blue doble",
-    "descripcion": "Pan, doble carne, cheddar, cebolla caramelizada, roquefort",
+    "descripcion": "Pan, doble carne, cheddar, cebolla caramelizada, roquefort.",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
