@@ -100,16 +100,16 @@
     "disponible": true
   },
   {
-    "nombre": "Cryspi simple",
-    "descripcion": "Pan, ketchup, carne, doble cheddar, pepino, cebolla cryspi",
+    "nombre": "Crispy simple",
+    "descripcion": "Pan, tomate, pepino, carne, mozzarella, cebolla crispy, aderezo de chimichurry.",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
     "destacado": false
   },
   {
-    "nombre": "Cryspi doble",
-    "descripcion": "Pan, ketchup, doble carne, doble cheddar, pepino, cebolla cryspi",
+    "nombre": "Crispy doble",
+    "descripcion": "Pan, tomate, pepino, doble carne, mozzarella, cebolla crispy, aderezo de chimichurry.",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
