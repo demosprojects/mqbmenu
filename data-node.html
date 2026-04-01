@@ -810,7 +810,7 @@
         <div class="field-group">
           <label class="field-label">Categoría</label>
           <select id="new-categoria">
-            <option>Burgers</option><option>Para compartir</option><option>Papas</option>
+            <option>Burgers</option><option>Pizzas</option><option>Para compartir</option><option>Papas</option>
             <option>Kids</option><option>Sin alcohol</option><option>Con alcohol</option>
             <option>Agregados</option>
           </select>
@@ -869,7 +869,7 @@ const ARCHIVO_JSON = "menu.json";
 let productos = [];
 let soloNoDisponibles = false;
 const cardCache = new Map();
-const ordenCategorias = ["Burgers","Para compartir","Papas","Kids","Sin alcohol","Con alcohol","Agregados"];
+const ordenCategorias = ["Burgers","Pizzas","Para compartir","Papas","Kids","Sin alcohol","Con alcohol","Agregados"];
 
 // ── Optimización de Imágenes al vuelo ──
 function getOptimizedImageUrl(url, width = 100, quality = 60) {
