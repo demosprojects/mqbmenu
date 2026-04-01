@@ -666,6 +666,59 @@
     color: var(--danger);
   }
   .img-error.visible { display: block; }
+
+  .img-link-row {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-top: 0.4rem;
+  }
+  .img-link-row input {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 0.45rem 0.65rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    outline: none;
+    min-width: 0;
+  }
+  .img-link-row input::placeholder { color: var(--muted); }
+  .img-link-confirm {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: #fff;
+    min-height: 36px;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .img-link-confirm:hover { opacity: 0.85; }
+  .img-link-cancel {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    background: var(--surface2);
+    color: var(--muted);
+    min-height: 36px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .img-link-cancel:hover { color: var(--text); }
 </style>
 </head>
 <body>
@@ -1136,6 +1189,7 @@ function canvasToBlob(canvas) {
 const ICONO_SUBIR = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>`;
 const ICONO_TRASH = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg>`;
 const ICONO_SPIN  = `<span class="img-spinner"></span>`;
+const ICONO_LINK  = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
 
 function mkImgUploader(initialUrl, cb) {
   const g = document.createElement('div');
@@ -1158,23 +1212,62 @@ function mkImgUploader(initialUrl, cb) {
   fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
 
   let hasImage = !!initialUrl;
-  renderButtons();
 
-  function renderButtons() {
+  function renderButtons(showLinkInput = false) {
     row.innerHTML = '';
     row.appendChild(fileInput);
+
+    // Limpiar link row anterior
+    const prevLinkRow = g.querySelector('.img-link-row');
+    if (prevLinkRow) prevLinkRow.remove();
+
     if (!hasImage) {
-      const btnUp = makeBtn('upload', ICONO_SUBIR + ' Subir imagen', () => fileInput.click());
-      row.appendChild(btnUp);
+      const btnUp   = makeBtn('upload', ICONO_SUBIR + ' Subir imagen', () => fileInput.click());
+      const btnLink = makeBtn('upload', ICONO_LINK + ' Pegar link', () => renderButtons(true));
+      row.append(btnUp, btnLink);
     } else {
-      const btnCh = makeBtn('change', ICONO_SUBIR + ' Cambiar imagen', () => fileInput.click());
-      const btnRm = makeBtn('remove', ICONO_TRASH + ' Eliminar imagen', () => {
+      const btnCh   = makeBtn('change', ICONO_SUBIR + ' Cambiar imagen', () => fileInput.click());
+      const btnLink = makeBtn('upload', ICONO_LINK + ' Cambiar link', () => renderButtons(true));
+      const btnRm   = makeBtn('remove', ICONO_TRASH + ' Eliminar imagen', () => {
         hasImage = false;
         errEl.classList.remove('visible');
         cb('');
         renderButtons();
       });
-      row.append(btnCh, btnRm);
+      row.append(btnCh, btnLink, btnRm);
+    }
+
+    // Input de link inline
+    if (showLinkInput) {
+      const linkRow = document.createElement('div');
+      linkRow.className = 'img-link-row';
+      const linkInput = document.createElement('input');
+      linkInput.type = 'url';
+      linkInput.placeholder = 'https://ejemplo.com/imagen.jpg';
+      linkInput.value = hasImage ? (initialUrl || '') : '';
+      const btnOk = document.createElement('button');
+      btnOk.type = 'button'; btnOk.className = 'img-link-confirm';
+      btnOk.innerHTML = '✓ Usar';
+      const btnCancel = document.createElement('button');
+      btnCancel.type = 'button'; btnCancel.className = 'img-link-cancel';
+      btnCancel.textContent = '✕';
+      btnOk.addEventListener('click', () => {
+        const url = linkInput.value.trim();
+        if (!url) return;
+        hasImage = true;
+        initialUrl = url;
+        cb(url);
+        renderButtons();
+        toast('✓ Link de imagen guardado', 'success');
+      });
+      btnCancel.addEventListener('click', () => renderButtons());
+      linkInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); btnOk.click(); }
+        if (e.key === 'Escape') renderButtons();
+      });
+      linkRow.append(linkInput, btnOk, btnCancel);
+      g.insertBefore(linkRow, errEl);
+      setTimeout(() => linkInput.focus(), 50);
     }
   }
 
@@ -1192,6 +1285,7 @@ function mkImgUploader(initialUrl, cb) {
     try {
       const url = await uploadImageFile(file);
       hasImage = true;
+      initialUrl = url;
       cb(url);
       renderButtons();
       toast('✓ Imagen subida', 'success');
@@ -1215,6 +1309,7 @@ function mkImgUploader(initialUrl, cb) {
     });
   }
 
+  renderButtons();
   g.append(lbl, row, errEl);
   return g;
 }
@@ -1264,10 +1359,15 @@ function cerrarImgModalDirecto() { document.getElementById('img-modal').classLis
 // ── Modal Agregar — lógica de imagen ──
 let newImgUrl = '';
 
-function renderNewImgButtons() {
+function renderNewImgButtons(showLinkInput = false) {
+  const container = document.getElementById('new-img-uploader');
   const row    = document.getElementById('new-img-btn-row');
   const hidden = document.getElementById('new-imagen');
   row.innerHTML = '';
+
+  // Limpiar link row anterior si existe
+  const prevLinkRow = container.querySelector('.img-link-row');
+  if (prevLinkRow) prevLinkRow.remove();
 
   // file input siempre oculto
   const fi = document.createElement('input');
@@ -1277,16 +1377,48 @@ function renderNewImgButtons() {
   row.appendChild(fi);
 
   if (!newImgUrl) {
-    const btn = makeImgBtn('upload', ICONO_SUBIR + ' Subir imagen', () => fi.click());
-    row.appendChild(btn);
+    const btnUp   = makeImgBtn('upload', ICONO_SUBIR + ' Subir imagen', () => fi.click());
+    const btnLink = makeImgBtn('upload', ICONO_LINK + ' Pegar link', () => renderNewImgButtons(true));
+    row.append(btnUp, btnLink);
   } else {
     const btnCh = makeImgBtn('change', ICONO_SUBIR + ' Cambiar imagen', () => fi.click());
+    const btnLink = makeImgBtn('upload', ICONO_LINK + ' Cambiar link', () => renderNewImgButtons(true));
     const btnRm = makeImgBtn('remove', ICONO_TRASH + ' Eliminar imagen', () => {
       newImgUrl = ''; hidden.value = '';
       document.getElementById('new-img-error').classList.remove('visible');
       renderNewImgButtons();
     });
-    row.append(btnCh, btnRm);
+    row.append(btnCh, btnLink, btnRm);
+  }
+
+  // Input de link inline
+  if (showLinkInput) {
+    const linkRow = document.createElement('div');
+    linkRow.className = 'img-link-row';
+    const linkInput = document.createElement('input');
+    linkInput.type = 'url';
+    linkInput.placeholder = 'https://ejemplo.com/imagen.jpg';
+    linkInput.value = newImgUrl || '';
+    const btnOk = document.createElement('button');
+    btnOk.type = 'button'; btnOk.className = 'img-link-confirm';
+    btnOk.innerHTML = '✓ Usar';
+    const btnCancel = document.createElement('button');
+    btnCancel.type = 'button'; btnCancel.className = 'img-link-cancel';
+    btnCancel.textContent = '✕';
+    btnOk.addEventListener('click', () => {
+      const url = linkInput.value.trim();
+      if (!url) return;
+      newImgUrl = url;
+      hidden.value = url;
+      document.getElementById('new-img-error').classList.remove('visible');
+      renderNewImgButtons();
+      toast('✓ Link de imagen guardado', 'success');
+    });
+    btnCancel.addEventListener('click', () => renderNewImgButtons());
+    linkInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); btnOk.click(); } if (e.key === 'Escape') renderNewImgButtons(); });
+    linkRow.append(linkInput, btnOk, btnCancel);
+    container.insertBefore(linkRow, document.getElementById('new-img-error'));
+    setTimeout(() => linkInput.focus(), 50);
   }
 }
 
