@@ -120,7 +120,7 @@
     "descripcion": "Pan, mayonesa, carne, salsa de tomate y huevo.",
     "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
     "disponible": true
   },
@@ -129,7 +129,7 @@
     "descripcion": "Pan, mayonesa, doble carne, cheddar, palta, salsa de tomate y huevo.",
     "precio": 11500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
     "disponible": true
   },
@@ -138,7 +138,7 @@
     "descripcion": "Pan, ketchup, pepino, tomate, carne, cheddar, cebolla pluma y salsa picante.",
     "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775086052/xz6pp2yvxx9juzpzqb7a.webp",
     "destacado": false,
     "disponible": true
   },
@@ -147,7 +147,7 @@
     "descripcion": "Pan, ketchup, pepino, tomate, doble carne, cheddar, cebolla pluma y salsa picante.",
     "precio": 11500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775086059/ppubnknynh7i7jkcyiou.webp",
     "destacado": false,
     "disponible": true
   },
