@@ -116,6 +116,42 @@
     "destacado": false
   },
   {
+    "nombre": "De palta simple",
+    "descripcion": "Panl, mayonesa, carne, salsa de tomate y huevo.",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "De palta doble",
+    "descripcion": "Pan, mayonesa, doble carne, cheddar, palta, salsa de tomate y huevo.",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Mexicana simple",
+    "descripcion": "Pan, ketchup, pepino, tomate, carne, cheddar, cebolla pluma y salsa picante.",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Mexicana doble",
+    "descripcion": "Pan, ketchup, pepino, tomate, doble carne, cheddar, cebolla pluma y salsa picante.",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
     "precio": 9500,
