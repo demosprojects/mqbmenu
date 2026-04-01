@@ -170,15 +170,6 @@
     "disponible": false
   },
   {
-    "nombre": "Pizza moozarella",
-    "descripcion": "Salsa y moozarella",
-    "precio": 18000,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
     "precio": 11000,
@@ -215,6 +206,15 @@
   {
     "nombre": "Pizza jamon y morrones",
     "descripcion": "Salsa, moozarella, morrones y aceitunas",
+    "precio": 18000,
+    "categoria": "Pizzas",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Pizza moozarella",
+    "descripcion": "Salsa y moozarella",
     "precio": 18000,
     "categoria": "Pizzas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775068220/kmq0pg3cpofdjtl7kw7u.webp",
