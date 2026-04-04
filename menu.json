@@ -118,7 +118,7 @@
   {
     "nombre": "De palta simple",
     "descripcion": "Pan, mayonesa, carne, salsa de tomate y huevo.",
-    "precio": 9500,
+    "precio": 11000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
@@ -127,7 +127,7 @@
   {
     "nombre": "De palta doble",
     "descripcion": "Pan, mayonesa, doble carne, cheddar, palta, salsa de tomate y huevo.",
-    "precio": 11500,
+    "precio": 13000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
