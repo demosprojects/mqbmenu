@@ -135,7 +135,7 @@
   },
   {
     "nombre": "Mexicana simple",
-    "descripcion": "Pan, ketchup, pepino, tomate, carne, cheddar, cebolla pluma y salsa picante.",
+    "descripcion": "Pan, ketchup, tomate, carne, cheddar, cebolla pluma y salsa picante.",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775086052/xz6pp2yvxx9juzpzqb7a.webp",
@@ -144,7 +144,7 @@
   },
   {
     "nombre": "Mexicana doble",
-    "descripcion": "Pan, ketchup, pepino, tomate, doble carne, cheddar, cebolla pluma y salsa picante.",
+    "descripcion": "Pan, ketchup, tomate, doble carne, cheddar, cebolla pluma y salsa picante.",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775086059/ppubnknynh7i7jkcyiou.webp",
