@@ -82,40 +82,6 @@
     "destacado": false
   },
   {
-    "nombre": "Criolla simple",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, huevo, Salsa Criolla",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1773445140/iovioftnh0o4hmldw3ub.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
-    "nombre": "Criolla doble",
-    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, huevo, Salsa Criolla",
-    "precio": 11500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1773445132/xrr1gmxypwaw3aoide1e.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
-    "nombre": "Crispy simple",
-    "descripcion": "Pan, tomate, pepino, carne, mozzarella, cebolla crispy, aderezo de chimichurry.",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
-    "destacado": false
-  },
-  {
-    "nombre": "Crispy doble",
-    "descripcion": "Pan, tomate, pepino, doble carne, mozzarella, cebolla crispy, aderezo de chimichurry.",
-    "precio": 11500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375065/mkiazlicl6vdvscmysfj.webp",
-    "destacado": false
-  },
-  {
     "nombre": "De palta simple",
     "descripcion": "Pan, mayonesa, carne, salsa de tomate y huevo.",
     "precio": 11000,
