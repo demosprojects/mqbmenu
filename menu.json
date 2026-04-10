@@ -499,6 +499,15 @@
     "destacado": false
   },
   {
+    "nombre": "Estrella Galicia 473ml",
+    "descripcion": "Cerveza en lata de 473ml",
+    "precio": 325,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775782856/fjbmkhmh98fywelnd3pe.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Fernet de 50ml con hielo",
     "descripcion": "Se compra por separado la Coca Cola.",
     "precio": 7000,
