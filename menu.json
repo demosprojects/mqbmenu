@@ -152,42 +152,6 @@
     "destacado": false
   },
   {
-    "nombre": "Pizza bacon y verdeo",
-    "descripcion": "Salsa, moozarella, panceta y verdeo.",
-    "precio": 18000,
-    "categoria": "Pizzas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775076838/zv3f2nkd2hjpvm6mlbzr.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
-    "nombre": "Pizza caballa y huevo",
-    "descripcion": "Salsa, moozarella, caballa y huevo.",
-    "precio": 18000,
-    "categoria": "Pizzas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775077454/acecfryo4dxuj1uzuyqw.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
-    "nombre": "Pizza jamon y morrones",
-    "descripcion": "Salsa, moozarella, morrones y aceitunas",
-    "precio": 18000,
-    "categoria": "Pizzas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775078571/ksukdegjfvujjkxpbeha.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
-    "nombre": "Pizza moozarella",
-    "descripcion": "Salsa y moozarella",
-    "precio": 18000,
-    "categoria": "Pizzas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775077809/cwa5jxbhnarnabmy8cdd.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
     "nombre": "Miniburgers",
     "descripcion": "Miniburgers, papa y aderezos (mayonesa y ketchup)",
     "precio": 29900,
