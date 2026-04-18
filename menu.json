@@ -1,7 +1,7 @@
 [
   {
     "nombre": "American simple",
-    "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon.",
+    "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon, lechuga",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
@@ -9,7 +9,7 @@
   },
   {
     "nombre": "American doble",
-    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon.",
+    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon, lechuga",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
@@ -17,7 +17,7 @@
   },
   {
     "nombre": "Berlín simple",
-    "descripcion": "Pan, mayonesa, pepino, carne, cheddar, cebolla morada.",
+    "descripcion": "Pan, mayonesa, pepino en brunoise, carne, cheddar, cebolla morada en brunoise.",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
@@ -25,7 +25,7 @@
   },
   {
     "nombre": "Berlín doble",
-    "descripcion": "Pan, mayonesa, pepino, doble carne, doble cheddar, cebolla morada.",
+    "descripcion": "Pan, mayonesa, pepino en brunoise, doble carne, doble cheddar, cebolla morada en brunoise.",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
@@ -33,7 +33,7 @@
   },
   {
     "nombre": "Blue simple",
-    "descripcion": "Pan, mayonesa, carne, cebolla caramelizada, roquefort.",
+    "descripcion": "Pan, carne, cheddar, mermelada de bacon, roquefort",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409294/v87b4kjgyhqdhdrnz0dx.webp",
@@ -42,7 +42,7 @@
   },
   {
     "nombre": "Blue doble",
-    "descripcion": "Pan, mayonesa, doble carne, cebolla caramelizada, roquefort.",
+    "descripcion": "Pan, doble carne, doble cheddar, mermelada de bacon, roquefort",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
@@ -82,6 +82,42 @@
     "destacado": false
   },
   {
+    "nombre": "De palta simple",
+    "descripcion": "Pan, mayonesa, carne, cheddar, palta, cebolla en brunoise, huevo",
+    "precio": 11000,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "De palta doble",
+    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, palta, cebolla en brunoise, huevo",
+    "precio": 13000,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Moscu simple",
+    "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, papa rosty",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Moscu doble",
+    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, papa rosty",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Moscú simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, bacon, huevo",
     "precio": 9500,
@@ -98,6 +134,24 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771825815/qien3is0rg2qm9ohhzfv.webp",
     "destacado": false,
     "disponible": false
+  },
+  {
+    "nombre": "Sin nombre (doble)",
+    "descripcion": "Pan, ketchup, doble carne, doble cheddar, cebolla en brunoise",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Sin nombre (simple)",
+    "descripcion": "Pan, ketchup, carne, cheddar, cebolla en brunoise",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Yankee doble",
