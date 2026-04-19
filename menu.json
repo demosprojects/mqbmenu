@@ -136,15 +136,6 @@
     "disponible": false
   },
   {
-    "nombre": "Schneider 1L",
-    "descripcion": "Cerveza de vidrio de 1 Litro",
-    "precio": 4000,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1776561317/jaxmme6o6r05r0y4neal.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
     "nombre": "Sin nombre (doble)",
     "descripcion": "Pan, ketchup, doble carne, doble cheddar, cebolla en brunoise",
     "precio": 11500,
@@ -634,6 +625,15 @@
     "precio": 2200,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482324/rhn02nwsjcs22hsriuez.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Schneider 1L",
+    "descripcion": "Cerveza de vidrio de 1 Litro",
+    "precio": 4000,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1776561317/jaxmme6o6r05r0y4neal.webp",
     "destacado": false,
     "disponible": true
   },
