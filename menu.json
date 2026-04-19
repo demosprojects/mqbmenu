@@ -136,6 +136,15 @@
     "disponible": false
   },
   {
+    "nombre": "Schneider 1L",
+    "descripcion": "Cerveza de vidrio de 1 Litro",
+    "precio": 4000,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1776561317/jaxmme6o6r05r0y4neal.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Sin nombre (doble)",
     "descripcion": "Pan, ketchup, doble carne, doble cheddar, cebolla en brunoise",
     "precio": 11500,
@@ -455,6 +464,15 @@
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483994/f2x9yn0kbxgv0vgqlm8p.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Amstel 1L Vidrio",
+    "descripcion": "Cerveza de vidrio de 1 Litro",
+    "precio": 4000,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1776561284/uwcidpu6adu7x3odjvmd.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Amstel 473cc",
