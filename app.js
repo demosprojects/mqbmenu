@@ -1,4 +1,3 @@
-
 let menuData = [];
 let categoriaActiva = "";
 
@@ -55,7 +54,18 @@ function renderTodo() {
 
         clone.querySelector(`#ft-${slugify(cat)}`).innerText = destacado.nombre;
         clone.querySelector(`#fd-${slugify(cat)}`).innerText = destacado.descripcion;
-        clone.querySelector(`#fp-${slugify(cat)}`).innerText = `$${destacado.precio.toLocaleString('es-AR')}`;
+        
+        const priceEl = clone.querySelector(`#fp-${slugify(cat)}`);
+        if (destacado.precioAnterior) {
+            priceEl.innerHTML = `
+                <div class="flex flex-col items-end leading-none">
+                    <span class="text-xl text-gray-400 line-through font-impact">$${destacado.precioAnterior.toLocaleString('es-AR')}</span>
+                    <span class="text-red-600 font-impact text-5xl">$${destacado.precio.toLocaleString('es-AR')}</span>
+                </div>`;
+        } else {
+            priceEl.innerText = `$${destacado.precio.toLocaleString('es-AR')}`;
+        }
+
         clone.querySelector(`#fb-${slugify(cat)}`).innerText = destacado.etiqueta || "Destacado";
 
         featuredSection.parentNode.insertBefore(clone, featuredSection);
@@ -77,14 +87,23 @@ function renderTodo() {
         card.style.display = "none";
         card.className = "group bg-white p-4 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-mqb-blue/20 transition-all duration-500";
 
+        // Cambio principal: En el div contenedor del título y precio, cambié items-start a items-center
+        // y eliminé el mb-1 del span del precio anterior para que no haya margen extra.
         card.innerHTML = `
             <div class="aspect-video rounded-[2rem] overflow-hidden bg-gray-100 mb-6 cursor-pointer" onclick="openModal('${producto.imagen}', '${nombreSafe}')">
                 <img src="${imgUrl(producto.imagen, cat)}" alt="${producto.nombre}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
             </div>
-            <div class="px-2 space-y-4">
-                <div class="flex justify-between items-start">
+            <div class="px-2 space-y-3">
+                <div class="flex justify-between items-center">
                     <h4 data-card-title class="font-impact text-2xl uppercase italic text-mqb-blue">${producto.nombre}</h4>
-                    <span class="font-impact text-2xl">$${producto.precio.toLocaleString('es-AR')}</span>
+                    ${producto.precioAnterior ? 
+                        `<div class="flex flex-col items-end leading-tight">
+                            <span class="text-sm text-gray-400 line-through font-impact">$${producto.precioAnterior.toLocaleString('es-AR')}</span>
+                            <span class="font-impact text-2xl text-red-600 leading-none">$${producto.precio.toLocaleString('es-AR')}</span>
+                        </div>` 
+                        : 
+                        `<span class="font-impact text-2xl">$${producto.precio.toLocaleString('es-AR')}</span>`
+                    }
                 </div>
                 <p data-card-desc class="text-sm text-gray-700 font-medium leading-snug">${producto.descripcion}</p>
                 <div class="pt-2 border-t border-gray-50 flex justify-between items-center">
