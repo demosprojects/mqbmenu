@@ -53,8 +53,8 @@
  {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 4900, 
-    "precioAnterior": 8500,
+    "precio": 8500, 
+  
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
@@ -63,8 +63,8 @@
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 5900,
-    "precioAnterior": 10500,
+    "precio": 10500,
+  
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
@@ -72,8 +72,8 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 4900,
-    "precioAnterior": 9300,
+    "precio": 9300,
+
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
@@ -81,8 +81,8 @@
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 5900,
-    "precioAnterior": 11300,
+    "precio": 11300,
+
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
@@ -108,8 +108,8 @@
   {
     "nombre": "Moscu simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, papa rosty",
-    "precio": 5900,
-    "precioAnterior": 9500,
+    "precio": 9500,
+
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false,
@@ -118,8 +118,8 @@
   {
     "nombre": "Moscu doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, papa rosty",
-    "precio": 6900,
-    "precioAnterior": 11500,
+    "precio": 11500,
+
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false,
