@@ -15,7 +15,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
   },
-
   {
     "nombre": "American simple + sobre de papas + coca cola 220ml",
     "descripcion": "Combo American simple + sobre de papas + coca cola 220ml",
@@ -47,7 +46,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409294/v87b4kjgyhqdhdrnz0dx.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Blue doble",
@@ -56,7 +55,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Cheese simple",
@@ -74,7 +73,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
   },
-{
+  {
     "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
     "descripcion": "Combo Cheese simple + sobre de papas + coca cola 220ml",
     "precio": 7500,
@@ -82,7 +81,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209470/mlws7m57jcsllem7r8dt.webp",
     "destacado": false
   },
-
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
@@ -107,7 +105,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209273/n2mtp4e7ch2cghwzuulr.webp",
     "destacado": false
   },
-
   {
     "nombre": "De palta simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, palta, cebolla en brunoise, huevo",
@@ -115,7 +112,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "De palta doble",
@@ -124,7 +121,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Moscu simple",
@@ -144,7 +141,6 @@
     "destacado": false,
     "disponible": true
   },
-
   {
     "nombre": "Moscu simple + sobre de papas + coca cola 220ml",
     "descripcion": "Combo Moscu simple + sobre de papas + coca cola 220ml",
@@ -160,7 +156,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Sin nombre (simple)",
@@ -169,7 +165,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Yankee doble",
