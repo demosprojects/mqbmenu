@@ -46,7 +46,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409294/v87b4kjgyhqdhdrnz0dx.webp",
     "destacado": false,
-    "disponible": false
+    "disponible": true
   },
   {
     "nombre": "Blue doble",
@@ -55,7 +55,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
     "destacado": false,
-    "disponible": false
+    "disponible": true
   },
   {
     "nombre": "Cheese simple",
