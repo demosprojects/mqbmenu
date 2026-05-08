@@ -259,7 +259,7 @@
   {
     "nombre": "Aquarius 1,5L",
     "descripcion": "Agua saborizada, consultar sabores.",
-    "precio": 2800,
+    "precio": 2700,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268012/m12eivsdr9wrytaf1yw4.webp",
     "destacado": false
@@ -300,11 +300,11 @@
   {
     "nombre": "Coca Cola 375 Pet",
     "descripcion": "Coca Cola Pet ",
-    "precio": 1750,
+    "precio": 1400,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271175/za51bnfezvgdy55fgnlf.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Coca Cola de vidrio 1,5L",
@@ -436,8 +436,7 @@
     "precio": 3300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483994/f2x9yn0kbxgv0vgqlm8p.webp",
-    "destacado": false,
-    "disponible": false
+    "destacado": false
   },
   {
     "nombre": "Amstel 1L Vidrio",
@@ -459,7 +458,7 @@
   {
     "nombre": "Amstel 710cc",
     "descripcion": "Cerveza en lata de 710cc",
-    "precio": 4300,
+    "precio": 4000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480611/lbllnp2idzlrzclylj00.webp",
     "destacado": false
@@ -479,8 +478,7 @@
     "precio": 7000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771269748/agddqiirlk7rnhgxpya6.webp",
-    "destacado": false,
-    "disponible": false
+    "destacado": false
   },
   {
     "nombre": "Heineken 1L",
@@ -541,7 +539,7 @@
   {
     "nombre": "Imperial golden 473cc",
     "descripcion": "Cerveza en lata de 473cc",
-    "precio": 4200,
+    "precio": 3000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481102/ded1skf8ijs4brra6exb.webp",
     "destacado": false
@@ -561,6 +559,15 @@
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771716164/efga2bvm6v5uctegndaq.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Miller 330",
+    "descripcion": "Cerveza de vidrio de 330cc",
+    "precio": 4900,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778207013/ywf9n47hzxohyy1pkumw.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Miller 473cc",
@@ -636,15 +643,6 @@
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482169/iml2xymat7e4kf5iqumk.webp",
     "destacado": false
-  },
-  {
-    "nombre": "Schneider REMIX Limón",
-    "descripcion": "Cerveza en lata de 473ml",
-    "precio": 2000,
-    "categoria": "Con alcohol",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778206425/jq2evpp8symptzixhfl7.webp",
-    "destacado": false,
-    "disponible": true
   },
   {
     "nombre": "Bacon",
