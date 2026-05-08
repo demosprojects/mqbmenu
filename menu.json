@@ -259,7 +259,7 @@
   {
     "nombre": "Aquarius 1,5L",
     "descripcion": "Agua saborizada, consultar sabores.",
-    "precio": 2700,
+    "precio": 2800,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771268012/m12eivsdr9wrytaf1yw4.webp",
     "destacado": false
@@ -300,11 +300,11 @@
   {
     "nombre": "Coca Cola 375 Pet",
     "descripcion": "Coca Cola Pet ",
-    "precio": 1400,
+    "precio": 1750,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271175/za51bnfezvgdy55fgnlf.webp",
     "destacado": false,
-    "disponible": false
+    "disponible": true
   },
   {
     "nombre": "Coca Cola de vidrio 1,5L",
@@ -436,7 +436,8 @@
     "precio": 3300,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483994/f2x9yn0kbxgv0vgqlm8p.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Amstel 1L Vidrio",
@@ -478,7 +479,8 @@
     "precio": 7000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771269748/agddqiirlk7rnhgxpya6.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Heineken 1L",
@@ -634,6 +636,15 @@
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482169/iml2xymat7e4kf5iqumk.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Schneider REMIX Limón",
+    "descripcion": "Cerveza en lata de 473ml",
+    "precio": 2000,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778206425/jq2evpp8symptzixhfl7.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Bacon",
