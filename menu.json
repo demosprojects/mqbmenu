@@ -15,6 +15,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false
   },
+
+  {
+    "nombre": "American simple + sobre de papas + coca cola 220ml",
+    "descripcion": "Combo American simple + sobre de papas + coca cola 220ml",
+    "precio": 9000,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209903/ddggjogypb1c6cknghss.webp",
+    "destacado": false
+  },
   {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino en brunoise, carne, cheddar, cebolla morada en brunoise.",
@@ -65,6 +74,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
   },
+{
+    "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
+    "descripcion": "Combo Cheese simple + sobre de papas + coca cola 220ml",
+    "precio": 7500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209470/mlws7m57jcsllem7r8dt.webp",
+    "destacado": false
+  },
+
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
@@ -81,6 +99,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
   },
+  {
+    "nombre": "Clasica simple + sobre de papas + coca cola 220ml",
+    "descripcion": "Combo Clasica simple + sobre de papas + coca cola 220ml",
+    "precio": 7500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209273/n2mtp4e7ch2cghwzuulr.webp",
+    "destacado": false
+  },
+
   {
     "nombre": "De palta simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, palta, cebolla en brunoise, huevo",
@@ -116,6 +143,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false,
     "disponible": true
+  },
+
+  {
+    "nombre": "Moscu simple + sobre de papas + coca cola 220ml",
+    "descripcion": "Combo Moscu simple + sobre de papas + coca cola 220ml",
+    "precio": 9000,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209585/p4stgft7r6rmnwwbosxh.webp",
+    "destacado": false
   },
   {
     "nombre": "Sin nombre (doble)",
