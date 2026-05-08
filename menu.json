@@ -49,22 +49,18 @@
     "destacado": false,
     "disponible": true
   },
-
- {
+  {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 8500, 
-  
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
   },
-
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
     "precio": 10500,
-  
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false
@@ -73,7 +69,6 @@
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
     "precio": 9300,
-
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
@@ -82,7 +77,6 @@
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
     "precio": 11300,
-
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false
@@ -109,7 +103,6 @@
     "nombre": "Moscu simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, papa rosty",
     "precio": 9500,
-
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false,
@@ -119,13 +112,11 @@
     "nombre": "Moscu doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, papa rosty",
     "precio": 11500,
-
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
     "destacado": false,
     "disponible": true
   },
-
   {
     "nombre": "Sin nombre (doble)",
     "descripcion": "Pan, ketchup, doble carne, doble cheddar, cebolla en brunoise",
@@ -285,7 +276,7 @@
   {
     "nombre": "Cepita durazno 1,5cc",
     "descripcion": "Cepita sabor durazno",
-    "precio": 3800,
+    "precio": 4000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270969/coylziwnodpqoqksk6jr.webp",
     "destacado": false
@@ -352,7 +343,7 @@
   {
     "nombre": "Coca Cola lata",
     "descripcion": "Coca Cola en lata ",
-    "precio": 1900,
+    "precio": 2100,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483283/qtmcfxajs9htuoye5ub9.webp",
     "destacado": false
@@ -384,7 +375,7 @@
   {
     "nombre": "Levite 1,5L",
     "descripcion": "Agua saborizada, consultar sabores disponibles.",
-    "precio": 2800,
+    "precio": 3000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771270745/kdfg7v1iqwypubcwnasl.webp",
     "destacado": false
@@ -401,7 +392,7 @@
   {
     "nombre": "Monster",
     "descripcion": "Bebida energética, consultar sabores disponibles. ",
-    "precio": 3000,
+    "precio": 3500,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771271523/meutgnv9rqbujqcruwqp.webp",
     "destacado": false
@@ -434,7 +425,7 @@
   {
     "nombre": "Sprite lata de 354cc",
     "descripcion": "Sprite de 354cc",
-    "precio": 1900,
+    "precio": 2100,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483906/unjjna3wmjjd28exwcdi.webp",
     "destacado": false
@@ -475,7 +466,7 @@
   {
     "nombre": "Estrella Galicia 473ml",
     "descripcion": "Cerveza en lata de 473ml",
-    "precio": 325,
+    "precio": 3250,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775782856/fjbmkhmh98fywelnd3pe.webp",
     "destacado": false,
