@@ -21,7 +21,8 @@
     "precio": 9000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209903/ddggjogypb1c6cknghss.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Berlín simple",
@@ -79,7 +80,8 @@
     "precio": 7500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209470/mlws7m57jcsllem7r8dt.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Clasica simple",
@@ -103,7 +105,8 @@
     "precio": 7500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209273/n2mtp4e7ch2cghwzuulr.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "De palta simple",
@@ -147,7 +150,8 @@
     "precio": 9000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209585/p4stgft7r6rmnwwbosxh.webp",
-    "destacado": false
+    "destacado": false,
+    "disponible": false
   },
   {
     "nombre": "Sin nombre (doble)",
