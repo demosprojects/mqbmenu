@@ -294,6 +294,42 @@
     "destacado": false
   },
   {
+    "nombre": "Cajita Hoppers",
+    "descripcion": "Mini cheese, sobre de papas, lata de Coca 220ml",
+    "precio": 12900,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889753/uyfqqtfvsnhnpbf4sbhq.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Cajita Kpop Demon Hunters",
+    "descripcion": "Mini cheese, sobre de papas, lata de Coca 220ml",
+    "precio": 12900,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889721/saqoozkqcysevxjibmck.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Cajita My Melody Kuromi",
+    "descripcion": "Mini cheese, sobre de papas, lata de Coca 220ml",
+    "precio": 12900,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889784/fol69lyd8icr0bdhrqwx.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Cajita Roblox",
+    "descripcion": "Mini cheese, sobre de papas, lata de Coca 220ml",
+    "precio": 12900,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889805/tvmx5qybpapmafrpfsv6.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Agua mineral 600ml",
     "descripcion": "Agua mineral de 600ml",
     "precio": 1300,
