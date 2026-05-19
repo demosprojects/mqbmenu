@@ -390,11 +390,11 @@
   {
     "nombre": "Coca Cola 220ml",
     "descripcion": "Lata de coca cola de 220ml",
-    "precio": 5,
+    "precio": 1400,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1779198910/a87iccm8hvdhzbnhlvbt.webp",
     "destacado": false,
-    "disponible": false
+    "disponible": true
   },
   {
     "nombre": "Coca Cola 375 Pet",
@@ -445,14 +445,6 @@
     "precio": 2100,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483283/qtmcfxajs9htuoye5ub9.webp",
-    "destacado": false
-  },
-  {
-    "nombre": "Coca Cola lata mini 250ml",
-    "descripcion": "Coca Cola de 250ml",
-    "precio": 1400,
-    "categoria": "Sin alcohol",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771717026/a12779mrqxcirheovpwo.webp",
     "destacado": false
   },
   {
