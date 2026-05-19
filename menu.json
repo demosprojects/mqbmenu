@@ -397,6 +397,14 @@
     "disponible": true
   },
   {
+    "nombre": "Coca Cola 354ml",
+    "descripcion": "Coca Cola de 354ml",
+    "precio": 2100,
+    "categoria": "Sin alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483283/qtmcfxajs9htuoye5ub9.webp",
+    "destacado": false
+  },
+  {
     "nombre": "Coca Cola 375 Pet",
     "descripcion": "Coca Cola Pet ",
     "precio": 1750,
@@ -438,14 +446,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772072342/oolne6mwh0ovmjb5qamo.webp",
     "destacado": false,
     "disponible": true
-  },
-  {
-    "nombre": "Coca Cola lata",
-    "descripcion": "Coca Cola en lata ",
-    "precio": 2100,
-    "categoria": "Sin alcohol",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483283/qtmcfxajs9htuoye5ub9.webp",
-    "destacado": false
   },
   {
     "nombre": "Fanta 1,5L",
