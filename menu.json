@@ -295,6 +295,15 @@
     "disponible": true
   },
   {
+    "nombre": "Sobre de papas + coca cola 220ml",
+    "descripcion": "Sobre de papas con una lata de coca cola de 220ml",
+    "precio": 3000,
+    "categoria": "Papas",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1779418244/p5rzzslqgjqvbgls93zs.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "burger con papas y lata de Coca Cola",
     "descripcion": "Burger, sobre de papas y lata de Coca Cola",
     "precio": 8500,
