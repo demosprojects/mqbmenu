@@ -3,7 +3,6 @@ let categoriaActiva = "";
 
 const menuGrid        = document.getElementById('products-grid');
 const sectionTitle    = document.getElementById('section-title');
-const featuredSection = document.getElementById('featured-section');
 
 // ─────────────────────────────────────────────
 // Carga de datos → render único de TODO el menú
@@ -31,49 +30,28 @@ function renderTodo() {
 
     const categorias = [...new Set(menuData.map(p => p.categoria))];
 
-    // Featured por categoría
+    // ── Agrupar destacados por ofertaGrupo o nombre para el carousel ──
+    const destacadosPorCategoria = {};
     categorias.forEach(cat => {
-        const destacado = menuData.find(p =>
+        const destacados = menuData.filter(p =>
             p.categoria.toLowerCase() === cat.toLowerCase() && p.destacado
         );
-        if (!destacado) return;
-
-        const clone = featuredSection.cloneNode(true);
-        clone.id = `featured-${slugify(cat)}`;
-        clone.style.display = "none";
-
-        clone.querySelector('[id^=featured-img]').id   = `fi-${slugify(cat)}`;
-        clone.querySelector('[id^=featured-title]').id = `ft-${slugify(cat)}`;
-        clone.querySelector('[id^=featured-desc]').id  = `fd-${slugify(cat)}`;
-        clone.querySelector('[id^=featured-price]').id = `fp-${slugify(cat)}`;
-        clone.querySelector('[id^=featured-badge]').id = `fb-${slugify(cat)}`;
-
-        const img = clone.querySelector(`#fi-${slugify(cat)}`);
-        img.src = imgUrlFeatured(destacado.imagen, cat);
-        img.onclick = () => openModal(destacado.imagen, destacado.nombre);
-
-        clone.querySelector(`#ft-${slugify(cat)}`).innerText = destacado.nombre;
-        clone.querySelector(`#fd-${slugify(cat)}`).innerText = destacado.descripcion;
-        
-        const priceEl = clone.querySelector(`#fp-${slugify(cat)}`);
-        if (destacado.precioAnterior) {
-            priceEl.innerHTML = `
-                <div class="flex flex-col items-end leading-none">
-                    <span class="text-xl text-gray-400 line-through font-impact">$${destacado.precioAnterior.toLocaleString('es-AR')}</span>
-                    <span class="text-red-600 font-impact text-5xl">$${destacado.precio.toLocaleString('es-AR')}</span>
-                </div>`;
-        } else {
-            priceEl.innerText = `$${destacado.precio.toLocaleString('es-AR')}`;
+        if (destacados.length > 0) {
+            // Agrupar por ofertaGrupo si existe, si no por imagen
+            const grupos = {};
+            destacados.forEach(p => {
+                const key = p.ofertaGrupo || p.imagen;
+                if (!grupos[key]) grupos[key] = [];
+                grupos[key].push(p);
+            });
+            destacadosPorCategoria[cat] = Object.values(grupos);
         }
-
-        clone.querySelector(`#fb-${slugify(cat)}`).innerText = destacado.etiqueta || "Destacado";
-
-        featuredSection.parentNode.insertBefore(clone, featuredSection);
     });
 
-    featuredSection.style.display = "none";
+    // ── Construir slides del carousel ──
+    construirCarousel(destacadosPorCategoria);
 
-    // Cards normales
+    // Cards normales (no destacadas)
     const fragment = document.createDocumentFragment();
 
     menuData.filter(p => !p.destacado).forEach(producto => {
@@ -87,8 +65,6 @@ function renderTodo() {
         card.style.display = "none";
         card.className = "group bg-white p-4 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-mqb-blue/20 transition-all duration-500";
 
-        // Cambio principal: En el div contenedor del título y precio, cambié items-start a items-center
-        // y eliminé el mb-1 del span del precio anterior para que no haya margen extra.
         card.innerHTML = `
             <div class="aspect-video rounded-[2rem] overflow-hidden bg-gray-100 mb-6 cursor-pointer" onclick="openModal('${producto.imagen}', '${nombreSafe}')">
                 <img src="${imgUrl(producto.imagen, cat)}" alt="${producto.nombre}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
@@ -132,6 +108,233 @@ function renderTodo() {
 }
 
 // ─────────────────────────────────────────────
+// Carousel global de ofertas (siempre visible)
+// ─────────────────────────────────────────────
+let carouselData    = {};
+let carouselState   = { currentIndex: 0, grupos: [], autoplayTimer: null, progressEl: null };
+
+function construirCarousel(destacadosPorCategoria) {
+    carouselData = destacadosPorCategoria;
+    // Recopilar TODOS los grupos de todas las categorías para el carousel global
+    const todosLosGrupos = Object.values(carouselData).flat();
+    if (todosLosGrupos.length > 0) {
+        montarCarouselGlobal(todosLosGrupos);
+    }
+}
+
+// ── Build HTML de un slide ──
+function buildSlideHTML(grupo, slideIdx) {
+    const [simple, doble] = grupo.length >= 2
+        ? (grupo[0].precio <= grupo[1].precio ? [grupo[0], grupo[1]] : [grupo[1], grupo[0]])
+        : [grupo[0], null];
+
+    const cat      = simple.categoria;
+    const imgSrc   = imgUrlFeatured(simple.imagen, cat);
+    const nombreSafe = simple.nombre.replace(/'/g, "\\'");
+    const ahorroSimple = simple.precioAnterior ? simple.precioAnterior - simple.precio : 0;
+    const ahorroDoble  = doble && doble.precioAnterior ? doble.precioAnterior - doble.precio : 0;
+
+    const nombreBase = simple.nombre.replace(/\s*(simple|doble|triple)\s*/gi, '').trim();
+    const slug = slugify(nombreBase) + '-' + slideIdx;
+    const tieneVariantes = !!doble;
+
+    // Porcentaje de descuento
+    const pctSimple = simple.precioAnterior
+        ? Math.round((1 - simple.precio / simple.precioAnterior) * 100) : 0;
+
+    return `
+    <div class="carousel-slide relative overflow-hidden" style="background:linear-gradient(135deg,#060d09 0%,#0d1f14 55%,#0a1710 100%);">
+
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22 opacity=%221%22/></svg>');background-size:200px 200px;"></div>
+
+        <div class="absolute top-0 right-0 w-[280px] h-[280px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(1,73,38,0.35) 0%,transparent 70%);transform:translate(30%,-30%);"></div>
+        <div class="absolute bottom-0 left-0 w-[200px] h-[200px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(220,38,38,0.12) 0%,transparent 70%);transform:translate(-30%,30%);"></div>
+
+        <div class="relative z-10 flex flex-col sm:flex-row items-stretch gap-0" style="min-height:220px;">
+
+            <div class="relative w-full sm:w-[45%] shrink-0 cursor-pointer overflow-hidden group aspect-[4/3] sm:aspect-auto"
+                 onclick="openModal('${simple.imagen}','${nombreSafe}')"
+                 style="min-height:220px;">
+                <img src="${imgSrc}"
+                     alt="${nombreBase}"
+                     loading="lazy"
+                     class="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                     style="object-position:center;">
+                <div class="absolute inset-0 hidden sm:block" style="background:linear-gradient(to right,transparent 40%,#0d1f14 100%);"></div>
+                <div class="absolute inset-0 sm:hidden" style="background:linear-gradient(to bottom,transparent 30%,#0a1710 100%);"></div>
+
+                ${pctSimple > 0 ? `
+                <div class="absolute top-4 left-4 z-10">
+                    <div class="oferta-event-pill text-white text-[12px] font-black px-3 py-1.5 rounded-lg uppercase shadow-lg">
+                        −${pctSimple}% OFF
+                    </div>
+                </div>` : ''}
+            </div>
+
+            <div class="flex-1 flex flex-col justify-center px-6 py-6 sm:py-8 sm:pl-4 sm:pr-8 slide-reveal z-10 relative">
+
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="oferta-event-pill text-white text-[10px] font-black px-3 py-1.5 rounded-md uppercase tracking-widest shadow-md flex items-center gap-1.5 w-fit">
+                        Día de la Hamburguesa
+                    </span>
+                </div>
+
+                <h3 class="font-impact text-[2.8rem] sm:text-5xl uppercase leading-none tracking-tight text-white mb-2 drop-shadow-lg"
+                    style="line-height:0.92;">${nombreBase}</h3>
+                <p class="text-white/60 text-xs font-medium leading-relaxed mb-5 line-clamp-2">${simple.descripcion}</p>
+
+                ${tieneVariantes ? `
+                <div class="flex gap-2 mb-4 bg-black/40 p-1.5 rounded-2xl w-max border border-white/10 shadow-inner" id="vt-${slug}">
+                    <button class="variant-toggle active flex items-center justify-center gap-2 text-[11px] font-black uppercase px-4 py-2.5 rounded-xl tracking-wider cursor-pointer transform hover:scale-[1.02] active:scale-95 transition-all"
+                        onclick="setVariant('${slug}',0,this)">
+                        Simple
+                    </button>
+                    <button class="variant-toggle flex items-center justify-center gap-2 text-[11px] font-black uppercase px-4 py-2.5 rounded-xl tracking-wider cursor-pointer transform hover:scale-[1.02] active:scale-95 transition-all"
+                        onclick="setVariant('${slug}',1,this)">
+                        Doble
+                    </button>
+                </div>` : ''}
+
+                <div id="ps-${slug}" class="mt-auto">
+                    <div class="flex items-end gap-3 flex-wrap">
+                        <div class="flex flex-col leading-none">
+                            ${simple.precioAnterior ? `<span class="text-white/40 font-impact text-xl line-through mb-1">$${simple.precioAnterior.toLocaleString('es-AR')}</span>` : ''}
+                            <span class="precio-oferta-num font-impact leading-none drop-shadow-xl" style="font-size:clamp(2.6rem,8vw,3.8rem);">$${simple.precio.toLocaleString('es-AR')}</span>
+                        </div>
+                        ${ahorroSimple > 0 ? `<span class="ahorro-chip text-xs font-black px-3 py-1.5 rounded-lg mb-1.5 uppercase tracking-wider shadow-sm">Ahorrás $${ahorroSimple.toLocaleString('es-AR')}</span>` : ''}
+                    </div>
+                </div>
+
+                ${tieneVariantes ? `
+                <div id="pd-${slug}" style="display:none;" class="mt-auto">
+                    <div class="flex items-end gap-3 flex-wrap">
+                        <div class="flex flex-col leading-none">
+                            ${doble.precioAnterior ? `<span class="text-white/40 font-impact text-xl line-through mb-1">$${doble.precioAnterior.toLocaleString('es-AR')}</span>` : ''}
+                            <span class="precio-oferta-num font-impact leading-none drop-shadow-xl" style="font-size:clamp(2.6rem,8vw,3.8rem);">$${doble.precio.toLocaleString('es-AR')}</span>
+                        </div>
+                        ${ahorroDoble > 0 ? `<span class="ahorro-chip text-xs font-black px-3 py-1.5 rounded-lg mb-1.5 uppercase tracking-wider shadow-sm">Ahorrás $${ahorroDoble.toLocaleString('es-AR')}</span>` : ''}
+                    </div>
+                </div>` : ''}
+   
+            </div>
+        </div>
+    </div>`;
+}
+
+window.setVariant = function(slug, idx, btn) {
+    const vt = document.getElementById('vt-' + slug);
+    if (!vt) return;
+    vt.querySelectorAll('.variant-toggle').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const ps = document.getElementById('ps-' + slug);
+    const pd = document.getElementById('pd-' + slug);
+    
+    const activePrice = idx === 0 ? ps : pd;
+    const hiddenPrice = idx === 0 ? pd : ps;
+    
+    if (hiddenPrice) hiddenPrice.style.display = 'none';
+    if (activePrice) {
+        activePrice.style.display = '';
+        activePrice.style.animation = 'none';
+        activePrice.offsetHeight; // forzar reflow
+        activePrice.style.animation = 'slideReveal 0.3s ease forwards';
+    }
+};
+
+function montarCarouselGlobal(grupos) {
+    const track   = document.getElementById('carousel-track-global');
+    const dots    = document.getElementById('carousel-dots-global');
+    const prevBtn = document.getElementById('carousel-prev-global');
+    const nextBtn = document.getElementById('carousel-next-global');
+    const progress = document.getElementById('carousel-progress');
+
+    if (!track || !dots) return;
+
+    track.innerHTML = '';
+    dots.innerHTML  = '';
+
+    grupos.forEach((grupo, i) => {
+        track.insertAdjacentHTML('beforeend', buildSlideHTML(grupo, i));
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = () => irASlide(i);
+        dots.appendChild(dot);
+    });
+
+    carouselState.grupos = grupos;
+    carouselState.currentIndex = 0;
+    carouselState.progressEl = progress;
+
+    function resetProgress() {
+        if (!progress) return;
+        progress.style.animation = 'none';
+        progress.offsetHeight; // reflow
+        progress.style.animation = '';
+        progress.classList.remove('carousel-progress-bar');
+        void progress.offsetWidth;
+        progress.classList.add('carousel-progress-bar');
+    }
+
+    function irASlide(idx) {
+        carouselState.currentIndex = (idx + grupos.length) % grupos.length;
+        track.style.transform = `translateX(-${carouselState.currentIndex * 100}%)`;
+        dots.querySelectorAll('.carousel-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === carouselState.currentIndex);
+        });
+        resetProgress();
+    }
+
+    carouselState.irASlide = irASlide;
+
+    if (prevBtn) prevBtn.onclick = () => irASlide(carouselState.currentIndex - 1);
+    if (nextBtn) nextBtn.onclick = () => irASlide(carouselState.currentIndex + 1);
+
+    // Mostrar flechas/dots solo si hay más de 1 slide
+    const multi = grupos.length > 1;
+    if (prevBtn) prevBtn.style.display = multi ? '' : 'none';
+    if (nextBtn) nextBtn.style.display = multi ? '' : 'none';
+    dots.style.display = multi ? '' : 'none';
+
+    // Autoplay
+    if (carouselState.autoplayTimer) clearInterval(carouselState.autoplayTimer);
+    if (multi) {
+        resetProgress();
+        carouselState.autoplayTimer = setInterval(() => {
+            irASlide(carouselState.currentIndex + 1);
+        }, 9000);
+    }
+
+    // Touch swipe
+    const el = document.getElementById('ofertas-carousel-global');
+    if (!el) return;
+
+    let tx = 0, ty = 0, dragging = false;
+
+    el.addEventListener('touchstart', e => {
+        tx = e.touches[0].clientX;
+        ty = e.touches[0].clientY;
+        dragging = true;
+        if (carouselState.autoplayTimer) clearInterval(carouselState.autoplayTimer);
+    }, { passive: true });
+
+    el.addEventListener('touchend', e => {
+        if (!dragging) return;
+        dragging = false;
+        const dx = e.changedTouches[0].clientX - tx;
+        const dy = e.changedTouches[0].clientY - ty;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 38) {
+            irASlide(carouselState.currentIndex + (dx < 0 ? 1 : -1));
+        }
+        if (multi) {
+            carouselState.autoplayTimer = setInterval(() => {
+                irASlide(carouselState.currentIndex + 1);
+            }, 9000);
+        }
+    }, { passive: true });
+}
+
+// ─────────────────────────────────────────────
 // Cambio de categoría: show/hide + scroll arriba
 // ─────────────────────────────────────────────
 function mostrarCategoria(categoria) {
@@ -150,11 +353,6 @@ function mostrarCategoria(categoria) {
     if (clearBtn)      clearBtn.style.display = 'none';
     if (resultsCount)  resultsCount.style.display = 'none';
     if (noResults)     noResults.classList.add('hidden');
-
-    // Featured
-    document.querySelectorAll('[id^="featured-"]').forEach(el => {
-        el.style.display = el.id === `featured-${slugify(categoria)}` ? "grid" : "none";
-    });
 
     // Cards
     const catLower = categoria.toLowerCase();
@@ -357,7 +555,6 @@ window.zoomOut = () => {
     }
 };
 
-// Zoom con scroll de mouse
 if (modal) {
     modal.addEventListener('wheel', (e) => {
         if (modal.classList.contains('hidden')) return;
@@ -366,7 +563,6 @@ if (modal) {
     }, { passive: false });
 }
 
-// Pinch-to-zoom mobile
 let lastPinchDist = null;
 
 if (modal) {
@@ -389,10 +585,57 @@ if (modal) {
     modal.addEventListener('touchend', () => { lastPinchDist = null; });
 }
 
-// Cerrar con Escape
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) window.closeModal();
+    if (e.key === 'Escape') {
+        if (modal && !modal.classList.contains('hidden')) window.closeModal();
+        // Permite cerrar el modal promo con ESC también
+        const promoModal = document.getElementById('promo-modal');
+        if (promoModal && !promoModal.classList.contains('hidden')) window.closePromoModal();
+    }
 });
+
+// ─────────────────────────────────────────────
+// Modal Promocional (App de Puntos)
+// ─────────────────────────────────────────────
+function initPromoModal() {
+    const promoModal = document.getElementById('promo-modal');
+    const promoContent = document.getElementById('promo-modal-content');
+    
+    if (!promoModal) return;
+
+    // Muestra siempre al entrar o recargar la página
+    setTimeout(() => {
+        promoModal.classList.remove('hidden');
+        promoModal.classList.add('flex');
+        
+        // Animación de entrada
+        setTimeout(() => {
+            promoModal.classList.remove('opacity-0');
+            promoContent.classList.remove('scale-95');
+            promoContent.classList.add('scale-100');
+        }, 10);
+
+        // Bloquear scroll
+        document.body.style.overflow = 'hidden';
+    }, 2000); // Aparece a los 2 segundos
+}
+
+window.closePromoModal = () => {
+    const promoModal = document.getElementById('promo-modal');
+    const promoContent = document.getElementById('promo-modal-content');
+    if (!promoModal) return;
+
+    promoModal.classList.add('opacity-0');
+    promoContent.classList.remove('scale-100');
+    promoContent.classList.add('scale-95');
+    
+    setTimeout(() => {
+        promoModal.classList.add('hidden');
+        promoModal.classList.remove('flex');
+        // Restaurar scroll
+        document.body.style.overflow = '';
+    }, 300);
+};
 
 // ─────────────────────────────────────────────
 // Init
@@ -402,4 +645,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initDropdown();
     initCategoryButtons();
     cargarDatos();
+    initPromoModal(); // Inicializa el modal de promo
 });
