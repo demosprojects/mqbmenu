@@ -465,6 +465,20 @@ function initDropdown() {
 }
 
 // ─────────────────────────────────────────────
+// Scroll automático al título en mobile
+// ─────────────────────────────────────────────
+function scrollToSectionTitleMobile() {
+    if (window.innerWidth >= 768) return;
+    const title = document.getElementById('section-title');
+    if (!title) return;
+    setTimeout(() => {
+        const headerH = document.querySelector('header')?.offsetHeight ?? 72;
+        const y = title.getBoundingClientRect().top + window.scrollY - headerH - 12;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }, 60);
+}
+
+// ─────────────────────────────────────────────
 // Listeners de categorías
 // ─────────────────────────────────────────────
 function initCategoryButtons() {
@@ -473,6 +487,7 @@ function initCategoryButtons() {
         btn.addEventListener('click', () => {
             activarBoton(btn);
             mostrarCategoria(btn.innerText.trim());
+            scrollToSectionTitleMobile();
         });
     });
 
@@ -481,6 +496,7 @@ function initCategoryButtons() {
             closeBebidasDropdown();
             activarBoton(btn);
             mostrarCategoria(btn.innerText.trim());
+            scrollToSectionTitleMobile();
         });
     });
 }
