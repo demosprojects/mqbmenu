@@ -70,24 +70,18 @@
   {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 4900,
-    "precioAnterior": 8500,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
-    "destacado": true,
-    "etiqueta": "Día de la Hamburguesa",
-    "ofertaGrupo": "cheese"
+    "destacado": false
   },
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 6900,
-    "precioAnterior": 10500,
+    "precio": 10500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
-    "destacado": true,
-    "etiqueta": "Día de la Hamburguesa",
-    "ofertaGrupo": "cheese"
+    "destacado": false
   },
   {
     "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
@@ -101,24 +95,18 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 4900,
-    "precioAnterior": 9300,
+    "precio": 9300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
-    "destacado": true,
-    "etiqueta": "Día de la Hamburguesa",
-    "ofertaGrupo": "clasica"
+    "destacado": false
   },
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 6900,
-    "precioAnterior": 11300,
+    "precio": 11300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
-    "destacado": true,
-    "etiqueta": "Día de la Hamburguesa",
-    "ofertaGrupo": "clasica"
+    "destacado": false
   },
   {
     "nombre": "Clasica simple + sobre de papas + coca cola 220ml",
@@ -412,13 +400,10 @@
   {
     "nombre": "Coca Cola 1,5L",
     "descripcion": "Coca Cola de 1,5L ",
-    "precio": 3999,
-    "precioAnterior": 5000,
+    "precio": 5000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482785/iqdtpetk1tc4jvzmlxt5.webp",
-    "destacado": true,
-    "etiqueta": "Día de la Hamburguesa",
-    "ofertaGrupo": "Coca Cola 1.5"
+    "destacado": false
   },
   {
     "nombre": "Coca Cola 220ml",
