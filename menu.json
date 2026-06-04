@@ -349,7 +349,7 @@
   },
   {
     "nombre": "Cajita Mundial 2026",
-    "descripcion": "Mini cheese con pan celeste, sobre de papas, lata de Coca 220ml, álbum del mundial.",
+    "descripcion": "Mini cheese con pan celeste, sobre de papas, lata de Coca 220ml, álbum del mundial. Figuritas se venden por separado. ",
     "precio": 12900,
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780535307/ret4vw2uk4qxnxew0vk4.webp",
@@ -371,6 +371,15 @@
     "precio": 12900,
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889805/tvmx5qybpapmafrpfsv6.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Figuritas Mundial",
+    "descripcion": "Contiene 5 figuritas para completar el álbum.",
+    "precio": 1000,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780535440/uc4cgvyats3epcaoidvc.webp",
     "destacado": false,
     "disponible": true
   },
