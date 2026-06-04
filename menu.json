@@ -348,6 +348,15 @@
     "disponible": true
   },
   {
+    "nombre": "Cajita Mundial 2026",
+    "descripcion": "Mini cheese con pan celeste, sobre de papas, lata de Coca 220ml, álbum del mundial.",
+    "precio": 12900,
+    "categoria": "Kids",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780535307/ret4vw2uk4qxnxew0vk4.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Cajita My Melody Kuromi",
     "descripcion": "Mini cheese, sobre de papas, lata de Coca 220ml, libro para colorear ",
     "precio": 12900,
