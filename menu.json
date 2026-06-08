@@ -158,7 +158,7 @@
     "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, verdeo",
     "precio": 9500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
     "destacado": false,
     "disponible": true
   },
@@ -167,7 +167,7 @@
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, verdeo",
     "precio": 11500,
     "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375620/vjeqbuwtlwvfpyvaestj.webp",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
     "destacado": false,
     "disponible": true
   },
@@ -508,6 +508,15 @@
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483550/fscwuc82do5op74uzuvb.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Fanta de manzana 2.5L",
+    "descripcion": "Fanta de manzana 2.5L",
+    "precio": 4000,
+    "categoria": "Sin alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780879146/ywneyvidklhzrgqix7vh.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Fanta de vidrio 1L",
