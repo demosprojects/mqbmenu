@@ -518,6 +518,15 @@
     "destacado": false
   },
   {
+    "nombre": "Full Sport",
+    "descripcion": "Sabores disponibles: Manzana, frutas tropicales y fresh blue",
+    "precio": 1600,
+    "categoria": "Sin alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780878648/plrhgu4mdxlt0pkihmxa.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Levite 1,5L",
     "descripcion": "Agua saborizada, consultar sabores disponibles.",
     "precio": 3000,
@@ -608,6 +617,24 @@
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771480611/lbllnp2idzlrzclylj00.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Colon Blanco dulce",
+    "descripcion": "Vino blanco dulce",
+    "precio": 7500,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780878765/hbkopgjiug8gfnn67msf.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Colon Tinto dulce",
+    "descripcion": "Vino tinto dulce",
+    "precio": 7500,
+    "categoria": "Con alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780878718/h7ojkhpuuxtldylevzyd.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Estrella Galicia 473ml",
