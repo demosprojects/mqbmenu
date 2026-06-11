@@ -155,7 +155,7 @@
   },
   {
     "nombre": "Moscu simple",
-    "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, verdeo",
+    "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, papa rosty",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965116/yzqwxdod1npzawqhsyfj.webp",
@@ -164,7 +164,7 @@
   },
   {
     "nombre": "Moscu doble",
-    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, verdeo",
+    "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, papa rosty",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965120/jhzd1s85sxni00hjbg4j.webp",
