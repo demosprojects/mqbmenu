@@ -605,7 +605,7 @@
   {
     "nombre": "Amstel 1L Vidrio",
     "descripcion": "Cerveza de vidrio de 1 Litro",
-    "precio": 4000,
+    "precio": 5000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1776561284/uwcidpu6adu7x3odjvmd.webp",
     "destacado": false,
