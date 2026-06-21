@@ -722,7 +722,7 @@
   {
     "nombre": "Imperial golden 473cc",
     "descripcion": "Cerveza en lata de 473cc",
-    "precio": 4200,
+    "precio": 3000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481102/ded1skf8ijs4brra6exb.webp",
     "destacado": false
@@ -762,7 +762,7 @@
   {
     "nombre": "Miller 710cc",
     "descripcion": "Cerveza en lata de 710cc",
-    "precio": 5500,
+    "precio": 6000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481578/cryr77hifcabmjpzrge3.webp",
     "destacado": false
@@ -770,7 +770,7 @@
   {
     "nombre": "Pampa dorada 473cc",
     "descripcion": "Cerveza en lata de 473cc",
-    "precio": 2200,
+    "precio": 3200,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771481856/odd4pelricsjjay6qcop.webp",
     "destacado": false
@@ -778,7 +778,7 @@
   {
     "nombre": "Pampa honey 473cc",
     "descripcion": "Cerveza en lata de 473cc",
-    "precio": 2200,
+    "precio": 3200,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772071934/uas7kkcvyvrv7ocet3ju.webp",
     "destacado": false,
@@ -796,7 +796,7 @@
   {
     "nombre": "Schneider 1L",
     "descripcion": "Cerveza de vidrio de 1 Litro",
-    "precio": 4000,
+    "precio": 5000,
     "categoria": "Con alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1776561317/jaxmme6o6r05r0y4neal.webp",
     "destacado": false,
