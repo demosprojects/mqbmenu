@@ -232,6 +232,15 @@
     "disponible": false
   },
   {
+    "nombre": "Picada para compartir",
+    "descripcion": "Dos mini burgers, dos piezas de pollo frito, papas, queso, salame, salamin, queso azul, mortadela y toping de aderezo.",
+    "precio": 19900,
+    "categoria": "Para compartir",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1782137625/y8i5hqtgg4ghtanyt05m.webp",
+    "destacado": true,
+    "disponible": true
+  },
+  {
     "nombre": "Pollo frito 12 piezas",
     "descripcion": "Doce piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
     "precio": 32000,
