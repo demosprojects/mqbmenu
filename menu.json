@@ -118,6 +118,24 @@
     "disponible": false
   },
   {
+    "nombre": "Criolla Simple",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, huevo, Salsa Criolla",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1782438390/r504unwlnauw1vmhpnlc.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Criolla Doble",
+    "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, huevo, Salsa Criolla",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "De palta simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, palta, cebolla en brunoise, huevo",
     "precio": 11000,
