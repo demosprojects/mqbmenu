@@ -131,7 +131,7 @@
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, huevo, Salsa Criolla",
     "precio": 11500,
     "categoria": "Burgers",
-    "imagen": "",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/w_600,q_auto,f_auto/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
     "disponible": true
   },
