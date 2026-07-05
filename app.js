@@ -66,8 +66,14 @@ function renderTodo() {
         card.className = "group bg-white p-4 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-mqb-blue/20 transition-all duration-500";
 
         card.innerHTML = `
-            <div class="aspect-video rounded-[2rem] overflow-hidden bg-gray-100 mb-6 cursor-pointer" onclick="openModal('${producto.imagen}', '${nombreSafe}')">
+            <div class="relative aspect-video rounded-[2rem] overflow-hidden bg-gray-100 mb-6 cursor-pointer" onclick="openModal('${producto.imagen}', '${nombreSafe}')">
                 <img src="${imgUrl(producto.imagen, cat)}" alt="${producto.nombre}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                ${producto.sumaPuntos ? `
+                <div class="absolute top-3 left-3 z-10">
+                    <span class="bg-[#014926] text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                        <i class="fa-solid fa-star text-[9px]" style="color:#a3f0c4;"></i> Suma puntos
+                    </span>
+                </div>` : ''}
             </div>
             <div class="px-2 space-y-3">
                 <div class="flex justify-between items-center">
@@ -168,6 +174,13 @@ function buildSlideHTML(grupo, slideIdx) {
                     <div class="oferta-event-pill text-white text-[12px] font-black px-3 py-1.5 rounded-lg uppercase shadow-lg">
                         −${pctSimple}% OFF
                     </div>
+                </div>` : ''}
+
+                ${(simple.sumaPuntos || (doble && doble.sumaPuntos)) ? `
+                <div class="absolute top-4 right-4 z-10">
+                    <span class="bg-[#014926] text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                        <i class="fa-solid fa-star text-[9px]" style="color:#a3f0c4;"></i> Suma puntos
+                    </span>
                 </div>` : ''}
             </div>
 
@@ -611,29 +624,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ─────────────────────────────────────────────
-// Modal Promocional (App de Puntos)
+// Modal Promocional (App de Puntos) — DESACTIVADO
+// El banner del header ya muestra la info de la app
 // ─────────────────────────────────────────────
 function initPromoModal() {
-    const promoModal = document.getElementById('promo-modal');
-    const promoContent = document.getElementById('promo-modal-content');
-    
-    if (!promoModal) return;
-
-    // Muestra siempre al entrar o recargar la página
-    setTimeout(() => {
-        promoModal.classList.remove('hidden');
-        promoModal.classList.add('flex');
-        
-        // Animación de entrada
-        setTimeout(() => {
-            promoModal.classList.remove('opacity-0');
-            promoContent.classList.remove('scale-95');
-            promoContent.classList.add('scale-100');
-        }, 10);
-
-        // Bloquear scroll
-        document.body.style.overflow = 'hidden';
-    }, 2000); // Aparece a los 2 segundos
+    // Modal desactivado: la info de la app ahora está en el banner principal
 }
 
 window.closePromoModal = () => {
