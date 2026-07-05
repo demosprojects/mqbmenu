@@ -126,6 +126,251 @@
 
     @media (prefers-color-scheme: dark) { html { filter: invert(0%) !important; } }
 
+    /* ── Banner Fidelidad ── */
+    .mqb-banner-fidelidad {
+        background-color: #014926;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    @media (min-width: 641px) {
+        .mqb-banner-fidelidad { min-height: 230px; }
+    }
+    .mqb-banner-dots {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255,255,255,0.07) 1.5px, transparent 1.5px);
+        background-size: 22px 22px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* ── Layout desktop: fila única ── */
+    .mqb-banner-inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 36px;
+        gap: 24px;
+        overflow: visible;
+    }
+    /* Desktop: sin teléfono, padding normal (ya no hace falta espacio extra arriba) */
+    @media (min-width: 641px) {
+        .mqb-banner-inner {
+            padding-top: 28px;
+        }
+        .mqb-banner-left {
+            flex: 0 1 auto;
+            max-width: 460px;
+        }
+    }
+    .mqb-banner-left { flex: 1; min-width: 0; }
+
+    /* ── Layout mobile: grilla 2 columnas arriba + CTA abajo ── */
+    @media (max-width: 640px) {
+        .mqb-banner-inner {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "left phone"
+                "cta  cta";
+            padding: 20px 18px 22px;
+            gap: 16px 12px;
+            align-items: start;
+        }
+        .mqb-banner-left   { grid-area: left; }
+        .mqb-banner-divider { display: none; }
+        .mqb-phone-mockup  { grid-area: phone; align-self: center; }
+        .mqb-banner-right  { grid-area: cta; width: 100%; align-items: flex-start; }
+        .mqb-banner-hint   { text-align: left; }
+        .mqb-banner-subtitle { max-width: 100%; }
+    }
+
+    .mqb-banner-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: rgba(255,255,255,0.11);
+        border: 1px solid rgba(255,255,255,0.18);
+        color: #c6f0d9;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 5px 13px;
+        border-radius: 100px;
+        margin-bottom: 13px;
+        font-family: 'Inter', sans-serif;
+    }
+    .mqb-banner-eyebrow-dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: #4ade80;
+        flex-shrink: 0;
+        display: inline-block;
+    }
+    .mqb-banner-headline {
+        font-family: 'Bebas Neue', sans-serif;
+        color: #ffffff;
+        line-height: 0.9;
+        letter-spacing: 0.01em;
+        margin: 0 0 4px 0;
+        font-weight: 400;
+    }
+    .mqb-banner-headline span.accent { color: #a3f0c4; }
+    .mqb-banner-hl-size { font-size: clamp(30px, 5vw, 62px); display: block; }
+    .mqb-banner-subtitle {
+        color: rgba(255,255,255,0.72);
+        font-size: clamp(11px, 1.5vw, 15px);
+        font-weight: 500;
+        line-height: 1.55;
+        margin: 10px 0 0;
+        max-width: 340px;
+        font-family: 'Inter', sans-serif;
+    }
+    .mqb-banner-divider {
+        display: none;
+    }
+    @media (min-width: 641px) {
+        .mqb-banner-divider {
+            display: block;
+            width: 1px;
+            height: 72px;
+            background: rgba(255,255,255,0.16);
+            flex-shrink: 0;
+        }
+    }
+    .mqb-banner-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+    .mqb-banner-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: #ffffff;
+        color: #014926;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: none;
+        padding: 13px 22px;
+        border-radius: 100px;
+        white-space: nowrap;
+        letter-spacing: -0.01em;
+        transition: background 0.15s;
+    }
+    .mqb-banner-cta:hover { background: #d4f5e3; }
+    .mqb-banner-hint {
+        color: rgba(255,255,255,0.4);
+        font-size: 10px;
+        font-weight: 500;
+        text-align: right;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Bloque QR (solo desktop, rellena el hueco donde antes iba el celular) ── */
+    .mqb-banner-qr {
+        display: none;
+    }
+    @media (min-width: 641px) {
+        .mqb-banner-qr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .mqb-banner-qr img {
+            width: 132px;
+            height: 132px;
+            display: block;
+            border-radius: 12px;
+            background: #ffffff;
+            padding: 8px;
+        }
+        .mqb-banner-qr span {
+            color: rgba(255,255,255,0.55);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            max-width: 140px;
+            line-height: 1.4;
+        }
+    }
+
+    /* ── Mockup Celular ── */
+    .mqb-phone-mockup {
+        /* Mobile: ocupa su celda en el grid */
+        flex-shrink: 0;
+        width: 90px;
+        height: 172px;
+        border-radius: 18px;
+        border: 2.5px solid rgba(255,255,255,0.22);
+        background: #01331a;
+        box-shadow:
+            0 0 0 1px rgba(0,0,0,0.25),
+            0 20px 50px rgba(0,0,0,0.45),
+            0 4px 16px rgba(0,0,0,0.3),
+            inset 0 0 0 1px rgba(255,255,255,0.06);
+        position: relative;
+        overflow: hidden;
+    }
+    /* Notch pill */
+    .mqb-phone-mockup::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 28px;
+        height: 4px;
+        background: rgba(255,255,255,0.18);
+        border-radius: 100px;
+        z-index: 2;
+    }
+    /* Brillo superior */
+    .mqb-phone-mockup::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 50%;
+        background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, transparent 100%);
+        border-radius: 18px 18px 0 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .mqb-phone-screen {
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    .mqb-phone-screen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+    }
+
+    /* Desktop: sin mockup de celular (no tiene sentido en pantallas grandes) */
+    @media (min-width: 641px) {
+        .mqb-phone-mockup {
+            display: none;
+        }
+    }
+
  </style>
 </head>
 <body class="bg-white text-mqb-dark font-sans selection:bg-mqb-blue selection:text-white">
@@ -172,6 +417,63 @@
      <p class="text-xs font-bold text-mqb-blue uppercase tracking-wider flex items-center justify-center gap-2">
          <i class="fa-solid fa-bell"></i> Menú digital: Elegí y pedíselo al mozo
      </p>
+ </div>
+
+ <!-- ── BANNER FIDELIDAD / APP DE PUNTOS ── -->
+ <div class="max-w-7xl mx-auto px-4 sm:px-8 mt-5">
+     <div class="mqb-banner-fidelidad">
+         <div class="mqb-banner-dots"></div>
+         <div class="mqb-banner-inner">
+
+             <!-- Izquierda: texto -->
+             <div class="mqb-banner-left">
+                 <div class="mqb-banner-eyebrow">
+                     <span class="mqb-banner-eyebrow-dot"></span>
+                     Más que Burgers App
+                 </div>
+                 <h2 class="mqb-banner-headline">
+                     <span class="mqb-banner-hl-size">DESCARGÁ</span>
+                     <span class="mqb-banner-hl-size accent">NUESTRA</span>
+                     <span class="mqb-banner-hl-size">APLICACIÓN</span>
+                 </h2>
+                 <p class="mqb-banner-subtitle">
+Creá tu cuenta con el mozo o en caja. Los canjes se realizan únicamente en caja.                 </p>
+             </div>
+
+             <!-- Divisor vertical (solo desktop) -->
+             <div class="mqb-banner-divider"></div>
+
+             <!-- QR (solo desktop, rellena el espacio donde antes iba el celular) -->
+             <div class="mqb-banner-qr">
+                 <img src="data:image/png;base64,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" alt="Código QR para acceder a la app">
+                 <span>Escaneá y descargá la app</span>
+             </div>
+
+             <!-- Divisor vertical (solo desktop, entre el QR y el CTA) -->
+             <div class="mqb-banner-divider"></div>
+
+             <!-- Mockup Celular (mobile) -->
+             <div class="mqb-phone-mockup">
+                 <div class="mqb-phone-screen">
+                     <img
+                         src="https://res.cloudinary.com/dl2tftoum/image/upload/v1782696253/sxmhvlzxtxs9ewvroetx.webp"
+                         alt="Captura de la app de puntos Más que Burgers"
+                         loading="lazy"
+                     >
+                 </div>
+             </div>
+
+             <!-- Derecha: CTA -->
+             <div class="mqb-banner-right">
+                 <a href="https://masqueburgers.com.ar" target="_blank" rel="noopener" class="mqb-banner-cta">
+                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#014926" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                     ¿Ya tenés cuenta?
+                 </a>
+                 <span class="mqb-banner-hint">Accedé desde acá · masqueburgers.com.ar</span>
+             </div>
+
+         </div>
+     </div>
  </div>
 
  <!-- ── CAROUSEL DE OFERTAS GLOBAL (siempre visible) ── -->
