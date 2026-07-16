@@ -6,7 +6,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "American doble",
@@ -15,7 +15,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "American simple + sobre de papas + coca cola 220ml",
@@ -33,7 +33,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Berlín doble",
@@ -42,7 +42,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Blue simple",
@@ -52,7 +52,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409294/v87b4kjgyhqdhdrnz0dx.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Blue doble",
@@ -62,7 +62,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Boom",
@@ -72,7 +72,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1779414526/zm076qsfzpiaug5grbez.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Cheese simple",
@@ -81,7 +81,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Cheese doble",
@@ -90,7 +90,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
@@ -108,7 +108,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Clasica doble",
@@ -117,7 +117,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Clasica simple + sobre de papas + coca cola 220ml",
@@ -136,7 +136,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Criolla Doble",
@@ -146,7 +146,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/w_600,q_auto,f_auto/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "De palta simple",
@@ -156,7 +156,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1775085773/zm3zktr19owe04uhexzc.webp",
     "destacado": false,
     "disponible": false
-    
   },
   {
     "nombre": "De palta doble",
@@ -174,8 +173,8 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1781050021/d2cm1nh5qqzt9dskxwin.webp",
     "destacado": false,
-    "disponible": true,
-      "sumaPuntos": true
+    "disponible": false,
+    "sumaPuntos": true
   },
   {
     "nombre": "La ultima jugada doble",
@@ -184,8 +183,8 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1781050021/d2cm1nh5qqzt9dskxwin.webp",
     "destacado": false,
-    "disponible": true,
-      "sumaPuntos": true
+    "disponible": false,
+    "sumaPuntos": true
   },
   {
     "nombre": "Moscu simple",
@@ -195,7 +194,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965116/yzqwxdod1npzawqhsyfj.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Moscu doble",
@@ -205,7 +204,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965120/jhzd1s85sxni00hjbg4j.webp",
     "destacado": false,
     "disponible": true,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Moscu simple + sobre de papas + coca cola 220ml",
@@ -237,20 +236,20 @@
   {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
-    "precio": 11000,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Yankee triple",
     "descripcion": "Pan, mayonesa, triple carne, doble cheddar, bacon.",
-    "precio": 13000,
+    "precio": 13500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false,
-      "sumaPuntos": true
+    "sumaPuntos": true
   },
   {
     "nombre": "Miniburgers",
