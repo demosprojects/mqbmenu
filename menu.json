@@ -174,7 +174,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1781050021/d2cm1nh5qqzt9dskxwin.webp",
     "destacado": false,
     "disponible": false,
-    "sumaPuntos": true
+    "sumaPuntos": false
   },
   {
     "nombre": "La ultima jugada doble",
@@ -184,7 +184,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1781050021/d2cm1nh5qqzt9dskxwin.webp",
     "destacado": false,
     "disponible": false,
-    "sumaPuntos": true
+    "sumaPuntos": false
   },
   {
     "nombre": "Moscu simple",
