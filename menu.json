@@ -1,5 +1,14 @@
 [
   {
+    "nombre": " (simple)",
+    "descripcion": "Pan, ketchup, carne, cheddar, cebolla en brunoise",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
+    "destacado": false,
+    "disponible": false
+  },
+  {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon, lechuga",
     "precio": 9500,
@@ -225,15 +234,6 @@
     "disponible": false
   },
   {
-    "nombre": " (simple)",
-    "descripcion": "Pan, ketchup, carne, cheddar, cebolla en brunoise",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
-    "destacado": false,
-    "disponible": false
-  },
-  {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
     "precio": 11500,
@@ -275,7 +275,7 @@
     "categoria": "Para compartir",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1782137625/y8i5hqtgg4ghtanyt05m.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Pollo frito 12 piezas",
