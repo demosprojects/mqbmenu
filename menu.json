@@ -36,6 +36,24 @@
     "disponible": false
   },
   {
+    "nombre": "Bangkok Simple",
+    "descripcion": "Pan, mayonesa, carne, mostaza, cheddar y cebolla salteada",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406275/n1mpfbk7quy5ghbsioxs.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Bangkok Doble",
+    "descripcion": "Pan, mayonesa, doble carne, mostaza, cheddar y cebolla salteada",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406275/n1mpfbk7quy5ghbsioxs.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino en brunoise, carne, cheddar, cebolla morada en brunoise.",
     "precio": 9500,
@@ -109,6 +127,15 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209470/mlws7m57jcsllem7r8dt.webp",
     "destacado": false,
     "disponible": false
+  },
+  {
+    "nombre": "Chicken Burger",
+    "descripcion": "Pan, mayonesa, mix de repollos, pollo frito, pepino y salsa mqb",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406130/vohf6ejjqlgwnjxw4ss3.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Clasica simple",
@@ -223,6 +250,24 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778209585/p4stgft7r6rmnwwbosxh.webp",
     "destacado": false,
     "disponible": false
+  },
+  {
+    "nombre": "Parma Simple",
+    "descripcion": "Pan, carne, mozzarella, pimientos, rucula, parmesano, tomate y aceite de oliva",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406197/wzkosjotvyogwwrsppab.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Parma Doble",
+    "descripcion": "Pan, doble carne, mozzarella, pimientos, rucula, parmesano, tomate y aceite de oliva",
+    "precio": 11500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406197/wzkosjotvyogwwrsppab.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Sin nombre (doble)",
