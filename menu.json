@@ -94,30 +94,33 @@
   {
     "nombre": "Boom",
     "descripcion": "Pan, mayonesa, colchón de papas fritas, carne rellena de muzza, cheddar, huevo",
-    "precio": 11500,
+    "precio": 9200,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1779414526/zm076qsfzpiaug5grbez.webp",
     "destacado": false,
     "disponible": true,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 11500
   },
   {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 8500,
+    "precio": 6800,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 8500
   },
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 10500,
+    "precio": 8400,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 10500
   },
   {
     "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
@@ -140,8 +143,7 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 7400,
-    "precioAnterior": 9300,
+    "precio": 9300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
@@ -150,8 +152,7 @@
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 9000,
-    "precioAnterior": 11300,
+    "precio": 11300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
