@@ -140,7 +140,8 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 9300,
+    "precio": 7400,
+    "precioAnterior": 9300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
@@ -149,7 +150,8 @@
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 11300,
+    "precio": 9000,
+    "precioAnterior": 11300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
@@ -167,7 +169,8 @@
   {
     "nombre": "Criolla Simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, huevo, Salsa Criolla",
-    "precio": 9500,
+    "precio": 7600,
+    "precioAnterior": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
@@ -177,7 +180,8 @@
   {
     "nombre": "Criolla Doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, huevo, Salsa Criolla",
-    "precio": 11500,
+    "precio": 9200,
+    "precioAnterior": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/w_600,q_auto,f_auto/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
@@ -355,15 +359,6 @@
     "destacado": false
   },
   {
-    "nombre": "Papas bravas",
-    "descripcion": "Papas, cheddar, salchicha, salsa jalapeño, nachos y ketchup",
-    "precio": 10500,
-    "categoria": "Papas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786407116/fnt9499qkgq3bx5dgevy.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
     "nombre": "Papas cheddar",
     "descripcion": "Papas con cheddar",
     "precio": 8800,
@@ -402,24 +397,6 @@
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211990/lwurul1tnm1tkx3uieoz.webp",
     "destacado": false
-  },
-  {
-    "nombre": "Papas parmesano",
-    "descripcion": "Papas con parmesano",
-    "precio": 10500,
-    "categoria": "Papas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406464/p0wbtmau88rybpdivvrj.webp",
-    "destacado": false,
-    "disponible": true
-  },
-  {
-    "nombre": "Salchipapa",
-    "descripcion": "Papas, doble cheddar y salchichas",
-    "precio": 9500,
-    "categoria": "Papas",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406411/hjymjle6hufv5wh5kls5.webp",
-    "destacado": false,
-    "disponible": true
   },
   {
     "nombre": "Sobre de papas",
