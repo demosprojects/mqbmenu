@@ -170,8 +170,7 @@
   {
     "nombre": "Criolla Simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, mozzarella, huevo, Salsa Criolla",
-    "precio": 7600,
-    "precioAnterior": 9500,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
@@ -181,8 +180,7 @@
   {
     "nombre": "Criolla Doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, mozzarella, huevo, Salsa Criolla",
-    "precio": 9200,
-    "precioAnterior": 11500,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/w_600,q_auto,f_auto/v1782438390/r504unwlnauw1vmhpnlc.webp",
     "destacado": false,
