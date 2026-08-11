@@ -808,6 +808,10 @@
           <input type="number" id="new-precio" placeholder="0" min="0">
         </div>
         <div class="field-group">
+          <label class="field-label">Precio anterior / oferta ($)</label>
+          <input type="number" id="new-precioAnterior" placeholder="Dejar vacío si no hay oferta" min="0">
+        </div>
+        <div class="field-group">
           <label class="field-label">Categoría</label>
           <select id="new-categoria">
             <option>Burgers</option><option>Pizzas</option><option>Para compartir</option><option>Papas</option>
@@ -842,6 +846,13 @@
             <div class="toggle-track"></div>
           </label>
           <span style="font-size:0.875rem">Destacado</span>
+        </div>
+        <div class="toggle-wrapper">
+          <label class="toggle">
+            <input type="checkbox" id="new-sumaPuntos">
+            <div class="toggle-track"></div>
+          </label>
+          <span style="font-size:0.875rem">Suma puntos</span>
         </div>
       </div>
     </div>
@@ -1029,6 +1040,14 @@ function crearCard(prod, i) {
     productos[i].precio = parseInt(v) || 0;
     priceBadge.textContent = productos[i].precio ? '$' + productos[i].precio.toLocaleString() : '—';
   }));
+  const gPrecioAnterior = mkNumber("Precio anterior / oferta ($)", "", prod.precioAnterior, v => {
+    const n = parseInt(v) || 0;
+    if (n > 0) productos[i].precioAnterior = n;
+    else delete productos[i].precioAnterior;
+  });
+  if (!prod.precioAnterior) gPrecioAnterior.querySelector('input').value = '';
+  gPrecioAnterior.querySelector('input').placeholder = 'Dejar vacío si no hay oferta';
+  grid.appendChild(gPrecioAnterior);
   grid.appendChild(mkSelect("Categoría", "", prod.categoria, v => {
     productos[i].categoria = v;
     catBadge.textContent = v;
@@ -1073,7 +1092,20 @@ function crearCard(prod, i) {
   const tDestText = document.createElement("span"); tDestText.style.fontSize = "0.875rem"; tDestText.textContent = "Destacado";
   tDestWrapper.append(tDestLabel, tDestText);
 
-  togglesContainer.append(tDispWrapper, tDestWrapper);
+  // Toggle Suma puntos
+  const tPuntosWrapper = document.createElement("div"); tPuntosWrapper.className = "toggle-wrapper";
+  const tPuntosLabel = document.createElement("label"); tPuntosLabel.className = "toggle";
+  const tPuntosInput = document.createElement("input"); tPuntosInput.type = "checkbox"; tPuntosInput.checked = !!prod.sumaPuntos;
+  tPuntosInput.addEventListener('change', () => {
+    if (tPuntosInput.checked) productos[i].sumaPuntos = true;
+    else delete productos[i].sumaPuntos;
+  });
+  const tPuntosTrack = document.createElement("div"); tPuntosTrack.className = "toggle-track";
+  tPuntosLabel.append(tPuntosInput, tPuntosTrack);
+  const tPuntosText = document.createElement("span"); tPuntosText.style.fontSize = "0.875rem"; tPuntosText.textContent = "Suma puntos";
+  tPuntosWrapper.append(tPuntosLabel, tPuntosText);
+
+  togglesContainer.append(tDispWrapper, tDestWrapper, tPuntosWrapper);
 
   const footer = document.createElement("div"); footer.className = "card-footer";
   const btnDel = document.createElement("button"); btnDel.className = "btn btn-danger"; btnDel.textContent = "Eliminar producto";
@@ -1461,13 +1493,14 @@ renderNewImgButtons();
 
 // ── Modal Agregar ──
 function abrirAgregarModal() {
-  ['new-nombre','new-precio','new-descripcion'].forEach(id => document.getElementById(id).value = '');
+  ['new-nombre','new-precio','new-precioAnterior','new-descripcion'].forEach(id => document.getElementById(id).value = '');
   newImgUrl = '';
   document.getElementById('new-imagen').value = '';
   document.getElementById('new-img-error').classList.remove('visible');
   renderNewImgButtons();
   document.getElementById('new-categoria').value = 'Burgers';
   document.getElementById('new-destacado').checked = false;
+  document.getElementById('new-sumaPuntos').checked = false;
   document.getElementById('new-disponible').checked = true;
   document.getElementById('agregar-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1477,6 +1510,7 @@ function cerrarAgregarModal(e) { if (e.target === document.getElementById('agreg
 function cerrarAgregarModalDirecto() { document.getElementById('agregar-modal').classList.remove('open'); document.body.style.overflow = ''; }
 
 function confirmarAgregarProducto() {
+  const precioAnteriorVal = document.getElementById('new-precioAnterior').value;
   const nuevo = {
     nombre:      document.getElementById('new-nombre').value.trim(),
     descripcion: document.getElementById('new-descripcion').value.trim(),
@@ -1486,6 +1520,12 @@ function confirmarAgregarProducto() {
     destacado:   document.getElementById('new-destacado').checked,
     disponible:  document.getElementById('new-disponible').checked
   };
+  if (precioAnteriorVal) {
+    nuevo.precioAnterior = parseInt(precioAnteriorVal) || 0;
+  }
+  if (document.getElementById('new-sumaPuntos').checked) {
+    nuevo.sumaPuntos = true;
+  }
   productos.push(nuevo);
   const i = productos.length - 1;
   const container = document.getElementById("productos-container");
