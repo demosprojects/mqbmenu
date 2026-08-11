@@ -359,6 +359,15 @@
     "destacado": false
   },
   {
+    "nombre": "Papas bravas",
+    "descripcion": "Papas, cheddar, salchicha, salsa jalapeño, nachos y ketchup",
+    "precio": 10500,
+    "categoria": "Papas",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408231/v7vzpxakp1fwlyvimed7.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Papas cheddar",
     "descripcion": "Papas con cheddar",
     "precio": 8800,
@@ -397,6 +406,24 @@
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211990/lwurul1tnm1tkx3uieoz.webp",
     "destacado": false
+  },
+  {
+    "nombre": "Papas parmesano",
+    "descripcion": "Papas, verdeo y parmesano",
+    "precio": 10500,
+    "categoria": "Papas",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408175/x2ex2gqzhhx0innlct3d.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
+    "nombre": "Salchipapa",
+    "descripcion": "Papas, doble cheddar y salchichas",
+    "precio": 9500,
+    "categoria": "Papas",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408143/bpgmwrwagcjqowys0v6s.webp",
+    "destacado": false,
+    "disponible": true
   },
   {
     "nombre": "Sobre de papas",
