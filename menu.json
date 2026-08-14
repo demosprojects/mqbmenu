@@ -389,10 +389,11 @@
   {
     "nombre": "Papas cheddar y verdeo",
     "descripcion": "Papas con cheddar y verdeo",
-    "precio": 9000,
+    "precio": 7200,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771208945/b3pcue9nk9h7qsbphlxx.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 9000
   },
   {
     "nombre": "Papas clásicas",
