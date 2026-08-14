@@ -371,7 +371,7 @@
   {
     "nombre": "Papas cheddar",
     "descripcion": "Papas con cheddar",
-    "precio": 7040,
+    "precio": 7000,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211838/rkrwn61dyyjhmsddximf.webp",
     "destacado": false,
