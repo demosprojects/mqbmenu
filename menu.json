@@ -56,22 +56,20 @@
   {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino en brunoise, carne, cheddar, cebolla morada en brunoise.",
-    "precio": 7600,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 9500
+    "sumaPuntos": true
   },
   {
     "nombre": "Berlín doble",
     "descripcion": "Pan, mayonesa, pepino en brunoise, doble carne, doble cheddar, cebolla morada en brunoise.",
-    "precio": 9200,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 11500
+    "sumaPuntos": true
   },
   {
     "nombre": "Blue simple",
@@ -283,22 +281,20 @@
   {
     "nombre": "Yankee doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, bacon.",
-    "precio": 9200,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 11500
+    "sumaPuntos": true
   },
   {
     "nombre": "Yankee triple",
     "descripcion": "Pan, mayonesa, triple carne, doble cheddar, bacon.",
-    "precio": 10800,
+    "precio": 13500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375550/dnscdxhybleudjhrlyvp.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 13500
+    "sumaPuntos": true
   },
   {
     "nombre": "Miniburgers",
@@ -329,59 +325,66 @@
   {
     "nombre": "Pollo frito 12 piezas",
     "descripcion": "Doce piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
-    "precio": 32000,
+    "precio": 25600,
     "categoria": "Para compartir",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976003/tosl2skyxt3rpuyaa1ux.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 32000
   },
   {
     "nombre": "Pollo frito 3 piezas",
     "descripcion": "Tres piezas de pollo frito, un toping de mayonesa y papas.",
-    "precio": 8000,
+    "precio": 6400,
     "categoria": "Para compartir",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976155/zt6hczmheivsgi3zfe23.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 8000
   },
   {
     "nombre": "Pollo frito 6 piezas",
     "descripcion": "Seis piezas de pollo frito, un toping de mayonesa, un toping de ketchup y papas.",
-    "precio": 16000,
+    "precio": 12800,
     "categoria": "Para compartir",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771976291/knpcoozaipyfva8s4bko.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 16000
   },
   {
     "nombre": "Mix de pollo y papas",
     "descripcion": "Papas, pollo, tres aderezos, verdeo",
-    "precio": 10500,
+    "precio": 8400,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212986/d2gmrqr4cqazexuptw51.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 10500
   },
   {
     "nombre": "Papas bravas",
     "descripcion": "Papas, cheddar, salchicha, salsa jalapeño, nachos y ketchup",
-    "precio": 10500,
+    "precio": 8400,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408231/v7vzpxakp1fwlyvimed7.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": true,
+    "precioAnterior": 10500
   },
   {
     "nombre": "Papas cheddar",
     "descripcion": "Papas con cheddar",
-    "precio": 8800,
+    "precio": 7040,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211838/rkrwn61dyyjhmsddximf.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 8800
   },
   {
     "nombre": "Papas cheddar y bacon",
     "descripcion": "Papas con cheddar y bacon",
-    "precio": 9500,
+    "precio": 7600,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771212093/bpudztedatx58xwzsjm3.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 9500
   },
   {
     "nombre": "Papas cheddar y verdeo",
@@ -394,36 +397,40 @@
   {
     "nombre": "Papas clásicas",
     "descripcion": "Solo papas",
-    "precio": 7500,
+    "precio": 6000,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211692/wuudsjftpob8bdm1jjth.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 7500
   },
   {
     "nombre": "Papas completas",
     "descripcion": "Papas con cheddar, huevo revuelto y verdeo",
-    "precio": 9500,
+    "precio": 7600,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211990/lwurul1tnm1tkx3uieoz.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 9500
   },
   {
     "nombre": "Papas parmesano",
     "descripcion": "Papas, verdeo y parmesano",
-    "precio": 10500,
+    "precio": 8400,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408175/x2ex2gqzhhx0innlct3d.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": true,
+    "precioAnterior": 10500
   },
   {
     "nombre": "Salchipapa",
     "descripcion": "Papas, doble cheddar y salchichas",
-    "precio": 9500,
+    "precio": 7600,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408143/bpgmwrwagcjqowys0v6s.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": true,
+    "precioAnterior": 9500
   },
   {
     "nombre": "Sobre de papas",
