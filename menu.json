@@ -11,7 +11,7 @@
   {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon, lechuga",
-    "precio": 7600,
+    "precio": 5000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false,
@@ -21,7 +21,7 @@
   {
     "nombre": "American doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon, lechuga",
-    "precio": 9200,
+    "precio": 8000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false,
@@ -40,60 +40,62 @@
   {
     "nombre": "Bangkok Simple",
     "descripcion": "Pan, mayonesa, carne, mostaza, cheddar y cebolla salteada",
-    "precio": 9500,
+    "precio": 5000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406275/n1mpfbk7quy5ghbsioxs.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": true,
+    "precioAnterior": 9500
   },
   {
     "nombre": "Bangkok Doble",
     "descripcion": "Pan, mayonesa, doble carne, mostaza, cheddar y cebolla salteada",
-    "precio": 11500,
+    "precio": 8000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406275/n1mpfbk7quy5ghbsioxs.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": true,
+    "precioAnterior": 11500
   },
   {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino en brunoise, carne, cheddar, cebolla morada en brunoise.",
-    "precio": 9500,
+    "precio": 5000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-    "sumaPuntos": true
-  },
-  {
-    "nombre": "Berlín doble",
-    "descripcion": "Pan, mayonesa, pepino en brunoise, doble carne, doble cheddar, cebolla morada en brunoise.",
-    "precio": 11500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
-    "destacado": false,
-    "sumaPuntos": true
-  },
-  {
-    "nombre": "Blue simple",
-    "descripcion": "Pan, carne, cheddar, mermelada de bacon, roquefort",
-    "precio": 7600,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409294/v87b4kjgyhqdhdrnz0dx.webp",
-    "destacado": false,
-    "disponible": true,
     "sumaPuntos": true,
     "precioAnterior": 9500
   },
   {
+    "nombre": "Berlín doble",
+    "descripcion": "Pan, mayonesa, pepino en brunoise, doble carne, doble cheddar, cebolla morada en brunoise.",
+    "precio": 8000,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
+    "destacado": false,
+    "sumaPuntos": true,
+    "precioAnterior": 11500
+  },
+  {
+    "nombre": "Blue simple",
+    "descripcion": "Pan, carne, cheddar, mermelada de bacon, roquefort",
+    "precio": 9500,
+    "categoria": "Burgers",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409294/v87b4kjgyhqdhdrnz0dx.webp",
+    "destacado": false,
+    "disponible": true,
+    "sumaPuntos": true
+  },
+  {
     "nombre": "Blue doble",
     "descripcion": "Pan, doble carne, doble cheddar, mermelada de bacon, roquefort",
-    "precio": 9200,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
     "destacado": false,
     "disponible": true,
-    "sumaPuntos": true,
-    "precioAnterior": 11500
+    "sumaPuntos": true
   },
   {
     "nombre": "Boom",
@@ -108,20 +110,22 @@
   {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 8500,
+    "precio": 5000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 8500
   },
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 10500,
+    "precio": 8000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 10500
   },
   {
     "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
@@ -144,20 +148,22 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 9300,
+    "precio": 5000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 9300
   },
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 11300,
+    "precio": 8000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 11300
   },
   {
     "nombre": "Clasica simple + sobre de papas + coca cola 220ml",
@@ -229,24 +235,22 @@
   {
     "nombre": "Moscu simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, huevo, lechuga, tomate, papa rosty",
-    "precio": 7600,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965116/yzqwxdod1npzawqhsyfj.webp",
     "destacado": false,
     "disponible": true,
-    "sumaPuntos": true,
-    "precioAnterior": 9500
+    "sumaPuntos": true
   },
   {
     "nombre": "Moscu doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, huevo, lechuga, tomate, papa rosty",
-    "precio": 9200,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965120/jhzd1s85sxni00hjbg4j.webp",
     "destacado": false,
     "disponible": true,
-    "sumaPuntos": true,
-    "precioAnterior": 11500
+    "sumaPuntos": true
   },
   {
     "nombre": "Moscu simple + sobre de papas + coca cola 220ml",
