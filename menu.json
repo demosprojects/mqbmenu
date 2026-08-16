@@ -11,22 +11,20 @@
   {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon, lechuga",
-    "precio": 5000,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 9500
+    "sumaPuntos": true
   },
   {
     "nombre": "American doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar, cebolla caramelizada, bacon, lechuga",
-    "precio": 8000,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375253/u676h7nh4dzokypxengm.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 11500
+    "sumaPuntos": true
   },
   {
     "nombre": "American simple + sobre de papas + coca cola 220ml",
@@ -40,42 +38,38 @@
   {
     "nombre": "Bangkok Simple",
     "descripcion": "Pan, mayonesa, carne, mostaza, cheddar y cebolla salteada",
-    "precio": 5000,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406275/n1mpfbk7quy5ghbsioxs.webp",
     "destacado": false,
-    "disponible": true,
-    "precioAnterior": 9500
+    "disponible": true
   },
   {
     "nombre": "Bangkok Doble",
     "descripcion": "Pan, mayonesa, doble carne, mostaza, cheddar y cebolla salteada",
-    "precio": 8000,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406275/n1mpfbk7quy5ghbsioxs.webp",
     "destacado": false,
-    "disponible": true,
-    "precioAnterior": 11500
+    "disponible": true
   },
   {
     "nombre": "Berlín simple",
     "descripcion": "Pan, mayonesa, pepino en brunoise, carne, cheddar, cebolla morada en brunoise.",
-    "precio": 5000,
+    "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 9500
+    "sumaPuntos": true
   },
   {
     "nombre": "Berlín doble",
     "descripcion": "Pan, mayonesa, pepino en brunoise, doble carne, doble cheddar, cebolla morada en brunoise.",
-    "precio": 8000,
+    "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375445/nvantenumshyeqd2b4um.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 11500
+    "sumaPuntos": true
   },
   {
     "nombre": "Blue simple",
@@ -110,22 +104,20 @@
   {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 5000,
+    "precio": 8500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 8500
+    "sumaPuntos": true
   },
   {
     "nombre": "Cheese doble",
     "descripcion": "Pan, mayonesa, doble carne, doble cheddar.",
-    "precio": 8000,
+    "precio": 10500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 10500
+    "sumaPuntos": true
   },
   {
     "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
@@ -148,22 +140,20 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 5000,
+    "precio": 9300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 9300
+    "sumaPuntos": true
   },
   {
     "nombre": "Clasica doble",
     "descripcion": "Pan, mayonesa, lechuga, tomate, doble carne, doble cheddar.",
-    "precio": 8000,
+    "precio": 11300,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-    "sumaPuntos": true,
-    "precioAnterior": 11300
+    "sumaPuntos": true
   },
   {
     "nombre": "Clasica simple + sobre de papas + coca cola 220ml",
