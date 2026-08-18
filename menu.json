@@ -253,7 +253,7 @@
   },
   {
     "nombre": "Parma Simple",
-    "descripcion": "Pan, carne, mozzarella, pimientos, rucula, parmesano, tomate y aceite de oliva",
+    "descripcion": "Pan, carne, mozzarella, pimentón, rucula, parmesano, tomate y aceite de oliva",
     "precio": 9500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406197/wzkosjotvyogwwrsppab.webp",
@@ -262,7 +262,7 @@
   },
   {
     "nombre": "Parma Doble",
-    "descripcion": "Pan, doble carne, mozzarella, pimientos, rucula, parmesano, tomate y aceite de oliva",
+    "descripcion": "Pan, doble carne, mozzarella, pimentón, rucula, parmesano, tomate y aceite de oliva",
     "precio": 11500,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406197/wzkosjotvyogwwrsppab.webp",
