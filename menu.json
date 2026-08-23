@@ -398,11 +398,10 @@
   {
     "nombre": "Papas completas",
     "descripcion": "Papas con cheddar, huevo revuelto y verdeo",
-    "precio": 7600,
+    "precio": 9500,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771211990/lwurul1tnm1tkx3uieoz.webp",
-    "destacado": false,
-    "precioAnterior": 9500
+    "destacado": false
   },
   {
     "nombre": "Papas parmesano",
