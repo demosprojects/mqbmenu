@@ -1,13 +1,25 @@
 [
   {
-    "nombre": " (simple)",
-    "descripcion": "Pan, ketchup, carne, cheddar, cebolla en brunoise",
-    "precio": 9500,
-    "categoria": "Burgers",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771541021/eywam2yskru6topxmkya.webp",
+    "nombre": "Cheese simple + sobre de papas + coca cola 220ml",
+    "descripcion": "Promoción de la semana. Hamburguesa Simple",
+    "precio": 8500,
+    "categoria": "Promos",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1788223940/jczo1mgmdmfoez1oyzaz.webp",
     "destacado": false,
-    "disponible": false
+    "disponible": true
   },
+  {
+    "nombre": "Clasica simple + sobre de papas + coca cola 220ml",
+    "descripcion": "Promoción de la semana. Hamburguesa Simple",
+    "precio": 8500,
+    "categoria": "Promos",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1788224024/xqysvsiyuwzcugq3rbfd.webp",
+    "destacado": false,
+    "disponible": true
+  },
+
+
+
   {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon, lechuga",
