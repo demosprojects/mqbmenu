@@ -48,6 +48,20 @@
         background-color: #014926 !important;
         color: white !important;
     }
+    /* Botón "Promos": color distintivo (ámbar) para diferenciarlo del resto */
+    .promo-btn {
+        background-color: rgba(245, 158, 11, 0.10) !important;
+        color: #b45309 !important;
+        border-color: rgba(245, 158, 11, 0.35) !important;
+    }
+    .promo-btn:hover {
+        background-color: rgba(245, 158, 11, 0.18) !important;
+    }
+    .promo-btn.active {
+        background-color: #f59e0b !important;
+        color: white !important;
+        border-color: #f59e0b !important;
+    }
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
@@ -403,6 +417,10 @@
              </button>
              
              <button class="category-btn bg-gray-50/50 px-1 md:px-5 py-2 rounded-2xl whitespace-normal md:whitespace-nowrap text-[11px] sm:text-xs leading-tight font-black uppercase border border-transparent text-gray-400 hover:bg-gray-100 flex items-center justify-center text-center">Agregados</button>
+             
+             <button class="category-btn promo-btn col-start-2 md:col-start-auto px-1 md:px-5 py-2 rounded-2xl whitespace-normal md:whitespace-nowrap text-[11px] sm:text-xs leading-tight font-black uppercase border flex items-center justify-center gap-1.5 text-center">
+                 <i class="fa-solid fa-tag text-[10px]"></i> Promos
+             </button>
              
          </nav>
          
