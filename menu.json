@@ -533,9 +533,18 @@
     "destacado": false
   },
   {
+    "nombre": "Coca Cola 2,25L",
+    "descripcion": "Coca Cola 2,25L",
+    "precio": 6200,
+    "categoria": "Sin alcohol",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1789173479/mfuqnwe592bf7wpqtvak.webp",
+    "destacado": false,
+    "disponible": true
+  },
+  {
     "nombre": "Coca Cola 220ml",
     "descripcion": "Lata de coca cola de 220ml",
-    "precio": 1400,
+    "precio": 1700,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1779198910/a87iccm8hvdhzbnhlvbt.webp",
     "destacado": false,
@@ -595,10 +604,11 @@
   {
     "nombre": "Fanta 1,5L",
     "descripcion": "Fanta de 1,5L",
-    "precio": 5000,
+    "precio": 3000,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771483550/fscwuc82do5op74uzuvb.webp",
-    "destacado": false
+    "destacado": false,
+    "precioAnterior": 5000
   },
   {
     "nombre": "Fanta de manzana 2.5L",
