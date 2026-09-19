@@ -95,11 +95,12 @@
   {
     "nombre": "Cheese simple",
     "descripcion": "Pan, mayonesa, carne, cheddar.",
-    "precio": 8500,
+    "precio": 8000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375692/brqisevanmuk6epxxvqc.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 8500
   },
   {
     "nombre": "Cheese doble",
@@ -131,11 +132,12 @@
   {
     "nombre": "Clasica simple",
     "descripcion": "Pan, mayonesa, lechuga, tomate, carne, cheddar.",
-    "precio": 9300,
+    "precio": 8000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771375378/rzm2mvsvlpygjxrahg5y.webp",
     "destacado": false,
-    "sumaPuntos": true
+    "sumaPuntos": true,
+    "precioAnterior": 9300
   },
   {
     "nombre": "Clasica doble",
