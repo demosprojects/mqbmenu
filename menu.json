@@ -424,7 +424,7 @@
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408175/x2ex2gqzhhx0innlct3d.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Salchipapa",
