@@ -401,11 +401,11 @@
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408175/x2ex2gqzhhx0innlct3d.webp",
     "destacado": false,
-    "disponible": false
+    "disponible": true
   },
   {
     "nombre": "Salchipapa",
-    "descripcion": "Papas, doble cheddar y salchichas",
+    "descripcion": "Papas, doble cheddar, salchichas y verdeo",
     "precio": 9500,
     "categoria": "Papas",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786408143/bpgmwrwagcjqowys0v6s.webp",
