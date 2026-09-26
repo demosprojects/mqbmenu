@@ -579,7 +579,7 @@
   {
     "nombre": "Coca Cola de vidrio 1L",
     "descripcion": "Coca Cola de vidrio",
-    "precio": 4600,
+    "precio": 4100,
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1771482988/qgea8b1z9fcxaitestrn.webp",
     "destacado": false
