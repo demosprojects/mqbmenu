@@ -82,7 +82,7 @@
   {
     "nombre": "Blue doble",
     "descripcion": "Pan, doble carne, doble cheddar, mermelada de bacon, roquefort",
-    "precio": 8995,
+    "precio": 9000,
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1772409351/whicmrbilcfqzstu2hqn.webp",
     "destacado": false,
