@@ -90,7 +90,7 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1779414526/zm076qsfzpiaug5grbez.webp",
     "destacado": false,
     "disponible": true,
-    "sumaPuntos": true
+    "sumaPuntos": false
   },
   {
     "nombre": "Cheese simple",
