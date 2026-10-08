@@ -445,7 +445,7 @@
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889753/uyfqqtfvsnhnpbf4sbhq.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Cajita Kpop Demon Hunters",
@@ -454,7 +454,7 @@
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889721/saqoozkqcysevxjibmck.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Cajita My Melody Kuromi",
@@ -463,7 +463,7 @@
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889784/fol69lyd8icr0bdhrqwx.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Cajita Roblox",
@@ -472,7 +472,7 @@
     "categoria": "Kids",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1778889805/tvmx5qybpapmafrpfsv6.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Agua mineral 600ml",
