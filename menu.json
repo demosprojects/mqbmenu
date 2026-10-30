@@ -229,7 +229,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965116/yzqwxdod1npzawqhsyfj.webp",
     "destacado": false,
-    "disponible": true,
+    "disponible": false,
     "sumaPuntos": true
   },
   {
@@ -239,7 +239,7 @@
     "categoria": "Burgers",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780965120/jhzd1s85sxni00hjbg4j.webp",
     "destacado": false,
-    "disponible": true,
+    "disponible": false,
     "sumaPuntos": true
   },
   {
