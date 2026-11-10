@@ -672,7 +672,7 @@
     "categoria": "Sin alcohol",
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1780878648/plrhgu4mdxlt0pkihmxa.webp",
     "destacado": false,
-    "disponible": true
+    "disponible": false
   },
   {
     "nombre": "Levite 1,5L",
