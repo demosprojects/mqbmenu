@@ -1,5 +1,14 @@
 [
   {
+    "nombre": "Clasica +Cheese",
+    "descripcion": "Llevando dos Clasica simple + Cheese simple te quedan a $15.000",
+    "precio": 15000,
+    "categoria": "Promos",
+    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1794867959/z8a7nldxfzskh9biaqq5.webp",
+    "destacado": false,
+    "disponible": false
+  },
+  {
     "nombre": "American simple",
     "descripcion": "Pan, mayonesa, carne, cheddar, cebolla caramelizada, bacon, lechuga",
     "precio": 10500,
@@ -127,15 +136,6 @@
     "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1786406130/vohf6ejjqlgwnjxw4ss3.webp",
     "destacado": false,
     "disponible": false
-  },
-  {
-    "nombre": "Clasica +Cheese",
-    "descripcion": "Llevando dos Clasica simple + Cheese simple te quedan a $15.000",
-    "precio": 15000,
-    "categoria": "Promos",
-    "imagen": "https://res.cloudinary.com/dl2tftoum/image/upload/v1794867959/z8a7nldxfzskh9biaqq5.webp",
-    "destacado": false,
-    "disponible": true
   },
   {
     "nombre": "Clasica simple",
